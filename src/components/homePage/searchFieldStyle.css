@@ -1,0 +1,274 @@
+
+
+.search-home-page-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+.search-sistem-home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.search-sistem-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.search-system-slider {
+  display: flex;
+  align-items: flex-start;
+  gap: 91px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .search-system-slider {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.search-bar-filters {
+  display: flex;
+  height: 57px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+
+}
+
+.search-bar-slider {
+  display: flex;
+  height: 113px;
+  width: 1200px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+
+}
+
+
+.search-bar {
+  position: absolute;
+  width: 383px;
+  height: 57px;
+  padding: 18px, 24px, 18px, 24px;
+  margin: 0px auto 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+
+}
+
+.inport-bar-gome-page {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-align: center;
+  background-color: transparent;
+  outline: transparent;
+
+}
+
+.inport-bar-gome-page[type="text"] {
+  width: 100%;
+  height: 57px;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(51, 51, 51, 1);
+}
+
+.import-bar-drop-down-page {
+  width: 383px;
+  height: 57px;
+  border-radius: 15px;
+  background: #f2f2f2;
+  color: rgba(51, 51, 51, 1);
+  outline: transparent;
+  border-color: transparent;
+  appearance: none;
+  text-align: center;
+
+}
+
+
+
+.import-bar-drop-down-page-big {
+  display: flex;
+  width: 1200px;
+  padding: 18px 24px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  height: 57px;
+  border-radius: 15px;
+  background: #f2f2f2;
+  color: rgba(51, 51, 51, 1);
+  outline: transparent;
+  border-color: transparent;
+  appearance: none;
+  text-align: center;
+
+}
+
+
+
+.board-baner-texts-and-info {
+  display: flex;
+  width: 434px;
+  height: 57px;
+  align-items: center;
+  gap: 18px;
+}
+
+.balasne-text {
+  display: flex;
+  width: 434px;
+  height: 57px;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider-barel {
+  width: 434px;
+  height: 24px;
+}
+
+.h3-class-text {
+  color: #000;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* 
+.slider-text-group {
+  display: flex;
+  height: 113px;
+  width: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+} */
+
+
+
+.slider-test-barel {
+  width: 100% 108px;
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 15px;
+  background: #f2f2f2;
+  outline: transparent;
+  border-color: transparent;
+  appearance: none;
+  text-align: center;
+  -webkit-appearance: none;
+}
+
+
+.slider-test-barel[type=number]::-webkit-inner-spin-button,
+.slider-test-barel[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  width:  100% 434px ;
+
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+  position: absolute;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 3px;
+  height: 5px;
+}
+
+.slider__track {
+  background-color: rgba(242, 242, 242, 1);
+  width: 100%;
+  z-index: 1;
+}
+
+.slider__range {
+  background-color: rgba(231, 120, 23, 1);
+  z-index: 2;
+}
+
+.slider__left-value,
+.slider__right-value {
+  color: rgba(51, 51, 51, 1);
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.slider__left-value {
+  left: 6px;
+}
+
+.slider__right-value {
+  right: -4px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width:  434px;
+  outline: none;
+}
+
+.thumb--left {
+  z-index: 3;
+}
+
+.thumb--right {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: rgba(231, 120, 23, 1);
+  border: none;
+  border-radius: 50%;
+  box-shadow: transparent;
+  cursor: pointer;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}

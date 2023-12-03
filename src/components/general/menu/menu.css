@@ -1,0 +1,50 @@
+.menu-btn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: inherit;
+}
+
+.menu-btn:hover {
+    color: #03001e;
+}
+
+.menu-btn-active {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #03001e;
+}
+
+.menu-wrapper {
+    padding: 32px 0px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.post-property-span {
+    font-weight: 600;
+}
+
+.manu-class-valut-and-language-full-div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.manu-class-valut-and-language-text {
+    color: var(--light-grey, #B0AFAF);
+
+    /* 14 mid */
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.menu-main {
+    @media only screen and (max-width: 1150px) {
+        display: none!important;
+    }
+}

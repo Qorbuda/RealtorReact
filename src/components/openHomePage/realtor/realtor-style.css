@@ -1,0 +1,121 @@
+.main-box {
+    width: 382px;
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    border-radius: 20px;
+    gap: 48px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 400;
+    color: #B0AFAF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: #333333;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.property-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.property-rooms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.property-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.property-info {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+.property-info h3 {
+    width: 110px;
+    font-size: 14px;
+    color: #B0AFAF;
+    margin-bottom: 0;
+}
+
+.property-info span {
+    font-size: 16px;
+    color: #333333;
+}
+
+.realtor-box {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.realtor-info {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+    gap: 12px;
+}
+
+.open-home-page-agent-iamge-div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.open-home-page-agent-iamge{
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+}
+
+.languages {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+
+.footer-button {
+    cursor: pointer;
+    padding: 18px 24px;
+    background: #E77817;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+
+.open-home-page-agent-language-flags {
+    display: flex;
+    height: 21px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}

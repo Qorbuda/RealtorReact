@@ -1,0 +1,65 @@
+.Add-link-box-full-div {
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 5px;
+    border: 0.5px solid var(--dark-grey, #333);
+}
+
+.Add-link-box-link-and-main-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Add-link-box-main-icon {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    border: 2px solid #333;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+.Add-link-box-text {
+    color: var(--light-grey, #554747);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 450px;
+    border: none;
+    outline: none;
+}
+
+.Add-link-box-delete-button-full-div {
+    display: flex;
+    padding: 6px;
+    align-items: flex-start;
+    gap: 10px;
+    border: 2px solid #333;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+.Add-link-box-delete-button-div {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    padding: 1.311px 2.755px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Add-link-box-delete-button {
+    width: 12.49px;
+    height: 15.378px;
+    flex-shrink: 0;
+}

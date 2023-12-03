@@ -1,0 +1,80 @@
+{
+  "HomePage": {
+    "FastFilter": {
+      "UnderConstruction": "Under construction companies",
+      "Apartments": "Apartments",
+      "CommercialSpace": "Commercial Space",
+      "Land": "Land",
+      "Investmentobject": "Investment object",
+      "Privatehouses": "Private houses"
+    },
+    "Footer": {
+      "home": "Home",
+      "ourTeam": "Our team",
+      "becomeAgent": "Become agent",
+      "Franchise": "Franchise",
+      "Contact": "Contact",
+      "postProperty": "Post property",
+      "currency": "currency",
+      "aboutUs": "About us"
+    },
+    "Header": {
+      "officeAddresses": "Office addresses",
+      "logIn": "Log in"
+    },
+    "searchField": {
+      "priceFrom": "Price from",
+      "Space": "Space",
+      "Floor": "Floor"
+    }
+  },
+  "LoginPage": {
+    "LogInToYourAccount": "Log in to your account",
+    "WrongPassword": "Wrong Password",
+    "WrongUser": "Wrong User",
+    "ForgotYourPassword": "Forgot your password?",
+    "Login": "LOG IN",
+    "ForgotPassword": {
+      "ForgotPassText": "FORGOT PASSWORD?",
+      "Send": "Send",
+      "BackLog": "Back to log in ",
+      "EnterEmailText": "Enter your email,we'll send you reset instructions"
+    },
+    "finishForogotPassword": {
+      "CheckYourEmail": "CHECK YOUR EMAIL"
+    }
+  },
+  "PostPropertyPage": {
+    "AddAProperty": "Add a property",
+    "SekectCity": "City",
+    "SekectStreet": "Street",
+    "Next": "Next ",
+    "District": "District ",
+    "Building": "Building ",
+    "ApartamentNumber": "Apartament number ",
+    "DataCitySelect": [
+      "Tbilici",
+      "Batumi",
+      "Foti",
+      "Qobuleti",
+      "Bakuriani"
+    ],
+    "DataStreetSelect": [
+      "ქუჩა,ბაქოს ქ.",
+      "გრიბოედოვის. ქ",
+      "ნინოშვილის ქ.",
+      "ნინოშვილის ქ.",
+      "ნოდარ იმნაძის. ქ.",
+      "სარაჯიშვილის ქ.",
+      "სელიმ ხიმშიაშვილის ქ.",
+      "ყაზბეგის. ქ",
+      "ჩაიკოვსკის. ქ",
+      "9 მარტი",
+      "აეროპორტის გზატკეცილი",
+      "ანგისა",
+      "აჭრის წყალი",
+      "ახმეტელის. ქ",
+      "ბერიძის შესახვევი"
+    ]
+  }
+}

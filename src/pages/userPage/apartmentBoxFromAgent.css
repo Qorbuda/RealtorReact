@@ -1,0 +1,393 @@
+.Apartment-box-from-agent-page-full-div {
+    display: flex;
+    width: 1197px;
+    height: 427px;
+    padding: 48px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 48px;
+    border-radius: 20px;
+    background: var(--light-grey, #F2F2F2);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Apartment-box-from-agent-page-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.Apartment-box-from-agent-apartment-info-full-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.Apartment-box-from-agent-apartment-info-image-div {
+    max-width: 392px;
+    max-height: 281px;
+    min-width: 392px;
+    min-height: 281px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Apartment-box-from-agent-apartment-info-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 20px;
+    box-shadow: 0px 2.67319px 2.67319px 0px rgba(0, 0, 0, 0.25);
+    max-width: 392px;
+    max-height: 281px;
+    align-items: center;
+
+}
+
+.Apartment-box-from-agent-apartment-info-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 72px;
+    flex: 1 0 0;
+}
+
+.Apartment-box-from-agent-apartment-info-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Apartment-box-from-agent-apartment-info-secend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+
+.Apartment-box-from-agent-apartment-info-first-title {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    /* 175% */
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-apartment-info-first-main-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.Apartment-box-from-agent-main-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Apartment-box-from-agent-main-title-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    /* 87.5% */
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-main-price-text-div {
+    display: flex;
+    width: 286px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Apartment-box-from-agent-main-price-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    /* 87.5% */
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-floor-bedroom-bathroom-text-div {
+    display: flex;
+    width: 286px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Apartment-box-from-agent-floor-text-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.Apartment-box-from-agent-floor-text-title {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Apartment-box-from-agent-floor-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-agent-info-full-div {
+    display: flex;
+    width: 286px;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.Apartment-box-from-agent-agent-info-image {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    box-shadow: 0px 2.67319px 2.67319px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.Apartment-box-from-agent-agent-info-text-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.Apartment-box-from-agent-agent-info-name-text {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 0;
+    /* 131.25% */
+}
+
+.Apartment-box-from-agent-agent-info-office-text {
+    color: var(--Gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+
+}
+
+.Apartment-box-from-agent-agent-info-phone-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Apartment-box-from-agent-agent-info-phone-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.Apartment-box-from-agent-agent-info-phone-text {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-apartment-info-secend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-apartment-info-secend-text-full-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.Apartment-box-from-agent-apartment-info-secend-text-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Apartment-box-from-agent-apartment-info-secend-text-title {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    width: 109.822px;
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-apartment-info-secend-text-box {
+    display: flex;
+    padding: 4px 12px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 5px;
+}
+
+.Apartment-box-from-agent-apartment-info-secend-text {
+    color: var(--Gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-three-point-button {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 0px 2.176px 0px 2.162px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Apartment-box-from-agent-three-point-button-icon {
+    width: 19.662px;
+    height: 4.668px;
+    flex-shrink: 0;
+}
+
+.Apartment-box-from-agent-apartment-open-btn {
+    display: flex;
+    height: 45px;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    background: var(--orange, #03001e);
+}
+
+.Apartment-box-from-agent-apartment-open-btn-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+}
+
+.Apartment-box-from-agent-popap-beckground {
+    display: flex;
+    width: 80px;
+    padding: 48px;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 20px;
+    background: var(--light-grey, #F2F2F2);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.Apartment-box-from-agent-change-apartment-pop {
+    width: auto;
+    height: auto;
+    position: absolute;
+    border-radius: 20px;
+    background: var(--light-grey, #F2F2F2);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+    display: none;
+}
+
+.Apartment-box-from-agent-change-apartment-pop-button-div {
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    align-self: stretch;
+}
+
+
+.Apartment-box-from-agent-apartment-pop-btn {
+    display: flex;
+    height: 35px;
+    width: 150px;
+
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--orange, #bebebe);
+}
+
+.Apartment-box-from-agent-apartment-pop-btn-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.Apartment-box-from-agent-apartment-pop-btn:hover {
+    background-color: #03001e;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}

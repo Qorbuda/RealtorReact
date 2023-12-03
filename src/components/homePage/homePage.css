@@ -1,0 +1,125 @@
+.ts-btn-fast-filters {
+    width: 384px;
+    height: 129px;
+    padding: 24px 48px;
+    border-radius: 20px;
+}
+
+.ts-property-card {
+    max-width: 384px;
+    padding: 0px;
+    gap: 20px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.ts-property-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.ts-property-card-info-head-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 0px;
+    gap: 20px;
+    min-width: 320px;
+}
+
+.ts-property-card-info-head-price-div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.ts-property-card-info-head-info-text{
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px; /* 116.667% */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.ts-property-card-info-secondary-items-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 0px;
+    gap: 20px;
+    min-width: 320px;
+}
+
+.ts-property-card-info-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 30px 30px 30px;
+    gap: 18px;
+
+}
+
+.ts-property-card-info-primary-items {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.ts-property-card-info-secondary-items {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.ts-fast-filters-section {
+    flex-direction: row;
+    width: 100%;
+}
+
+.ts-properties-section {
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1220px) {
+    .ts-fast-filters-section {
+        flex-direction: column;
+    }
+
+    .ts-btn-fast-filters {
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+    .ts-properties-section {
+        justify-content: center;
+    }
+}
+
+.property-card-image-carusel{
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}

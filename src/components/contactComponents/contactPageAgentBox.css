@@ -1,0 +1,133 @@
+.Contact-page-agent-box-full-div {
+    display: flex;
+    padding: 32px;
+    width: 588px;
+    height: 325px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Contact-page-agent-box-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 37px;
+    align-self: stretch;
+}
+
+.Contact-page-agent-text-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Contact-page-agent-text-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 37px;
+    align-self: stretch;
+}
+
+.Contact-page-agent-title {
+    color: var(--Gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.Contact-page-agent-title-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Contact-page-agent-BuildingsOrange-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.Contact-page-agent-icon-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    color: var(--orange, #03001e);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.Contact-page-agent-agent-image {
+    width: 126px;
+    height: 126px;
+    border-radius: 126px;
+}
+
+.Contact-page-agent-agent-info-text-div {
+    display: flex;
+    width: 433px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.Contact-page-agent-info-text-name {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    margin: 0;
+
+}
+
+.Contact-page-agent-info-text-status {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+
+}
+
+.Contact-page-agent-info-text-mail-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Contact-page-agent-Mail-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.Contact-page-agent-Mail-icon-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}

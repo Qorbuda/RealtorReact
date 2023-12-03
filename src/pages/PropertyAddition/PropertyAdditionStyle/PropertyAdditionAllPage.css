@@ -1,0 +1,481 @@
+.Post-property-pag-input-boxs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 100px;
+
+}
+
+
+.Post-property-heder-and-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+
+.Post-property-page-title {
+    color: var(--Gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+
+.Post-property-general-info-input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 1200px;
+
+}
+
+.Post-property-general-info-input-first-line {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    gap: 29px;
+}
+
+.Post-property-general-info-input-secend-line-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.Post-property-general-info-input-secend-line {
+    display: flex;
+    width: 894px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Post-property-next-input-button {
+    display: flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--orange, #03001e);
+}
+
+.Post-property-next-input-button-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    /* 116.667% */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.Post-property-general-info-input-icon {
+    margin-bottom: 5px;
+
+}
+
+
+.Post-property-add-map-cordinants {
+    width: 1200px;
+    height: 575px;
+}
+
+
+/* Owner page  */
+
+.Post-property-owner-page-input-line-div-thri-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.Post-property-owner-page-buttons-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    align-self: center;
+}
+
+/* property page */
+
+.Post-property-propery-page-input-full-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.Post-property-propery-page-input-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.Post-property-propery-page-check-box-full-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+}
+
+.Post-property-propery-page-check-box-div-title {
+    color: var(--orange, #03001e);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+.Post-property-propery-page-check-box-full-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    align-self: stretch;
+}
+
+.Post-property-propery-page-check-box-poplar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+.Post-property-propery-page-check-box-poplar-title {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.Post-property-propery-page-check-box-poplar-box {
+    /* display: flex; */
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Post-property-propery-page-check-box-poplar-left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+
+/* description page */
+
+
+
+.Post-property-fescription-page-input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.Post-property-fescription-page-input {
+    display: flex;
+    height: 137px;
+    width: 1200px;
+    padding: 24px;
+    align-items: flex-start;
+    align-self: stretch;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    background: #F2F2F2;
+    border-color: #F2F2F2;
+    gap: 32px;
+    align-self: center;
+}
+
+
+.Post-property-fescription-page-input:focus {
+    background: #F2F2F2;
+    border-color: #03001e;
+    box-shadow: 0 0 0 0.25rem rgba(231, 120, 23, 0.25);
+}
+
+
+/* photos and docs page */
+
+.Post-property-page-photos-and-docs-full-div {
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.Post-property-page-photos-and-docs-full-input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.Post-property-page-photos-and-docs-image-and-gallery {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.Post-property-page-photos-and-docs-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+.Post-property-page-photos-and-docs-links-title {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Post-property-page-photos-and-docs-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.Post-property-page-link-full-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.Post-property-page-link-title-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.Post-property-page-link-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+
+
+/* confirm page */
+
+.Post-property-confirm-full-div {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.Post-property-confirm-box-line {
+    display: flex;
+    width: 1200px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Post-property-confirm-general-information-box {
+    display: flex;
+    padding: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--light-grey, #F2F2F2);
+}
+
+.Post-property-confirm-general-information-box-title-div {
+    display: flex;
+    width: 277px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Post-property-confirm-general-information-box-title-text {
+    color: var(--orange, #03001e);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+
+.Post-property-confirm-general-information-box-info-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+    margin-bottom: 0;
+
+}
+
+.Post-property-confirm-general-information-box-info {
+    color: var(--dark-grey, #333);
+
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+.Post-property-confirm-general-information-box-personal-id {
+    color: var(--dark-grey, #333);
+
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    align-self: stretch;
+    margin-bottom: 0;
+}
+
+.Post-property-confirm-general-information-box-info-doble-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.Post-property-confirm-general-information-box-info-doble {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+}
+
+.Post-property-confirm-general-information-property-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.Post-property-confirm-general-information-property-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+}
+
+.Post-property-confirm-general-information-property-info-check-box {
+    display: flex;
+    width: 131px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+}
+
+.Post-property-confirm-finish-button {
+    display: flex;
+    width: 264px;
+    height: 57px;
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: var(--orange, #03001e);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Post-property-confirm-finish-button-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.Post-property-confirm-general-information-check-box-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Post-property-confirm-general-information-check-box-icon-div {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Post-property-confirm-general-information-check-box-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.Post-property-confirm-general-information-check-box-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.Post-property-confirm-Reason-Selector {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    gap: 29px;
+}

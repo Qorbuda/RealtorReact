@@ -1,0 +1,88 @@
+.Add-file-box-full-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+.Add-file-box-title-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Add-file-box-div-add-image-box {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 2px dashed var(--light-grey, #B0AFAF);
+}
+
+.Add-file-box-add-image-form-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.Add-file-box-add-image-div {
+    display: flex;
+    width: 21.023px;
+    height: 21.023px;
+    padding: 2.284px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Add-file-box-add-image {
+    width: 16.455px;
+    height: 16.455px;
+    flex-shrink: 0;
+}
+
+.Add-file-box-add-text-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Add-file-box-add-text {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    max-width: 400px;
+}
+
+.Add-file-box-div-add-button-div {
+    display: flex;
+    padding: 6px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--dark-grey, #333);
+}
+
+.Add-file-box-div-add-button-text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+}
+
+.Add-file-box-div-add-button-div input {
+    color: red;
+}
+

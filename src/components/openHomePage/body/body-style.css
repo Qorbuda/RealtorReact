@@ -1,0 +1,39 @@
+.main-body {
+    width: 1200px;
+    min-height: 744px;
+    display: flex;
+    flex-direction: row;
+    gap: 81px;
+    margin-top: 73px;
+}
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.text-container {
+    max-width: 690px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.map-container h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.map-container span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.map {
+    position: unset;
+    width: 736.12px;
+    height: 395.02px;
+}

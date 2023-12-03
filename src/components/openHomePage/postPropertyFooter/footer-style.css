@@ -1,0 +1,11 @@
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.footer-box h1 {
+   color: #333333;
+   font-size: 32px;
+   font-weight: 400;
+}

@@ -1,0 +1,81 @@
+.ts-header-wrapper {
+    width: 100%;
+    height: 138px;
+}
+
+.ts-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.mobile-content {
+    display: none;
+}
+
+.ts-mobile-email {
+    display: flex;
+    justify-content: flex-start;
+    gap: 78px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.ts-header-menu-wrapper {
+    height: 32px;
+    gap: 78px;
+    padding: 0px;
+
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .ts-header-menu-wrapper {
+        gap: 24px;
+        align-items: center!important;
+    }
+    .ts-mobile-email {
+        gap: 30px;
+    }
+}
+
+.header-desktop-info {
+    @media only screen and (max-width: 1150px) {
+        display: none!important;
+    }
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .ts-header {
+        margin-bottom: 50px;
+    }
+    .mobile-content {
+        display: block;
+    }
+    .ts-header-wrapper {
+        align-items: center!important;
+    }
+    .ts-mobile-email {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+a {
+    color: #fff;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    text-decoration: underline;
+}

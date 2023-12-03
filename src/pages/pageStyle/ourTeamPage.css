@@ -1,0 +1,133 @@
+.Our-team-page-full-div {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+
+}
+
+.Our-team-page-div {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    width: 1200px;
+
+}
+
+.Our-team-page-agent-box {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 48px;
+
+}
+
+.Our-team-page-tou-agent-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Our-team-page-search-boox-div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+
+}
+
+#Our-team-page-search-glass-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.Our-team-page-input-agent {
+    display: flex;
+    padding: 18px 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 15px;
+    background: var(--light-grey, #F2F2F2);
+}
+
+.Our-team-page-input-button {
+    display: flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #03001e;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    font-family: Noto Sans;
+
+
+}
+
+.Our-team-page-agents-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.Our-team-page-Text-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+
+.Our-team-page-Text-head {
+    color: var(--Gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Our-team-page-icon-text {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.Our-team-page-search-BuildingsOrange-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.Our-team-page-Text-icon {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.Our-team-page-office-agents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 60px;
+}
+
+.Our-team-page-lier-agent-box{
+    display: flex;
+    width: 588px;
+    height: 325px;
+}

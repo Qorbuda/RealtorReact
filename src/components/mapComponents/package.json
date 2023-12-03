@@ -1,0 +1,23 @@
+{
+    "name": "map-module",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "react",
+      "module",
+      "map"
+    ],
+    "author": "Luka Megrelishvili",
+    "license": "ISC",
+    "dependencies": {
+      "@maptiler/geocoding-control": "^0.0.99",
+      "maplibre-gl": "^2.3.1"
+    },
+    "peerDependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
+}

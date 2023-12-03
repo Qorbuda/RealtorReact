@@ -1,0 +1,1 @@
+export const setCurrentPage = (page) => ({type: 'setCurrenPage', payload: page})

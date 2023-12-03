@@ -1,0 +1,171 @@
+.Team-Agent-info-bar {
+    display: flex;
+    width: 588px;
+    height: 325px;
+
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid var(--light-grey, #F2F2F2);
+    /* 1 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Team-Agent-info-bar-img {
+
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 30px 0px 0px 30px;
+    max-width: 315px;
+}
+
+.Team-Agent-info-text-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 325px;
+    border-radius: 0px 30px 30px 0px ;
+
+    background: var(--white, #FFF);
+
+    /* 1 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Team-Agent-info-text {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.Team-Agent-info-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.Team-Agent-Name-Text {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 0;
+
+    /* 87.5% */
+}
+
+.Team-Agent-self-position {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+
+    /* 116.667% */
+}
+
+.Team-Agent-flags-holder {
+    display: flex;
+    height: 21px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.Team-Agent-flags {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    padding: 1.5px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Team-Agent-flags-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+
+.Team-Agent-info-view-properties {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    /* 150% */
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+}
+
+.Team-Agent-info-phone-numbers-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.Team-Agent-info-phone-number-bar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 21px;
+    width: 200px;
+}
+
+.Team-Agent-info-phone-icon {
+    width: 18px;
+    height: 18px;
+    color: #333;
+
+}
+
+.Team-Agent-info-phone-number {
+    color: var(--dark-grey, #333);
+    font-size: 18px;
+    font-style: normal;
+    line-height: 21px;
+    margin-bottom: 0;
+
+    /* 116.667% */
+}
+
+.Team-Agent-info-button-bar {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 15px;
+    background: var(--orange, #03001e);
+    /* 1 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Team-Agent-info-button-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    /* 116.667% */
+    text-transform: uppercase;
+    text-emphasis-color: #fff;
+    margin-bottom: 0;
+
+}

@@ -1,0 +1,26 @@
+.Woking-environment-for-Agent-page-Agent-name-image {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Woking-environment-for-Agent-page-Agent-name-image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Agent-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.Main-agent-page-full-div{
+    width: 1000px;
+    height: 1500px;
+}

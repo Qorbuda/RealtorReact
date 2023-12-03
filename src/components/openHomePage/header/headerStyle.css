@@ -1,0 +1,29 @@
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.header_container span {
+    font-size: 32px;
+}
+
+.header_container small {
+    color: #B0AFAF;
+    font-size: 14px;
+}
+
+.header_container button {
+    padding: 18px 24px;
+    background-color: #E77817;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

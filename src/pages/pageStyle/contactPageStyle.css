@@ -1,0 +1,35 @@
+.Contact-page-full-div {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.Contact-page-title {
+    color: var(--Gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.Contact-page-tou-agent-box {
+    display: flex;
+    width: 1200px;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Contact-page-agents-full-div {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.Contact-page-page-lier-agent-box {
+    display: flex;
+    padding: 32px;
+    width: 588px;
+    height: 325px;
+}

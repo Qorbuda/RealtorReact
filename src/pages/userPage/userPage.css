@@ -1,0 +1,218 @@
+.User-page-full-div {
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    margin-bottom: 100px;
+}
+
+.User-page-agent-info {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.User-page-agent-title-and-image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.User-page-agent-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.User-page-agent-title-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.User-page-agent-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.User-page-agent-name {
+    color: var(--dark-grey, #333);
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 0;
+    /* 87.5% */
+}
+
+.User-page-agent-name-icon-div {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    padding: 0.563px;
+    justify-content: center;
+    align-items: center;
+}
+
+.User-page-agent-name-icon {
+    width: 16.875px;
+    height: 16.875px;
+    flex-shrink: 0;
+}
+
+.User-page-log-out-buttton-full-div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.User-page-log-out-buttton-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.User-page-log-out-button-text {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.User-page-search-sistem-full-div {
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.User-page-search-sistem-add-new-btn {
+    display: flex;
+    height: 52px;
+    padding: 12px 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 15px;
+    border: 1px solid var(--orange, #03001e);
+    background: var(--orange, #03001e);
+}
+
+.User-page-search-sistem-add-new-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.User-page-search-sistem-add-new-info-title {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    /* 116.667% */
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.User-page-search-sistem-add-new-info-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.User-page-search-sistem-properti-all-button {
+    display: flex;
+    padding: 12px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--dark-grey, #333);
+}
+
+.User-page-search-sistem-properti-all-btn-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.User-page-search-sistem-properti-status-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.User-page-search-sistem-properti-all-or-my {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.User-page-search-sistem-properti-my-button {
+    display: flex;
+    padding: 12px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--light-grey, #F2F2F2);
+}
+
+.User-page-search-sistem-properti-my-btn-text {
+    color: var(--light-grey, #B0AFAF);
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.User-page-apartment-boxs {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+
+.User-pahe-show-mor-button {
+    display: inline-flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    background: var(--orange, #03001e);
+}
+
+.User-pahe-show-mor-button-text {
+    color: var(--white, #FFF);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.User-pahe-show-mor-button-Arrow {
+    width: 20px;
+    height: 15px;
+    fill: var(--white, #FFF);
+}

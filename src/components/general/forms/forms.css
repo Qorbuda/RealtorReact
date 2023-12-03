@@ -1,0 +1,56 @@
+.ts-form {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 15px;
+    padding: 18px 20px;
+    position: relative;
+    text-align: center;
+    background: #F2F2F2;
+    border-color: #F2F2F2;
+
+}
+
+.ts-textarea {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 10px;
+    position: relative;
+    background: #F2F2F2;
+    border-color: #F2F2F2;
+
+}
+
+.ts-textarea:focus {
+    background: #F2F2F2;
+    border-color: #03001e;
+    box-shadow: 0 0 0 0.25rem rgba(231, 120, 23, 0.25);
+}
+
+.ts-form:focus {
+    background: #F2F2F2;
+    border-color: #03001e;
+    box-shadow: 0 0 0 0.25rem rgba(231, 120, 23, 0.25);
+}
+
+
+.bs-title-placeholder {
+    display: none;
+}
+
+
+.base-select-input {
+    width: 70%;
+}
+
+.base-select-span {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+
+}
