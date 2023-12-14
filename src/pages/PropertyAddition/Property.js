@@ -24,7 +24,7 @@ function Property() {
     var lang = getActivLanguageStatus();
     var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
     useEffect(() => {
-        axios.get(`https://localhost:44394/api/Appartments/get-characteristic?langId=${langId}`)
+        axios.get(`http://167.86.75.34/api/Appartments/get-characteristic?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setCheckboxes(data);
@@ -54,7 +54,7 @@ function Property() {
     const [dealTypes, setDealTypes] = useState([]);
     const [repairs, setRepairs] = useState([]);
     useEffect(() => {
-        axios.get(`https://localhost:44394/api/Appartments/get-categories?langId=${langId}`)
+        axios.get(`http://167.86.75.34/api/Appartments/get-categories?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setCategories(data);
@@ -64,7 +64,7 @@ function Property() {
             });
     }, []);
     useEffect(() => {
-        axios.get(`https://localhost:44394/api/Appartments/get-deal-types?langId=${langId}`)
+        axios.get(`http://167.86.75.34/api/Appartments/get-deal-types?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setDealTypes(data);
@@ -74,7 +74,7 @@ function Property() {
             });
     }, []);
     useEffect(() => {
-        axios.get(`https://localhost:44394/api/Appartments/get-repairs?langId=${langId}`)
+        axios.get(`http://167.86.75.34/api/Appartments/get-repairs?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setRepairs(data);

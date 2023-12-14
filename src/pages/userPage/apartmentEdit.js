@@ -114,7 +114,7 @@ async function ApartmentEdit(apartmentId) {
     try {
         var lang = getActivLanguageStatus();
         var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
-        const response = await fetch(`https://localhost:44394/api/Appartments/get-edit-appartment?id=${apartmentId}&langId=${langId}`);
+        const response = await fetch(`http://167.86.75.34/api/Appartments/get-edit-appartment?id=${apartmentId}&langId=${langId}`);
         const data = await response.json();
         return data;
       } catch (error) {

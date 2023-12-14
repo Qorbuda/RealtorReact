@@ -42,7 +42,7 @@ function Owner() {
     const [agents, setAgents] = useState([]);
 
     useEffect(() => {
-        axios.get('https://localhost:44394/api/Appartments/get-offices')
+        axios.get('http://167.86.75.34/api/Appartments/get-offices')
             .then(response => {
                 const officeData = response.data;
                 setOffices(officeData);
@@ -53,7 +53,7 @@ function Owner() {
     }, []);
     useEffect(() => {
         // Fetch agent data when the selected office changes
-        axios.get(`https://localhost:44394/api/Agents/get-office-aggents?officeId=${officeSelect}`)
+        axios.get(`http://167.86.75.34/api/Agents/get-office-aggents?officeId=${officeSelect}`)
           .then(response => {
             const agentData = response.data;
             setAgents(agentData);

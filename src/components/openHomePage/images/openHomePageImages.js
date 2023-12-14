@@ -35,7 +35,7 @@ const OpenHomePageImagesComponent = ({mainImageInfo, imagesInfo}) => {
         <div>
             {modalOpen && <div className="image-modal-container">
                 <div> 
-                    <img className="modal-image" src={`https://localhost:44394/api/image/${imagesArray[currentSlide]}`} />
+                    <img className="modal-image" src={`http://167.86.75.34/api/image/${imagesArray[currentSlide]}`} />
                     <button className="close-button" onClick={toggleModal}>
                         CLOSE <FontAwesomeIcon icon={faTimes} className="custom-icon" />
                     </button>
@@ -54,10 +54,10 @@ const OpenHomePageImagesComponent = ({mainImageInfo, imagesInfo}) => {
                 </div>
             </div>}
             <div className="image-container">
-                <img className="main-picture" src={`https://localhost:44394/api/image/${mainImage}`} />
+                <img className="main-picture" src={`http://167.86.75.34/api/image/${mainImage}`} />
                 <div className="small-picture-container">
                     {smallImages.map((image, index) => (
-                        <img className="small-picture" src={`https://localhost:44394/api/image/${image}`} key={index} />
+                        <img className="small-picture" src={`http://167.86.75.34/api/image/${image}`} key={index} />
                     ))}
                 </div>
                 <button onClick={toggleModal}>

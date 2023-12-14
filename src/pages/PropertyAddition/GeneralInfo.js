@@ -26,7 +26,7 @@ function GeneralInfo(test = "")  {
     const [street, setstreet] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://localhost:44394/api/Appartments/get-cities?langId=${langId}`)
+        axios.get(`http://167.86.75.34/api/Appartments/get-cities?langId=${langId}`)
             .then(response => {
                 const citiesData = response.data;
                 setCities(citiesData);
@@ -37,7 +37,7 @@ function GeneralInfo(test = "")  {
             });
         }, []);
         useEffect(() => {
-            axios.get(`https://localhost:44394/api/Appartments/get-streets?langId=${langId}&cityId=${citySelect}`)
+            axios.get(`http://167.86.75.34/api/Appartments/get-streets?langId=${langId}&cityId=${citySelect}`)
             .then(response => {
                 const streetData = response.data;
                 setstreet(streetData);

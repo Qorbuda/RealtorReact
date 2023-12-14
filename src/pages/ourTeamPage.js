@@ -24,7 +24,7 @@ function OurTeamPage() {
     var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
     const [agents, setAgents] = useState([]);
     useEffect(() => {
-        axios.get(`https://localhost:44394/api/Agents/get-our-team-agents?langId=${langId}`)
+        axios.get(`http://167.86.75.34/api/Agents/get-our-team-agents?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setAgents(data);

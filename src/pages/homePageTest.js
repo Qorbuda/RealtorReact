@@ -9,7 +9,7 @@ export default class HomePageTest extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://localhost:44394/api/Appartments/get-appartments', {page: 2})
+    axios.get('http://167.86.75.34/api/Appartments/get-appartments', {page: 2})
       .then(res => {
         const persons = res.data;
         this.setState({ persons });
