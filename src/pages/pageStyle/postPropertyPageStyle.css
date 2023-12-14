@@ -1,0 +1,6 @@
+.Post-property-page-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: center;
+}
