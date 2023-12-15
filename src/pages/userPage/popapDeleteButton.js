@@ -56,7 +56,7 @@ const PopapDeleteButton = ({ open, onClose, historyFullInffoArr }) => {
   );
   async function deleteProperty(itemId, agentId, reason){
     var reasText = reasons.find(i => i.index == reason).name;
-    const response = await fetch(`http://167.86.75.34/api/Appartments/delete-appartment?itemId=${itemId}&agentId=${agentId}&reason=${reasText}`);
+    const response = await fetch(`https://167.86.75.34/api/Appartments/delete-appartment?itemId=${itemId}&agentId=${agentId}&reason=${reasText}`);
     onClose()
     window.location.reload(true)
   }

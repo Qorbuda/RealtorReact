@@ -11,7 +11,7 @@ function AgentInfoBox(apartmentInfo) {
 
     return (
         <div className="Apartment-box-from-agent-agent-info-full-div">
-            <img className='Apartment-box-from-agent-agent-info-image' src={`http://167.86.75.34/api/image/upload/${apartmentInfo.agentImage}`} />
+            <img className='Apartment-box-from-agent-agent-info-image' src={`https://167.86.75.34/api/image/upload/${apartmentInfo.agentImage}`} />
             <div className="Apartment-box-from-agent-agent-info-text-div">
                 <p className="Apartment-box-from-agent-agent-info-name-text">{apartmentInfo.agentName}</p>
                 <p className="Apartment-box-from-agent-agent-info-office-text">{apartmentInfo.office}</p>

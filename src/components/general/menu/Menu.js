@@ -20,7 +20,7 @@ function Menu() {
     };
     const [currency, setCurrency] = useState("1 $ = 2.672 GEL");
     useEffect(() => {
-        axios.get(`http://167.86.75.34/api/Appartments/get-currency`)
+        axios.get(`https://167.86.75.34/api/Appartments/get-currency`)
             .then(response => {
                 const data = response.data;
                 setCurrency(`1 $ = ${data}`);

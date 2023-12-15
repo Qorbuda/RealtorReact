@@ -7,7 +7,7 @@ const HistoriChangeBox = ({ key, historiBoxInfo }) => {
         <div key={key} className='History-change-box-page-fuul-div'>
             <div className="History-change-box-page-agent-div">
                 <div className="History-change-box-page-agent">
-                    <img className="History-change-box-page-agent-image" src={`http://167.86.75.34/api/image/upload/${historiBoxInfo.image}`}></img>
+                    <img className="History-change-box-page-agent-image" src={`https://167.86.75.34/api/image/upload/${historiBoxInfo.image}`}></img>
                     <p className="History-change-box-page-change-deyt">{historiBoxInfo.changeDate}</p>
                     <p className="History-change-box-page-change-deyt">{historiBoxInfo.changeTime}</p>
                 </div>

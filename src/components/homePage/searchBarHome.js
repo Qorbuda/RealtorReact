@@ -33,7 +33,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     const [street, setstreet] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://167.86.75.34/api/Appartments/get-cities?langId=${langId}`)
+        axios.get(`https://167.86.75.34/api/Appartments/get-cities?langId=${langId}`)
             .then(response => {
                 const citiesData = response.data;
                 setCities(citiesData);
@@ -44,7 +44,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     }, []);
     useEffect(() => {
         // Fetch agent data when the selected office changes
-        axios.get(`http://167.86.75.34/api/Appartments/get-streets?langId=${langId}&cityId=${citySelect}`)
+        axios.get(`https://167.86.75.34/api/Appartments/get-streets?langId=${langId}&cityId=${citySelect}`)
             .then(response => {
                 const streetData = response.data;
                 setstreet(streetData);
@@ -57,7 +57,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     const [dealTypes, setDealTypes] = useState([]);
     const [repairs, setRepairs] = useState([]);
     useEffect(() => {
-        axios.get(`http://167.86.75.34/api/Appartments/get-categories?langId=${langId}`)
+        axios.get(`https://167.86.75.34/api/Appartments/get-categories?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setCategories(data);
@@ -67,7 +67,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
             });
     }, []);
     useEffect(() => {
-        axios.get(`http://167.86.75.34/api/Appartments/get-deal-types?langId=${langId}`)
+        axios.get(`https://167.86.75.34/api/Appartments/get-deal-types?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setDealTypes(data);
@@ -77,7 +77,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
             });
     }, []);
     useEffect(() => {
-        axios.get(`http://167.86.75.34/api/Appartments/get-repairs?langId=${langId}`)
+        axios.get(`https://167.86.75.34/api/Appartments/get-repairs?langId=${langId}`)
             .then(response => {
                 const data = response.data;
                 setRepairs(data);

@@ -57,7 +57,7 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                 </div>
             </div>
             <div className='realtor-box'>
-                <img src={`http://167.86.75.34/api/image/${realtorInfo.realtorImage}`} className='open-home-page-agent-iamge' />
+                <img src={`https://167.86.75.34/api/image/${realtorInfo.realtorImage}`} className='open-home-page-agent-iamge' />
                 <div className='realtor-info'>
                     <span>{realtorInfo.realtorName}</span>
                     <div className='open-home-page-agent-iamge-div'>

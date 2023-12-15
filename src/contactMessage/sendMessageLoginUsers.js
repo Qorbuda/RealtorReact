@@ -94,7 +94,7 @@ async function sendMessageLoginUsers(clickCount, filter) {
   try {
     var lang = getActivLanguageStatus();
     var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
-    const response = await fetch(`http://167.86.75.34/api/Appartments/get-agent-appartment?filterJson=${JSON.stringify(filter)}&langId=${langId}&page=${clickCount}`);
+    const response = await fetch(`https://167.86.75.34/api/Appartments/get-agent-appartment?filterJson=${JSON.stringify(filter)}&langId=${langId}&page=${clickCount}`);
     const data = await response.json();
     return data;
   } catch (error) {
