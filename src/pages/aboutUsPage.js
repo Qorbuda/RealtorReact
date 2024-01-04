@@ -6,7 +6,7 @@ function AboutUsPage() {
     return (
         <div className='post-property-page'>
             <div className='main-container'>
-                <OpenHomePage />
+                {/* <OpenHomePage /> */}
             </div>  
         </div>
     );
