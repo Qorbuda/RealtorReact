@@ -25,7 +25,7 @@ function ContactPageAgentBox(agentInfo) {
                     </div>
                 </div>
                 <div className='Contact-page-agent-text-info'>
-                    <img src={`https://167.86.75.34/api/image/${agentInfo.agentInfo.image}`} className="Contact-page-agent-agent-image" />
+                    <img src={`https://api.myflats.ge/api/image/${agentInfo.agentInfo.image}`} className="Contact-page-agent-agent-image" />
                     <div className="Contact-page-agent-agent-info-text-div">
                         <p className='Contact-page-agent-info-text-name'>{agentInfo.agentInfo.name}</p>
                         <p className='Contact-page-agent-info-text-status'>{agentInfo.agentInfo.position}</p>

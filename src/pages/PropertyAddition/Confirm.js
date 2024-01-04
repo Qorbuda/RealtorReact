@@ -202,7 +202,7 @@ function Confirm() {
     
     
         formData.append('inputInfo', JSON.stringify(inputInfo));
-        axios.post('https://167.86.75.34/api/Appartments/post-appartments', formData, {
+        axios.post('https://api.myflats.ge/api/Appartments/post-appartments', formData, {
             params:{agentId: userId},
             headers: {
                 'Content-Type': 'multipart/form-data',

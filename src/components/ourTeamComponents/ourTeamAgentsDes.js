@@ -16,7 +16,7 @@ function OurTeamAgentsDes(agentInfro, agentKey) {
     
     return (
         <div key={agentInfro.agentKey} className='Team-Agent-info-bar' >
-            <img src={`https://167.86.75.34/api/image/${getInfroText(agentInfro.agentInfro, "agentMainImage")}`} alt="Image" className="Team-Agent-info-bar-img" />
+            <img src={`https://api.myflats.ge/api/image/${getInfroText(agentInfro.agentInfro, "agentMainImage")}`} alt="Image" className="Team-Agent-info-bar-img" />
             <div className='Team-Agent-info-text-bar'>
                 <div className='Team-Agent-info-text'>
                     <div className='Team-Agent-info-name'>

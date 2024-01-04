@@ -81,7 +81,7 @@ function Header() {
                         </a> : 
 
                         <a className='d-flex flex-row align-items-center gap-3 white-font login-btn' href='/user_property'>
-                            <img src={`https://167.86.75.34/api/image/${user.img}`} style = {{width: "50px", height: "50px", borderRadius: "50%"}}/>
+                            <img src={`https://api.myflats.ge/api/image/${user.img}`} style = {{width: "50px", height: "50px", borderRadius: "50%"}}/>
                             {user.fullname}
                         </a>
                     }

@@ -36,7 +36,7 @@ function LoginPage() {
             UserName: uname.value,
             Password: pass.value,
         };
-        axios.post('https://167.86.75.34/api/Authorization/authenticate', dataToSend)
+        axios.post('https://api.myflats.ge/api/Authorization/authenticate', dataToSend)
         .then(response => {
             if (response.data.token){
                 setIsSubmitted(true);

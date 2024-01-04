@@ -40,7 +40,7 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
             <div className="Apartment-box-from-agent-page-div">
                 <div className="Apartment-box-from-agent-apartment-info-full-div">
                     <div className="Apartment-box-from-agent-apartment-info-image-div">
-                        <img className="Apartment-box-from-agent-apartment-info-image" src={`https://167.86.75.34/api/image/get-main-image/${apartmentInfo.mainImage}`} />
+                        <img className="Apartment-box-from-agent-apartment-info-image" src={`https://api.myflats.ge/api/image/get-main-image/${apartmentInfo.mainImage}`} />
 
                     </div>
                     <div className="Apartment-box-from-agent-apartment-info-div">
@@ -71,7 +71,7 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
 
                                 </div>
                                 <div className="Apartment-box-from-agent-agent-info-full-div">
-                                    <img className='Apartment-box-from-agent-agent-info-image' src={`https://167.86.75.34/api/image/upload/${apartmentInfo.agentImage}`} />
+                                    <img className='Apartment-box-from-agent-agent-info-image' src={`https://api.myflats.ge/api/image/upload/${apartmentInfo.agentImage}`} />
                                     <div className="Apartment-box-from-agent-agent-info-text-div">
                                         <p className="Apartment-box-from-agent-agent-info-name-text">{apartmentInfo.agentName}</p>
                                         <p className="Apartment-box-from-agent-agent-info-office-text">{apartmentInfo.office}</p>

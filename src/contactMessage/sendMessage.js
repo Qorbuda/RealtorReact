@@ -111,7 +111,7 @@ async function SendMessage(clickCount, filter) {
     // Assuming you are using fetch or some asynchronous operation to get data from the backend
     var lang = getActivLanguageStatus();
     var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
-    const response = await fetch(`https://167.86.75.34/api/Appartments/get-appartments?filterJson=${JSON.stringify(filter)}&langId=${langId}&page=${clickCount}`);
+    const response = await fetch(`https://api.myflats.ge/api/Appartments/get-appartments?filterJson=${JSON.stringify(filter)}&langId=${langId}&page=${clickCount}`);
     const data = await response.json();
     return data;
   } catch (error) {

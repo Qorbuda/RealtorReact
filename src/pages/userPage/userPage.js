@@ -69,7 +69,7 @@ function UserPage() {
 
             <div className="User-page-agent-info">
                 <div className="User-page-agent-title-and-image">
-                    <img className='User-page-agent-image' src={`https://167.86.75.34/api/image/${user.img}`} alt="Image"/>
+                    <img className='User-page-agent-image' src={`https://api.myflats.ge/api/image/${user.img}`} alt="Image"/>
                     <div className="User-page-agent-title-div">
                         <div className="User-page-agent-title">
                             <p className="User-page-agent-name">{user.fullname}</p>
