@@ -30,6 +30,7 @@
     background-color: lightblue;
     height: 423px;
     width: 555px;
+    cursor: pointer;
 }
 
 .small-picture-container {
@@ -42,6 +43,7 @@
 .small-picture {
     width: 285px;
     height: 205px;
+    cursor: pointer;
 }
 
 .image-modal-container {
@@ -133,4 +135,26 @@
 
 .custom-icon {
     font-size: 1.3em;
-  }
+}
+
+@media only screen and (max-width: 1230px) {
+    .image-container {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main-picture {
+        width: 300px;
+        height: 229px;
+    }
+    .small-picture {
+        width: 153px;
+        height: 110px;
+    }
+    .modal-image {
+        min-height: 130px;
+        max-height: 227px;
+    }
+}

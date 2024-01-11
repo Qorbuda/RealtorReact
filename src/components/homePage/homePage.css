@@ -9,7 +9,8 @@
     max-width: 384px;
     padding: 0px;
     gap: 20px;
-
+    position:relative;
+    z-index:auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -22,6 +23,8 @@
     align-items: center;
     width: 100%;
     gap: 24px;
+    position:relative;
+    z-index:auto;
 }
 
 .ts-property-card-info-head-container {
@@ -39,7 +42,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
+    z-index:3;
     gap: 20px;
 }
 
@@ -117,9 +120,56 @@
     }
 }
 
+@media only screen and (max-width: 400px) {
+    .ts-base-container {
+        max-width: 100%!important;
+    }
+    .ts-property-card {
+        max-width: calc(100% - 10px);
+    }
+    .ts-properties-section {
+        max-width: 100%;
+    }
+}
+
 .property-card-image-carusel{
     max-width: 100px;
     max-height: 100px;
     width: auto;
     height: auto;
+}
+
+.ts-property-card-open-apartment-image-button{
+    float:left;
+    height:100%;
+    width:70%;
+    z-index:2;
+    background-color:transparent;
+
+    position: absolute;
+    top: 0;
+    outline: none;
+    border: none;
+    margin-left: 15%;
+
+}
+
+.ts-property-card-open-apartment-main-button{
+    float:left;
+    height:50%;
+    width:100%;
+    z-index:2;
+    background-color:transparent;
+    position: absolute;
+    top: 0;
+    outline: none;
+    border: none;
+    margin-top: 60%;
+
+}
+
+
+.total-test{
+    position:relative;
+    z-index:auto;
 }

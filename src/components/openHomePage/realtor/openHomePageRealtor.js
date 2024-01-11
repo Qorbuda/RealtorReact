@@ -4,6 +4,7 @@ import Ka from '../../icons/ka.svg'
 import Eng from '../../icons/eng.svg'
 import Ru from '../../icons/ru.svg'
 import LanguageSwitcher from '../../secondary/localization/LanguageSwitcher';
+import PhoneCallOrangeSmal from '../../icons/PhoneCallOrangeSmal.svg';
 
 const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
     var textFolder = LanguageSwitcher().openApartmentPage;
@@ -61,7 +62,7 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                 <div className='realtor-info'>
                     <span>{realtorInfo.realtorName}</span>
                     <div className='open-home-page-agent-iamge-div'>
-                        <img src="phone.png"/>
+                        <img src={PhoneCallOrangeSmal}/> 
                         <span>{realtorInfo.realtorPhone}</span>
                     </div>
                     <div className='open-home-page-agent-language-flags'>

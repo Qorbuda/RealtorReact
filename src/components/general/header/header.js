@@ -89,7 +89,7 @@ function Header() {
                     {/* <button className={location.pathname === "/contact" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => {setTab("login")}}>Contact</button> */}
 
                     <div className="mobile-content">
-                        <img src="header-burger.png" onClick={handleMobileMenuOpen}/>
+                        <img src={process.env.PUBLIC_URL + '/header-burger.png'} onClick={handleMobileMenuOpen}/>
                     </div>
 
                 </div>

@@ -63,3 +63,12 @@
     height: 15.378px;
     flex-shrink: 0;
 }
+
+@media only screen and (max-width: 1230px) {
+    .Add-link-box-full-div {
+        width: 100%;
+    }
+    .Add-link-box-text {
+        width: 100%;
+    }
+}

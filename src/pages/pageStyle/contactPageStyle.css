@@ -33,3 +33,35 @@
     width: 588px;
     height: 325px;
 }
+
+@media only screen and (max-width: 1230px) {
+    .Contact-page-agents-full-div {
+        width: 100%;
+    }
+    .Contact-page-tou-agent-box {
+        width: 100%;
+        flex-direction: column;
+    }
+    .Contact-page-agent-box-full-div {
+        width: 100%;
+    }
+    .Contact-page-page-agent-box-A {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Contact-page-agent-Mail-icon-text {
+        font-size: 14px;
+        width: 100%;
+    }
+    .Contact-page-agent-info-text-mail-div {
+        flex-direction: column;
+    }
+    .Contact-page-agent-box-full-div {
+        height: 410px;
+    }
+    .Contact-page-agent-text-info {
+        gap: 15px;
+    }
+}

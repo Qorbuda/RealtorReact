@@ -20,21 +20,23 @@ function PropertyCard(apartmentInfo) {
     };
     return (
         <div className='ts-property-card d-flex flex-column align-items-start'>
-            <div className=''>
-                <Carousel imagePath={apartmentInfo.mainImagePath} />
 
+            <button className='ts-property-card-open-apartment-main-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1); window.location.reload(); }}>
+            </button>
+
+            <div className='total-test'>
+                <Carousel imagePath={apartmentInfo.mainImagePath} />
+                <button className='ts-property-card-open-apartment-image-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1); window.location.reload(); }}>
+                </button>
             </div>
             <div className='ts-property-card-info'>
                 <div className='ts-property-card-info-head-container'>
                     <p className='ts-property-card-info-head-info-text'>{apartmentInfo.cityName}</p>
                     <div className='ts-property-card-info-head-price-div'>
-
-                        {/* <p className='ts-property-card-info-head-info-text' ref={textRef} id='ts-property-card-info-head-info-text-id'>{getPriceValute(apartmentInfo.price)}</p> */}
                         <CurrencyButton textId={apartmentInfo.id} priceArr={apartmentInfo.price} />
                     </div>
                 </div>
                 <div className='ts-property-card-info-content-container flex-wrap' onClick={() => { setTab("open_property", apartmentInfo.id, 1); window.location.reload(); }}>
-
                     <div>
                         <span className='ts-property-card-info-primary-items orange-font' style={{ marginRight: "8px" }}>id</span>
                         <span className='ts-property-card-info-primary-items '>{apartmentInfo.itemCode}</span>

@@ -1,163 +1,163 @@
 {
   "HomePage": {
     "FastFilter": {
-      "UnderConstruction": "Under construction companies",
-      "Apartments": "Apartments",
-      "CommercialSpace": "Commercial Space",
-      "Land": "Land",
-      "Investmentobject": "Investment object",
-      "Privatehouses": "Private houses"
+      "UnderConstruction": "მშენებარე კომპანიები",
+      "Apartments": "ბინები",
+      "CommercialSpace": "კომერციული ფართი",
+      "Land": "მიწა",
+      "Investmentobject": "საინვესტიციო ობიექტი",
+      "Privatehouses": "კერძო სახლები"
     },
     "Footer": {
-      "home": "Home",
-      "ourTeam": "Our team",
-      "becomeAgent": "Become agent",
-      "Franchise": "Franchise",
-      "Contact": "Contact",
-      "postProperty": "Post property",
-      "currency": "currency",
-      "aboutUs": "About us"
+      "home": "მთავარი",
+      "ourTeam": "ჩვენი გუნდი",
+      "becomeAgent": "გახდი აგენტი",
+      "Franchise": "ფრანშიზა",
+      "Contact": "კონტაქტი",
+      "postProperty": "პოსტის ქონება",
+      "currency": "ვალუტა",
+      "aboutUs": "ჩვენს შესახებ"
     },
     "Header": {
-      "officeAddresses": "Office addresses",
-      "logIn": "Log in"
+      "officeAddresses": "ოფისის მისამართები",
+      "logIn": "შესვლა"
     },
     "searchField": {
-      "priceFrom": "Price from",
-      "Space": "Space",
-      "city": "CITY",
-      "room": "ROOM",
-      "Beadroom": "BEADROOM",
-      "dealType": "DEAL TYPE",
-      "bathroom": "Bathroom",
-      "repairs": "REPAIRS",
-      "street": "STREET",
-      "search": "SEARCH",
-      "PropertyId": "Property ID",
-      "apartmentCategory": "APARTMENT CATEGORY",
-      "Floor": "Floor"
+      "priceFrom": "ფასი დან",
+      "Space": "სივრცე",
+      "city": "ქალაქი",
+      "room": "ოთახი",
+      "Beadroom": "საძინებელი",
+      "dealType": "გარიგების ტიპი",
+      "bathroom": "აბაზანა",
+      "repairs": "რემონტი",
+      "street": "ქუჩა",
+      "search": "ძიება",
+      "PropertyId": "ქონების ID",
+      "apartmentCategory": "ბინების კატეგორია",
+      "Floor": "სართული"
     }
   },
   "OurTeamPage": {
-    "SearchBtnText": "SEARCH",
-    "PropertyId": "Property ID",
-    "MessageToAgent": "Message to agent",
-    "Agents": "Agents"
+    "SearchBtnText": "ძიება",
+    "PropertyId": "ქონების ID",
+    "MessageToAgent": "შეტყობინება აგენტს",
+    "Agents": "აგენტები"
   },
   "Contact": {
-    "ContactUs": "CONTACT US"
+    "ContactUs": "ᲓᲐᲒᲕᲘᲙᲐᲕᲨᲘᲠᲓᲘᲗ"
   },
   "PostPropertyPage": {
-    "AddAProperty": "Add a property",
-    "SekectCity": "City",
-    "SekectStreet": "Street",
-    "Next": "Next ",
-    "Back": "BACK ",
+    "AddAProperty": "დაამატეთ ქონება",
+    "SekectCity": "ქალაქი",
+    "SekectStreet": "ქუჩა",
+    "Next": "შემდეგი ",
+    "Back": "უკან ",
     "GeneralInfoPage": {
-      "District": "District ",
-      "Building": "Building ",
-      "ApartamentNumber": "Apartament number ",
-      "city": "City",
-      "street": "Street"
+      "District": "უბანი ",
+      "Building": "შენობა ",
+      "ApartamentNumber": "ბინის ნომერი",
+      "city": "ქალაქი",
+      "street": "ქუჩა"
     },
     "ownerPage": {
-      "Name": "Name",
-      "Surname": "Surname",
-      "PersonalId": "Personal Id",
-      "Phone": "Phone",
-      "SecendPhone": "Secend phone",
-      "Email": "Email",
-      "Agent": "Agent",
-      "Office": "Office"
+      "Name": "სახელი",
+      "Surname": "გვარი",
+      "PersonalId": "პირადი ID",
+      "Phone": "ტელეფონი",
+      "SecendPhone": "მეორე ტელეფონი",
+      "Email": "ელფოსტა",
+      "Agent": "აგენტი",
+      "Office": "ოფისი"
     },
     "Property": {
-      "Category": "Property Category",
-      "DealType": "Deal Type",
-      "Repairs": "Repairs",
-      "Space": "Space",
-      "Price": "Price",
-      "Floor": "Floor",
-      "Room": "Room",
-      "Bedroom": "Bedroom",
-      "Amenities": "Amenities",
-      "Popular": "Popular",
-      "Bathroom": "Bathroom"
+      "Category": "ქონების კატეგორია",
+      "DealType": "გარიგების ტიპი",
+      "Repairs": "რემონტი",
+      "Space": "სივრცე",
+      "Price": "ფასი",
+      "Floor": "სართული",
+      "Room": "ოთახი",
+      "Bedroom": "საძინებელი",
+      "Amenities": "კეთილმოწყობის",
+      "Popular": "პოპულარული",
+      "Bathroom": "აბაზანა"
     },
-    "Description": "Description ",
+    "Description": "აღწერა ",
     "photosAndDocs": {
-      "AddMainImage": "Add main image",
-      "IconTitleText": "Upload a picture",
+      "AddMainImage": "დაამატეთ მთავარი სურათი",
+      "IconTitleText": "ატვირთეთ სურათი",
       "IconFormatText": "SVG, PNG or JPG (rec. 700x430px)",
-      "UploadFile": "Upload file",
-      "MaxSize": "50 MB max file size",
-      "buttonText": "Browse",
-      "Links": "Links",
-      "AddMainImages": "Add main images"
+      "UploadFile": "aტვირთე ფაილი",
+      "MaxSize": "ფაილის მაქსიმალური ზომა 50 მბ",
+      "buttonText": "დათვალიერება",
+      "Links": "ბმულები",
+      "AddMainImages": "დაამატეთ ძირითადი სურათები"
     },
     "Confirm": {
-      "Property": "Property",
-      "Owner": "Owner",
-      "Confirm": "Confirm",
-      "Description": "Description",
-      "PhotosAndDocs": "Photos and Docs",
-      "PersonalID": "Personal ID",
-      "GeneralInformation": "General information",
-      "AddMainImages": "Add main images"
+      "Property": "საკუთრება",
+      "Owner": "მფლობელი",
+      "Confirm": "დაადასტურეთ",
+      "Description": "აღწერა",
+      "PhotosAndDocs": "ფოტოები და დოკუმენტები",
+      "PersonalID": "პირადი ID",
+      "GeneralInformation": "Ზოგადი ინფორმაცია",
+      "AddMainImages": "დაამატეთ ძირითადი სურათები"
     }
   },
   "LoginPage": {
-    "LogInToYourAccount": "Log in to your account",
-    "WrongPassword": "Wrong Password",
-    "WrongUser": "Wrong User",
-    "ForgotYourPassword": "Forgot your password?",
-    "Login": "LOG IN",
+    "LogInToYourAccount": "შედით თქვენს ანგარიშზე",
+    "WrongPassword": "არასწორი პაროლი",
+    "WrongUser": "არასწორი მომხმარებელი",
+    "ForgotYourPassword": "Დაგავიწყდათ პაროლი?",
+    "Login": "ᲨᲔᲡᲕᲚᲐ",
     "ForgotPassword": {
-      "ForgotPassText": "FORGOT PASSWORD?",
-      "Send": "Send",
-      "BackLog": "Back to log in ",
-      "EnterEmailText": "Enter your email,we'll send you reset instructions"
+      "ForgotPassText": "ᲓᲐᲒᲐᲕᲘᲬᲧᲓᲐ ᲨᲔᲜᲘ ᲞᲐᲠᲝᲚᲘ?",
+      "Send": "გაგზავნა",
+      "BackLog": "უკან შესვლა ",
+      "EnterEmailText": "შეიყვანეთ თქვენი ელფოსტა, ჩვენ გამოგიგზავნით გადატვირთვის ინსტრუქციებს"
     },
     "finishForogotPassword": {
-      "CheckYourEmail": "CHECK YOUR EMAIL"
+      "CheckYourEmail": "ᲒᲐᲓᲐᲐᲛᲝᲬᲛᲝᲗ ᲔᲚᲤᲝᲡᲢᲐ"
     }
   },
   "UserPage": {
-    "allProperties":"All properties",
-    "myProperties":"My properties",
-    "addNew":"ADD NEW",
-    "showMore":"SOW MORE",
-    "logOut": "Log out",
+    "allProperties":"ყველა თვისება",
+    "myProperties":"ჩემი თვისებები",
+    "addNew":"ᲐᲮᲚᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ",
+    "showMore":"დათესეთ მეტი",
+    "logOut": "გასვლა",
     "apartmentBox": {
-      "floor":"Floor:",
-      "bedrooms":"Bedrooms:",
-      "bathroom":"Bathroom:",
-      "generalInfo":"General info",
+      "floor":"სართული:",
+      "bedrooms":"საძინებლები:",
+      "bathroom":"აბაზანა:",
+      "generalInfo":"Ზოგადი ინფორმაცია",
       "id":"ID",
-      "fullSpace":"Full Space",
-      "dealType":"Deal type",
-      "category":"Category",
-      "address":"Address",
-      "city":"City",
-      "history":"HISTORY",
-      "edit":"EDIT",
-      "delete":"DELETE",
-      "open": "open"
+      "fullSpace":"სრული ფართი",
+      "dealType":"გარიგების ტიპი",
+      "category":"კატეგორია",
+      "address":"მისამართი",
+      "city":"ქალაქი",
+      "history":"ისტორია",
+      "edit":"რედაქტირება",
+      "delete":"წაშლა",
+      "open": "გახსნა"
     }
   },
   "openApartmentPage": {
-    "description":"DESCRIPTION",
-    "Information":"Information",
-    "Added":"Added: ",
-    "Floor":"Floor: ",
-    "Bedrooms":"Bedrooms: ",
-    "bathroom":"bathroom: ",
-    "PersonalID":"PersonalID",
-    "FullSpace":"Full Space",
-    "DealType":"Deal Type",
-    "Address":"Address",
-    "City":"City",
-    "Country":"Country",
-    "View":"View",
-    "test":"test"
+    "description":"აღწერა",
+    "Information":"ინფორმაცია",
+    "Added":"დამატებულია: ",
+    "Floor":"სართული: ",
+    "Bedrooms":"საძინებლები: ",
+    "bathroom":"აბაზანა: ",
+    "PersonalID":"პირადი ID",
+    "FullSpace":"სრული ფართი",
+    "DealType":"გარიგების ტიპი",
+    "Address":"მისამართი",
+    "City":"ქალაქი",
+    "Country":"ქვეყანა",
+    "View":"ხედი",
+    "test":"ტესტი"
   }
 }

@@ -37,3 +37,32 @@
     width: 736.12px;
     height: 395.02px;
 }
+
+@media only screen and (max-width: 1230px) {
+    .main-body {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .map {
+        width: 500px;
+        height: 268px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .map {
+        width: 400px;
+        height: 214.67px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .map {
+        width: 350px;
+        height: 187.83px;
+    }
+}

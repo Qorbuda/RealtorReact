@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import './imagesStyle.css';
-import { getImages } from "./mockApi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faCaretLeft, faTimes  } from "@fortawesome/free-solid-svg-icons"
 import '@fortawesome/fontawesome-free/css/all.css';
-import axios from 'axios';
 
 
 
@@ -26,7 +24,11 @@ const OpenHomePageImagesComponent = ({mainImageInfo, imagesInfo}) => {
                 setSmallImages(smallArray);
     }, [imagesInfo]);
 
-    const toggleModal = () => {
+    const toggleModal = (slideNumber = -1) => {
+        console.log(slideNumber);
+        if(slideNumber !== -1) { 
+            setCurrentSlide(slideNumber)
+        }
         setModalOpen(!modalOpen);
         document.body.style.overflow = modalOpen ? "auto" : "hidden";
     }
@@ -54,16 +56,16 @@ const OpenHomePageImagesComponent = ({mainImageInfo, imagesInfo}) => {
                 </div>
             </div>}
             <div className="image-container">
-                <img className="main-picture" src={`https://api.myflats.ge/api/image/${mainImage}`} />
+                <img className="main-picture" src={`https://api.myflats.ge/api/image/${mainImage}`} onClick={() => toggleModal(0)} />
                 <div className="small-picture-container">
                     {smallImages.map((image, index) => (
-                        <img className="small-picture" src={`https://api.myflats.ge/api/image/${image}`} key={index} />
+                        <img className="small-picture" src={`https://api.myflats.ge/api/image/${image}`} key={index} onClick={() => toggleModal(index+1)}/>
                     ))}
                 </div>
-                <button onClick={toggleModal}>
+                {/* <button onClick={toggleModal()}>
                     Show All
-                    <img src="showAllButton.svg"/>
-                </button>
+                    <img src={process.env.PUBLIC_URL + '/showAllButton.svg'}/>
+                </button> */}
             </div>
         </div>
     )

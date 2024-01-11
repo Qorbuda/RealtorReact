@@ -21,7 +21,7 @@ const MobileHeaderMenu = ({handleMenuClose}) => {
 
     return (
         <div className="main-mobile-menu-box">
-            <img src='mobile-menu-x.png' className='x-position' onClick={handleMenuClose}/>
+            <img src={process.env.PUBLIC_URL + '/mobile-menu-x.png'} className='x-position' onClick={handleMenuClose}/>
             <div className='contents-box'>
                 <button className={location.pathname === "/" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("") }}>{textFolder.home}</button>
                 <button className={location.pathname === "/about_us" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("about_us") }}>{textFolder.aboutUs}</button>

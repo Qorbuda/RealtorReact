@@ -1,4 +1,5 @@
 import PropertyCard from "../../homePage/propertyCard";
+import './footer-style.css';
 
 
 const OpenHomePageFooterComponent = ({popularProperties}) => {

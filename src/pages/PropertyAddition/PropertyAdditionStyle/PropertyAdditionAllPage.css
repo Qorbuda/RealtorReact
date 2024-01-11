@@ -1,7 +1,7 @@
 .Post-property-pag-input-boxs {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 48px;
     align-items: center;
     margin-bottom: 100px;
@@ -14,6 +14,8 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
+    max-width: calc(100% - 64px);
+    margin-left: 32px;
 }
 
 
@@ -54,9 +56,9 @@
 
 .Post-property-general-info-input-secend-line {
     display: flex;
-    width: 894px;
     align-items: flex-start;
     gap: 24px;
+    width: 100%;
 }
 
 .Post-property-next-input-button {
@@ -478,4 +480,102 @@
     width: 1200px;
     align-items: center;
     gap: 29px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .Post-property-fescription-page-input {
+        width: calc(100% - 200px)!important;
+    }
+    .Post-property-fescription-page-input-div {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+
+    .Post-property-general-info-input-div {
+        width: 100%;
+    }
+    .Post-property-confirm-box-line {
+        width: 100%;
+        flex-direction: column;
+        padding: 0 5px;
+    }
+    .Post-property-confirm-full-div {
+        width: 100%;
+    }
+    .Post-property-add-map-cordinants {
+        width: 100%!important;
+    }
+    .Post-property-general-info-input-first-line  {
+        flex-direction: column;
+        padding: 0 30px;
+        width: 100%!important;
+    }
+    .Post-property-general-info-input-secend-line-div {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .Post-property-general-info-input-secend-line-div > button {
+        width: 100%;
+    }
+
+    .Post-property-general-info-input-secend-line {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Post-property-owner-page-input-line-div-thri-bar {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .Post-property-propery-page-input-div {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Post-property-propery-page-check-box-full-div {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .Post-property-propery-page-check-box-poplar {
+        width: 100%;
+    }
+
+    .Post-property-fescription-page-input {
+        width: 100%;
+    }
+
+    .Post-property-fescription-page-input-div {
+        width: 100%;
+    }
+
+    .Post-property-page-photos-and-docs-image-and-gallery {
+        flex-direction: column;
+        width: 100%;
+        align-items: center!important;
+    }
+
+    .Post-property-page-link-div {
+        flex-direction: column;
+    }
+
+    .Post-property-page-photos-and-docs-full-div  {
+        width: 100%!important;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Post-property-owner-page-buttons-div > button {
+        min-width: 150px;
+    }
+
+    .Post-property-fescription-page-input {
+        width: calc(100% - 100px)!important;
+    }
 }

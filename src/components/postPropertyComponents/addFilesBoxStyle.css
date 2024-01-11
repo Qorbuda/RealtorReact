@@ -86,3 +86,12 @@
     color: red;
 }
 
+@media only screen and (max-width: 1230px) {
+    .Add-file-box-div-add-image-box {
+        width: 100%;
+    }
+    .Add-file-box-full-div {
+        width: 100%;
+    }
+}
+

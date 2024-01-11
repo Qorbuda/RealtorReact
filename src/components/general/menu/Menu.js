@@ -11,7 +11,7 @@ import LanguageSwitcher from '../../secondary/localization/LanguageSwitcher';
 function Menu() {
     const navigate = useNavigate();
     const location = useLocation();
-    
+
     var textFolder = LanguageSwitcher().HomePage.Footer;
 
 
@@ -31,7 +31,9 @@ function Menu() {
     }, []);
     return (
         <div className='d-flex flex-row justify-content-between align-items-center gap-3 menu-wrapper menu-main'>
-            <Logo />
+            <button  onClick={() => { setTab("") }}>
+                <Logo />
+            </button>
             <div className='d-flex flex-row align-items-start gap-3'>
                 <button className={location.pathname === "/" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("") }}>{textFolder.home}</button>
                 <button className={location.pathname === "/about_us" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("about_us") }}>{textFolder.aboutUs}</button>

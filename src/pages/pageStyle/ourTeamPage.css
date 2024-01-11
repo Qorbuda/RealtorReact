@@ -5,6 +5,87 @@
 
 }
 
+@media only screen and (max-width: 1250px) {
+    .Our-team-page-div {
+        width: 100%!important;
+        align-items: center!important;
+    }
+    .Our-team-page-search-boox-div {
+        flex-direction: column;
+    }
+    #Our-team-page-search-glass-icon {
+        display: none;
+    }
+    .Our-team-page-tou-agent-box {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .Our-team-page-agents-box {
+        width: 500px;
+    }
+    .Team-Agent-info-bar {
+        max-width: 500px;
+    }
+    .Team-Agent-info-bar-img {
+        max-width: 235px;
+    }
+    .Our-team-page-lier-agent-box {
+        width: 500px!important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Our-team-page-div {
+        padding: 5px;
+    }
+    .Team-Agent-info-text {
+        padding: 15px;
+        gap: 10px;
+    }
+    .Our-team-page-agents-box {
+        width: 100%!important;
+    }
+    .Our-team-page-lier-agent-box {
+        width: 100%!important;
+    }
+    .Team-Agent-info-bar {
+        width: 100%;
+        height: 280px;
+    }
+    .Our-team-page-office-agents {
+        width: 100%;
+    }
+    .Team-Agent-info-text-bar {
+        width: 50%;
+        height: 280px;
+    }
+    .Team-Agent-info-bar-img {
+        max-width: 50%;
+    }
+    .Team-Agent-info-bar {
+        max-width: 100%;
+    }
+    .Our-team-page-agent-box-A {
+        width: 100%;
+    }
+    .Our-team-page-agent-box {
+        width: 100%;
+    }
+    .Team-Agent-info-text {
+        width: 100%;
+    }
+    .Team-Agent-info-phone-number-bar {
+        white-space: normal;
+        width: 100%;
+    }
+    .Team-Agent-info-phone-number {
+        font-size: 15px;
+    }
+}
+
 .Our-team-page-div {
     display: inline-flex;
     flex-direction: column;
