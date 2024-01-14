@@ -9,7 +9,7 @@ import './Footer.css';
 function Footer() {
     return (
         <div className='d-flex flex-column align-items-center ts-footer-wrapper orange-background'>
-            <div className='footer-menu-box'>
+            <div className='footer-menu-box'> 
 
                 <div className='d-flex flex-column align-items-start ts-footer-row'>
                     <div className='ts-footer-items ts-footer-head-item white-font'>About us</div>

@@ -216,3 +216,15 @@
     height: 15px;
     fill: var(--white, #FFF);
 }
+
+@media only screen and (max-width: 1230px) {
+    .User-page-full-div {
+        width: calc(100% - 30px);
+    }
+    .User-page-search-sistem-full-div {
+        width: 100%;
+    }
+    .User-page-agent-info {
+        width: 100%;
+    }
+}

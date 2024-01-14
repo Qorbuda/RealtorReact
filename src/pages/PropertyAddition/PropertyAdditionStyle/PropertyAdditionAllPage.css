@@ -493,6 +493,11 @@
 
 @media only screen and (max-width: 1230px) {
 
+    .Post-property-propery-page-check-box-poplar-box {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
     .Post-property-general-info-input-div {
         width: 100%;
     }

@@ -18,10 +18,11 @@
 
 @media only screen and (max-width: 400px) {
     .caroucel-picture {
-        width: calc(100% - 10px);
+        max-width: 100%!important;
+        min-width: 100%;
     }
     .caroucel-current-image {
-        min-width: 365px;
-        max-width: 365px;
+        min-width: 100%!important;
+        max-width: 100%!important;
     }
 }

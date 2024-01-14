@@ -25,18 +25,18 @@ function Carousel(imagePath) {
                 <BootstrapCarousel interval={null} indicators={false} className='caroucel-picture'>
 
                     <BootstrapCarousel.Item>
-                        <img src="https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++" className="d-block w-100" 
-                        style={{borderRadius: "30px 30px 0px 0px", maxHeight:"286px", minHeight:"286px", minWidth:"384px"}} alt="..." />
+                        <img src="https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++" className="d-block w-100 caroucel-current-image" 
+                         alt="..." />
                     </BootstrapCarousel.Item>
 
                     <BootstrapCarousel.Item>
-                        <img src="https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++" className="d-block w-100"
-                         style={{borderRadius: "30px 30px 0px 0px", maxHeight:"286px", minHeight:"286px", minWidth:"384px"}} alt="..." />
+                        <img src="https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++" className="d-block w-100 caroucel-current-image"
+                        alt="..." />
                     </BootstrapCarousel.Item>
 
                     <BootstrapCarousel.Item>
-                        <img src="https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++" className=" w-100" 
-                        style={{borderRadius: "30px 30px 0px 0px", maxHeight:"286px", minHeight:"286px", minWidth:"384px"}} alt="..." />
+                        <img src="https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++" className="w-100 caroucel-current-image" 
+                        alt="..." />
                     </BootstrapCarousel.Item>
 
                 </BootstrapCarousel>

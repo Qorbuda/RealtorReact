@@ -26,7 +26,7 @@ const AddPropertyMapComponent = () => {
         map.current.setMinZoom(MAP_DATA.MIN_ZOOM);
         map.current.setMaxZoom(MAP_DATA.MAX_ZOOm);
         map.current.doubleClickZoom.disable();
-        addClickMarker(map);
+        addClickMarker(map, mapContainer);
 
     }, [])
 

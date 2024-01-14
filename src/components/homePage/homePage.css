@@ -173,3 +173,9 @@
     position:relative;
     z-index:auto;
 }
+
+@media only screen and (max-width: 400px) {
+    .total-test {
+        width: 100%;
+    }
+}

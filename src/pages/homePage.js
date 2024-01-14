@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import FastFilters from '../components/homePage/fastFilters';
 import PropertyCard from '../components/homePage/propertyCard';
 import SearchBarHome from '../components/homePage/searchBarHome';
@@ -15,17 +15,26 @@ function HomePage() {
   var textFolder = LanguageSwitcher();
   const [properties, setProperties] = useState([]);
   const [clickCount, setClickCount] = useState(1);
+  const propertiesElement = useRef(null);
+  const [scrollToCoordinate, setScrollToCoordinate] = useState(0);
 
   useEffect(() => {
-    homePageShowMorBtnClick()
+    homePageShowMorBtnClick();
+    if(propertiesElement.current) {
+      setScrollToCoordinate(propertiesElement.current.getBoundingClientRect().top)
+    }
+    
   }, [])
   const token = localStorage.getItem('token');
+  const handleScroll = () => {
+    window.scrollTo({top: scrollToCoordinate, behavior: 'smooth'});
+  }
 
 
   return (
     <div className='d-flex flex-column justify-content-center align-items-center'>
       <div className='ts-base-container' style={{ marginBottom: "100px", width: "90%" }}>
-        <FastFilters />
+        <FastFilters handleScroll={handleScroll}/>
       </div>
 
       <div className='ts-base-container' style={{ marginBottom: "100px", width: "90%" }}>
@@ -36,7 +45,7 @@ function HomePage() {
 
         <h1>{textFolder.weather_forcast_for}</h1>
 
-        <div className='ts-properties-section d-flex flex-row flex-wrap align-items-start' style={{ gap: "24px", marginBottom: "48px" }}>
+        <div ref={propertiesElement} className='ts-properties-section d-flex flex-row flex-wrap align-items-start' style={{ gap: "24px", marginBottom: "48px" }}>
           {properties.map((property, index) => (
             <PropertyCard apartmentInfo={property} key={index} />
           ))}
