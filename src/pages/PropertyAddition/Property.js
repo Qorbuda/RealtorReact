@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PostPropertyPage from '../postPropertyPage';
 import BaseInput from "../../components/general/forms/BaseInput";
+import BaseInputInt from '../../components/general/forms/BaseInputInt';
 import BaseSelect from "../../components/general/forms/BaseSelect";
 import { InputController, SelectController } from "../../components/general/forms/controllers";
 import LanguageSwitcher from "../../components/secondary/localization/LanguageSwitcher";
@@ -151,14 +152,14 @@ function Property() {
                         <BaseSelect nameOfSelect={textFolder.Property.Repairs} controller={repairsController} placeholder={textFolder.Property.Repairs} />
                     </div>
                     <div className='Post-property-propery-page-input-div'>
-                        <BaseInput placeholder={textFolder.Property.Space} controller={allSpaceController} />
-                        <BaseInput placeholder={textFolder.Property.Floor} controller={floorController} />
-                        <BaseInput placeholder={textFolder.Property.Room} controller={roomsController} />
+                        <BaseInputInt placeholder={textFolder.Property.Space} controller={allSpaceController} />
+                        <BaseInputInt placeholder={textFolder.Property.Floor} controller={floorController} />
+                        <BaseInputInt placeholder={textFolder.Property.Room} controller={roomsController} />
                     </div>
                     <div className='Post-property-propery-page-input-div'>
-                        <BaseInput placeholder={textFolder.Property.Bedroom} controller={bedroomsController} />
-                        <BaseInput placeholder={textFolder.Property.Bathroom} controller={bathroomsController} />
-                        <BaseInput placeholder={textFolder.Property.Price} controller={priceController} />
+                        <BaseInputInt placeholder={textFolder.Property.Bedroom} controller={bedroomsController} />
+                        <BaseInputInt placeholder={textFolder.Property.Bathroom} controller={bathroomsController} />
+                        <BaseInputInt placeholder={textFolder.Property.Price} controller={priceController} />
                     </div>
                 </div>
 

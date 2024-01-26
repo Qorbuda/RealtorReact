@@ -194,15 +194,14 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-
-  gap: 20px;
+  gap: 10px;
 
 }
 
 .currency-button-tite-text {
   color: var(--dark-grey, #333);
   font-family: Noto Sans;
-  font-size: 18px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 700;
   line-height: 21px;

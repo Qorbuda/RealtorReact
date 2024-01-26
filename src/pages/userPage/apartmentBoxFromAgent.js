@@ -13,7 +13,7 @@ import "./apartmentBoxFromAgent.css";
 import axios from 'axios';
 
 
-function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDeleteBtn}) {
+function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn }) {
     var textFolder = LanguageSwitcher().UserPage.apartmentBox;
     apartmentInfo = apartmentInfo
 
@@ -21,7 +21,7 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
 
     const navigate = useNavigate();
     const location = useLocation();
-    
+
     function setTab(tabName) {
         navigate(`/${tabName}`);
     };
@@ -40,7 +40,7 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
             <div className="Apartment-box-from-agent-page-div">
                 <div className="Apartment-box-from-agent-apartment-info-full-div">
                     <div className="Apartment-box-from-agent-apartment-info-image-div">
-                        <img className="Apartment-box-from-agent-apartment-info-image" src={`https://api.myflats.ge/api/image/get-main-image/${apartmentInfo.mainImage}`} />
+                        <img className="Apartment-box-from-agent-apartment-info-image" src={apartmentInfo.mainImage == null ? `https://dummyimage.com/600x400/03001e/fff.png&text=+++NO+PICTURE+++` : `https://api.myflats.ge/api/image/get-main-image/${apartmentInfo.mainImage}`} />
 
                     </div>
                     <div className="Apartment-box-from-agent-apartment-info-div">
@@ -51,7 +51,7 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
                                     <p className="Apartment-box-from-agent-main-title-text">{apartmentInfo.titleBox}</p>
                                     <div className="Apartment-box-from-agent-main-price-text-div">
                                         {/* <p className="Apartment-box-from-agent-main-price-text">{apartmentInfo.price}</p> */}
-                                        <CurrencyButton textId={"edit"} priceArr={apartmentInfo.price} widthFullBox = "286px" />
+                                        <CurrencyButton textId={"edit"} priceArr={apartmentInfo.price} widthFullBox="286px" />
 
                                     </div>
                                     <div className="Apartment-box-from-agent-floor-bedroom-bathroom-text-div">
@@ -111,12 +111,12 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
                                         <p className="Apartment-box-from-agent-apartment-info-secend-text">{apartmentInfo.category}</p>
                                     </div>
                                 </div>
-                                <div className="Apartment-box-from-agent-apartment-info-secend-text-div">
+                                {/* <div className="Apartment-box-from-agent-apartment-info-secend-text-div">
                                     <p className="Apartment-box-from-agent-apartment-info-secend-text-title">{textFolder.address}</p>
                                     <div className="Apartment-box-from-agent-apartment-info-secend-text-box">
                                         <p className="Apartment-box-from-agent-apartment-info-secend-text">{apartmentInfo.address}</p>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="Apartment-box-from-agent-apartment-info-secend-text-div">
                                     <p className="Apartment-box-from-agent-apartment-info-secend-text-title">{textFolder.city}</p>
                                     <div className="Apartment-box-from-agent-apartment-info-secend-text-box">
@@ -124,8 +124,10 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
                                     </div>
                                 </div>
                             </div>
+                        <button className="Apartment-box-from-agent-apartment-open-btn" onClick={() => { setTab(`open_property/${apartmentInfo.id}/${1}`) }}>
+                            <p className="Apartment-box-from-agent-apartment-open-btn-text">{textFolder.open}</p>
+                        </button>
                         </div>
-
                     </div>
                     <div>
                         <button className="Apartment-box-from-agent-three-point-button" onClick={togglePopup}>
@@ -133,16 +135,14 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
                         </button>
                     </div>
                 </div>
-                <button className="Apartment-box-from-agent-apartment-open-btn" onClick={() => { setTab(`open_property/${apartmentInfo.id}/${1}`)}}>
-                    <p className="Apartment-box-from-agent-apartment-open-btn-text">{textFolder.open}</p>
-                </button>
+
             </div>
             <div className="Apartment-box-from-agent-change-apartment-pop" id={'overlay' + apartmentInfo.id}>
                 <div className="Apartment-box-from-agent-change-apartment-pop-button-div">
                     <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onClickHistoryBtn(true, apartmentInfo.apartmentHistory)}>
                         <p className="Apartment-box-from-agent-apartment-pop-btn-text">{textFolder.history}</p>
                     </button>
-                    <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => { setEditProperty( apartmentInfo.id) }}>
+                    <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => { setEditProperty(apartmentInfo.id) }}>
                         <p className="Apartment-box-from-agent-apartment-pop-btn-text">{textFolder.edit}</p>
                     </button>
                     <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onClickDeleteBtn(true, apartmentInfo.id)}>
@@ -155,30 +155,30 @@ function ApartmentBoxFromAgent({ apartmentInfo, onClickHistoryBtn , onClickDelet
 
 
     );
-    
-        async function setEditProperty(itemId){
-            var input = await ApartmentEdit(itemId)
-            Object.keys(inputInfo).forEach(key1 => {
-                if (input[key1]) {
-                  Object.keys(inputInfo[key1]).forEach(key2 => {
+
+    async function setEditProperty(itemId) {
+        var input = await ApartmentEdit(itemId)
+        Object.keys(inputInfo).forEach(key1 => {
+            if (input[key1]) {
+                Object.keys(inputInfo[key1]).forEach(key2 => {
                     if (input[key1][key2]) {
-                      if (typeof input[key1][key2] === 'object' && input[key1][key2] !== null) {
-                        Object.keys(inputInfo[key1][key2]).forEach(key3 => {
+                        if (typeof input[key1][key2] === 'object' && input[key1][key2] !== null) {
+                            Object.keys(inputInfo[key1][key2]).forEach(key3 => {
                                 inputInfo[key1][key2][key3] = input[key1][key2][key3] !== null ? input[key1][key2][key3] : inputInfo[key1][key2][key3];
-                        });
-                      } else {
-                        inputInfo[key1][key2] = input[key1][key2];
-                      }
+                            });
+                        } else {
+                            inputInfo[key1][key2] = input[key1][key2];
+                        }
                     }
-                  });
-                }
-              });
-            inputInfo.editStatus = true;
-            inputInfo.appartmentId = itemId
-            inputInfo.property.checkBoxs = input.property.checkBoxs
-            setTab(`post_property/general_info`)
-            
-        }
+                });
+            }
+        });
+        inputInfo.editStatus = true;
+        inputInfo.appartmentId = itemId
+        inputInfo.property.checkBoxs = input.property.checkBoxs
+        setTab(`post_property/general_info`)
+
+    }
 }
 
 export default ApartmentBoxFromAgent;

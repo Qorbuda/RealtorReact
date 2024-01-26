@@ -30,10 +30,7 @@ function CurrencyButton(fullInfo) {
     function getFixedPointInt(number){
         let finNum = ""
         number = number.toString()
-        console.log("__________")
-        console.log(number)
-        console.log(typeof(number))
-        
+
         for (let i = 0; i < number.length; i++) {
             finNum = finNum + number[i]
             if((number.length - i - 1)%3 == 0 && number.length - i - 1 !=0 ){
@@ -41,7 +38,6 @@ function CurrencyButton(fullInfo) {
             }
         }
 
-        console.log(finNum)
         
         return finNum
     }

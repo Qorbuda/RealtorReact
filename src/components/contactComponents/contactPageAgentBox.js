@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import BuildingsOrange from '../icons/BuildingsOrange.svg'
 import MailIcon from '../icons/MailIcon.svg'
 import PhoneCallOrange from '../icons/PhoneCallOrange.svg'
-import axios from 'axios';
 
 
 
 import './contactPageAgentBox.css'
+import NumberLink from '../numberLinkComponent/numberLink';
 
 
 function ContactPageAgentBox(agentInfo) {
@@ -36,7 +36,7 @@ function ContactPageAgentBox(agentInfo) {
                         </div>
                         <div className='Contact-page-agent-info-text-mail-div'>
                             <img className='Contact-page-agent-Mail-icon' src={PhoneCallOrange} />
-                            <p className='Contact-page-agent-Mail-icon-text'>{agentInfo.agentInfo.phone}</p>
+                            <p className='Contact-page-agent-Mail-icon-text'><NumberLink phoneNumber={agentInfo.agentInfo.phone}/></p>
                         </div>
                     </div>
                 </div>

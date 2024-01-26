@@ -1,28 +1,21 @@
 .caroucel-activ-image-style {
-    max-width: 200px;
+    max-width: 210px;
     max-height: 200px;
     width: auto;
     height: auto;
 }
 
 .caroucel-picture {
-    width: 384px;
+    width: 210px;
 }
 
 .caroucel-current-image {
     border-radius: 30px 30px 0px 0px;
-    max-height: 286px;
-    min-height: 286px;
-    min-width: 384px;
+    max-height: 157px;
+    min-height: 157px;
+    min-width: 210px;
 }
 
 @media only screen and (max-width: 400px) {
-    .caroucel-picture {
-        max-width: 100%!important;
-        min-width: 100%;
-    }
-    .caroucel-current-image {
-        min-width: 100%!important;
-        max-width: 100%!important;
-    }
+    
 }

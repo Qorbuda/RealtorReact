@@ -3,16 +3,21 @@ import Ka from '../icons/ka.svg'
 import Eng from '../icons/eng.svg'
 import Ru from '../icons/ru.svg'
 import PhoneCallBlack from '../icons/PhoneCallBlack.svg'
-import PropertyAddInfoSaver from '../../pages/PropertyAddition/propertyAddInfoSaver';
 import LanguageSwitcher from '../secondary/localization/LanguageSwitcher';
-import axios from 'axios';
+import NumberLink from '../numberLinkComponent/numberLink';
+
 
 import "./ourTeamAgentsDes.css"
+import WhatsUpLinkUtil from '../../utils/whatsUpLinkUtil';
 
 
 function OurTeamAgentsDes(agentInfro, agentKey) {
 
     var textFolder = LanguageSwitcher().OurTeamPage;
+
+    const handleMessageToAgent = () => {
+        WhatsUpLinkUtil.openLink(agentInfro.agentInfro['numbers'][0]);
+    }
     
     return (
         <div key={agentInfro.agentKey} className='Team-Agent-info-bar' >
@@ -31,7 +36,7 @@ function OurTeamAgentsDes(agentInfro, agentKey) {
                             {getInfroPhone(agentInfro.agentInfro, "numbers", 0)}
                             {getInfroPhone(agentInfro.agentInfro, "numbers", 1)}
                     </div>
-                    <button className='Team-Agent-info-button-bar'>
+                    <button className='Team-Agent-info-button-bar' onClick={handleMessageToAgent}>
                         <p className='Team-Agent-info-button-text'>{textFolder.MessageToAgent}</p>
                     </button>
 
@@ -85,7 +90,9 @@ function getInfroPhone(mainInfom, TextKey, index = -1){
     return(
             <div className='Team-Agent-info-phone-number-bar'>
                 <img className='Team-Agent-info-phone-icon' src={PhoneCallBlack} />
-                <p className='Team-Agent-info-phone-number'> {mainInfom[TextKey][index]}</p>
+                <p className='Team-Agent-info-phone-number'> 
+                    <NumberLink phoneNumber={mainInfom[TextKey][index]}/>
+                </p>
             </div>
     );
 

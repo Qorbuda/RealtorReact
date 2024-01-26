@@ -4,7 +4,7 @@ import React from 'react';
 var searchFullDict = {
     "dealType": {
         "index": 0,
-        "name": "firsttime"
+        "name": ""
     },
     "categoryApartments": {
         "index": 0,
@@ -25,18 +25,22 @@ var searchFullDict = {
     "room":"",
     "beadroom":"",
     "bathroom":"",
+    "idNum":"",
+    "phoneNum":"",
     "price":{
         "min":0,
-        "max":0
+        "max":10000000
     },
     "floor":{
         "min":0,
-        "max":0
+        "max":100000
     },
     "space":{
         "min":0,
-        "max":0
-    }
+        "max":100000
+    },
+    "myItems": false,
+    "agentId": 0
 
 }
 

@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState, useRef, } from "react";
 import './searchBarStyle.css';
 import './searchFieldStyle.css';
 import BaseInput from "../general/forms/BaseInput";
+import BaseInputInt from "../general/forms/BaseInputInt";
 import BaseSelect from "../general/forms/BaseSelect";
 import BaseInputWithSlider from "../general/forms/BaseInputWithSlider";
 import { InputController, InputWithSliderController, SelectController } from "../general/forms/controllers";
@@ -107,13 +108,17 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     const [inputBeadroom, Beadroom] = useState('');
     const [inputBathroom, bathroom] = useState('');
     const [inputRoom, room] = useState('');
-
-
+    
+    const [inputId, id] = useState('');
+    const [inputPhoneNumber, phoneNumber] = useState('');
+    
     // var inputPropertyIdController = new InputController(propertyId, setPropertyId);
     var inputRoomController = new InputController(inputRoom, room);
     var inputBeadroomController = new InputController(inputBeadroom, Beadroom);
     var inputbathroomController = new InputController(inputBathroom, bathroom);
-
+    
+    var inputIdController = new InputController(inputId, id);
+    var inputPhoneNumberController = new InputController(inputPhoneNumber, phoneNumber);
 
     searchInputInfro.dealType.index = dealTypeController.state
     searchInputInfro.categoryApartments.index = categoryApartmentsController.state
@@ -125,6 +130,9 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     searchInputInfro.room = inputRoomController.state
     searchInputInfro.beadroom = inputBeadroomController.state
     searchInputInfro.bathroom = inputbathroomController.state
+
+    searchInputInfro.idNum = inputIdController.state
+    searchInputInfro.phoneNum = inputPhoneNumberController.state
 
     searchInputInfro.price.min = getMinAndMaxValue(priceFromRangeController.state[0], useState(priceFromRangeController.state[1]))
     searchInputInfro.price.max = getMinAndMaxValue(priceFromRangeController.state[1], useState(priceFromRangeController.state[1]))
@@ -153,9 +161,14 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
                 </div>
 
                 <div className='search-bar-row'>
-                    <BaseInput placeholder={textFolder.room} controller={inputRoomController} />
-                    <BaseInput placeholder={textFolder.Beadroom} controller={inputBeadroomController} />
-                    <BaseInput placeholder={textFolder.bathroom} controller={inputbathroomController} />
+                    <BaseInputInt placeholder={textFolder.room} controller={inputRoomController} />
+                    <BaseInputInt placeholder={textFolder.Beadroom} controller={inputBeadroomController} />
+                    <BaseInputInt placeholder={textFolder.bathroom} controller={inputbathroomController} />
+                </div>
+
+                <div className='search-bar-row'>
+                    <BaseInputInt placeholder={textFolder.idSerch} controller={inputIdController} />
+                    <BaseInputInt placeholder={textFolder.phoneNumber} controller={inputPhoneNumberController} />
                 </div>
 
                 <div className='search-system-slider'>

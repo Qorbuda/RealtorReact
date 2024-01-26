@@ -114,11 +114,11 @@ function Owner() {
                     <BaseInput placeholder={textFolder.ownerPage.SecendPhone} controller={inputSecendPhoneController} />
                     <BaseInput placeholder={textFolder.ownerPage.Email} controller={inputEmailController} />
                 </div>
-                <div className='Post-property-owner-page-input-line-div-thri-bar'>
+                {/* <div className='Post-property-owner-page-input-line-div-thri-bar'>
                     <BaseSelect nameOfSelect={textFolder.ownerPage.Office} controller={officeController} placeholder={textFolder.ownerPage.Office} 
                         />
                     <BaseSelect nameOfSelect={textFolder.ownerPage.Agent} controller={agentController} placeholder={textFolder.ownerPage.Agent} />
-                </div>
+                </div> */}
                 <div className='Post-property-owner-page-buttons-div'>
 
                     <BaseButton text={textFolder.Back} call_method={() => { setTab("post_property/general_info") }} />

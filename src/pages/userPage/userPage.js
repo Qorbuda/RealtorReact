@@ -31,7 +31,8 @@ function UserPage() {
         if (token) {
             const decodedToken = jwtDecode(token);
             setUser(decodedToken);
-
+            console.log("decodedToken")
+            console.log(decodedToken)
         }
     }, []);
     var textFolder = LanguageSwitcher().UserPage;
@@ -40,8 +41,8 @@ function UserPage() {
     const [propertiesFromUser, setpropertiesFromUser] = useState([]);
     const [clickCount, setClickCount] = useState(1);
 
-
-
+    const [isActiveAll, setIsActiveAll] = useState(true);
+    const [isActiveMy, setIsActiveMy] = useState(false);
     useEffect(() => {
         userPageShowMorBtnClick()
     }, [])
@@ -52,7 +53,6 @@ function UserPage() {
     function setTab(tabName) {
         navigate(`/${tabName}`);
     };
-
 
     const [popupHistoriOpen, setPopupHistoriOpen] = useState(false);
     const [popupHistoryInfo, setPopupHistoryInfo] = useState("");
@@ -87,11 +87,11 @@ function UserPage() {
             <div className="User-page-search-sistem-full-div">
                 <div className="User-page-search-sistem-properti-status-div">
                     <div className="User-page-search-sistem-properti-all-or-my">
-                        <button className="User-page-search-sistem-properti-all-button">
-                            <p className="User-page-search-sistem-properti-all-btn-text">{textFolder.allProperties}</p>
+                        <button className={`${isActiveAll ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={showAllItems}>
+                            <p className={`${isActiveAll ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.allProperties}</p>
                         </button>
-                        <button className="User-page-search-sistem-properti-my-button">
-                            <p className="User-page-search-sistem-properti-my-btn-text">{textFolder.myProperties}</p>
+                        <button className={`${isActiveMy ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={showMyItems}>
+                            <p className={`${isActiveMy ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.myProperties}</p>
                         </button>
                     </div>
                     <button className="User-page-search-sistem-add-new-btn" onClick={() => { setTab("post_property/general_info") }}>
@@ -128,8 +128,27 @@ function UserPage() {
         setPopupDeleteOpen(status)
     }
 
-
-
+    async function showMyItems(){
+        setIsActiveAll(false);
+        setIsActiveMy(true);
+        var filter = SearchFullInfo()
+        filter.myItems = true;
+        filter.agentId = user?.id;
+        var props = await sendMessageLoginUsers(clickCount, filter);
+        setpropertiesFromUser([]);
+        setpropertiesFromUser(props);
+        setClickCount(1);
+    }
+    async function showAllItems(){
+        setIsActiveAll(true);
+        setIsActiveMy(false);
+        var filter = SearchFullInfo()
+        filter.myItems = false;
+        var props = await sendMessageLoginUsers(clickCount, filter);
+        setpropertiesFromUser([]);
+        setpropertiesFromUser(props);
+        setClickCount(1);
+    }
     async function userPageShowMorBtnClick() {
         var filter = SearchFullInfo()
         var props = await sendMessageLoginUsers(clickCount, filter);

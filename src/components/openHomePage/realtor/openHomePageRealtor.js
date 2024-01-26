@@ -9,6 +9,11 @@ import PhoneCallOrangeSmal from '../../icons/PhoneCallOrangeSmal.svg';
 const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
     var textFolder = LanguageSwitcher().openApartmentPage;
 
+    console.log("realtorInfo")
+    console.log(realtorInfo)
+    console.log("realtorInfo.personalID")
+    console.log(realtorInfo.personalID)
+
 
 
     return (

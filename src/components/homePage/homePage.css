@@ -6,7 +6,8 @@
 }
 
 .ts-property-card {
-    max-width: 384px;
+    max-width: 210px;
+    height: 320px;
     padding: 0px;
     gap: 20px;
     position:relative;
@@ -32,10 +33,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-
     padding: 0px;
-    gap: 20px;
-    min-width: 320px;
+    gap: 10px;
+    min-width: 200px;
+    padding: 0 10px;
 }
 
 .ts-property-card-info-head-price-div{
@@ -49,7 +50,7 @@
 .ts-property-card-info-head-info-text{
     color: var(--dark-grey, #333);
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: 21px; /* 116.667% */
@@ -65,17 +66,17 @@
     align-items: flex-start;
 
     padding: 0px;
-    gap: 20px;
-    min-width: 320px;
+    gap: 10px;
+    min-width: 200px;
 }
 
 .ts-property-card-info-content-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding: 0 30px 30px 30px;
-    gap: 18px;
+    gap: 10px;
 
 }
 
@@ -83,7 +84,7 @@
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 16px;
     text-transform: uppercase;
 }
@@ -91,7 +92,7 @@
 .ts-property-card-info-secondary-items {
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 16px;
 }
 
@@ -123,9 +124,6 @@
 @media only screen and (max-width: 400px) {
     .ts-base-container {
         max-width: 100%!important;
-    }
-    .ts-property-card {
-        max-width: calc(100% - 10px);
     }
     .ts-properties-section {
         max-width: 100%;
