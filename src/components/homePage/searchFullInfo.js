@@ -40,7 +40,8 @@ var searchFullDict = {
         "max":100000
     },
     "myItems": false,
-    "agentId": 0
+    "agentId": 0,
+    "isNotActive": false
 
 }
 

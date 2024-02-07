@@ -14,6 +14,14 @@
     align-items: center;
 }
 
+
+.User-page-agent-info-burron-div{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
 .User-page-agent-title-and-image {
     display: flex;
     align-items: center;
@@ -269,6 +277,15 @@
         height: 100%;
         align-items: center;
         margin-right: 8px;
+    }
+    .User-page-agent-name {
+        font-size: 19px;
+    }
+    .User-page-agent-title {
+        gap: 0px;
+    }
+    .User-page-agent-info-burron-div {
+        gap: 0px;
     }
     
 }

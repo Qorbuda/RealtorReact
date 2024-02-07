@@ -36,7 +36,7 @@ const MobileHeaderMenu = ({handleMenuClose}) => {
                     <button className={location.pathname === "/about_us" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("about_us") }}>{textFolder.aboutUs}</button>
                     <button className={location.pathname === "/our_team" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("our_team") }}>{textFolder.ourTeam}</button>
                     <a className="menu-btn black-font" href="https://myvacancy.ge/" target="_blank">{textFolder.becomeAgent}</a>
-                    <button className={location.pathname === "/franchise" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("franchise") }}>{textFolder.Franchise}</button>
+                    {/* <button className={location.pathname === "/franchise" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("franchise") }}>{textFolder.Franchise}</button> */}
                     <button className={location.pathname === "/contact" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("contact") }}>{textFolder.Contact}</button>
                     <button className='orange-font' onClick={() => { setTab("post_property/general_info") }}>{textFolder.postProperty}<span className="orange-font "> +</span></button>
                     <a className='d-flex flex-row align-items-center gap-3' href='tel:+995322422093'>

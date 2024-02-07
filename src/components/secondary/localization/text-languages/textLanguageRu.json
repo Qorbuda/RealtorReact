@@ -12,7 +12,7 @@
       "home": "Home",
       "ourTeam": "Our team",
       "becomeAgent": "Become agent",
-      "Franchise": "Franchise",
+      "Franchise": "f",
       "Contact": "Contact",
       "postProperty": "Post property",
       "currency": "currency",
@@ -25,7 +25,107 @@
     "searchField": {
       "priceFrom": "Price from",
       "Space": "Space",
+      "city": "CITY",
+      "room": "ROOM",
+      "idSerch": "ID",
+      "phoneNumber": "PHONE NUMBER",
+      "Beadroom": "BEADROOM",
+      "dealType": "DEAL TYPE",
+      "bathroom": "Bathroom",
+      "repairs": "REPAIRS",
+      "street": "STREET",
+      "search": "SEARCH",
+      "PropertyId": "Property ID",
+      "apartmentCategory": "APARTMENT CATEGORY",
       "Floor": "Floor"
+    },
+    "homePageageApartmentText":{
+      "newProperties": "New Properties",
+      "showMore": "SHOW MORE"
+    },
+    "footerText":{
+      "ourTeam": "Our team",
+      "batumiRealtor": "Real estate agency network 'batumi-realtor'",
+      "socialMedia": "Social Media",
+      "followUs": "Follow us!",
+      "contact": "Contact",
+      "batumiLTD": "Batumi Realtor LTD Batumi,",
+      "batumiSTR": "str.26 of May, #68",
+      "joinUs": "Join us",
+      "becomeAgent": "Become agent",
+      "franchise": "Franchise",
+      "postProperty": "Post property",
+      "aboutUs": "About us"
+    }
+  },
+  "OurTeamPage": {
+    "SearchBtnText": "SEARCH",
+    "PropertyId": "Property ID",
+    "MessageToAgent": "Message to agent",
+    "Agents": "Agents"
+  },
+  "Contact": {
+    "ContactUs": "CONTACT US"
+  },
+  "PostPropertyPage": {
+    "AddAProperty": "Add a property",
+    "SekectCity": "City",
+    "SekectStreet": "Street",
+    "Next": "Next ",
+    "Back": "BACK ",
+    "GeneralInfoPage": {
+      "District": "District ",
+      "Building": "Building ",
+      "ApartamentNumber": "Apartament number ",
+      "city": "City",
+      "street": "Street"
+    },
+    "ownerPage": {
+      "Name": "Name",
+      "Surname": "Surname",
+      "PersonalId": "Personal Id",
+      "Phone": "Phone",
+      "SecendPhone": "Secend phone",
+      "Email": "Email",
+      "Agent": "Agent",
+      "Office": "Office"
+    },
+    "Property": {
+      "Category": "Property Category",
+      "DealType": "Deal Type",
+      "Repairs": "Repairs",
+      "Space": "Space",
+      "Price": "Price in dollar",
+      "Floor": "Floor",
+      "Room": "Room",
+      "Bedroom": "Bedroom",
+      "Amenities": "Amenities",
+      "Popular": "Similar offers",
+      "Bathroom": "Bathroom"
+    },
+    "Description": "Description ",
+    "photosAndDocs": {
+      "AddMainImage": "Add main image",
+      "IconTitleText": "Upload a picture",
+      "IconFormatText": "SVG, PNG or JPG (rec. 700x430px)",
+      "UploadFile": "Upload file",
+      "docs": "docs",
+      "agreement": "agreement",
+      "MaxSize": "50 MB max file size",
+      "buttonText": "Browse",
+      "Links": "Links",
+      "AddMainImages": "Add main images"
+    },
+    "Confirm": {
+      "Property": "Property",
+      "generalInfo": "General Info",
+      "Owner": "Owner",
+      "Confirm": "Confirm",
+      "Description": "Description",
+      "PhotosAndDocs": "Photos and Docs",
+      "PersonalID": "Personal ID",
+      "GeneralInformation": "General information",
+      "AddMainImages": "Add main images"
     }
   },
   "LoginPage": {
@@ -40,41 +140,70 @@
       "BackLog": "Back to log in ",
       "EnterEmailText": "Enter your email,we'll send you reset instructions"
     },
+    "registerAgent": {
+      "name": "NAME",
+      "surname": "SURNAME",
+      "personalNumber": "PERSONAL NUMBER",
+      "phone": "PHONE",
+      "mail": "MAIL",
+      "password": "PASSWORD",
+      "status": "STATUS",
+      "office": "OFFICE",
+      "georgian": "GEORGIAN",
+      "english": "ENGLISH",
+      "russian": "RUSSIAN",
+      "docs": "docs",
+      "registration": "Registration",
+      "addAgentImage": "Add agent image",
+      "language": "LANGUAGES:"
+    },
     "finishForogotPassword": {
       "CheckYourEmail": "CHECK YOUR EMAIL"
     }
   },
-  "PostPropertyPage": {
-    "AddAProperty": "Add a property",
-    "SekectCity": "City",
-    "SekectStreet": "Street",
-    "Next": "Next ",
-    "District": "District ",
-    "Building": "Building ",
-    "ApartamentNumber": "Apartament number ",
-    "DataCitySelect": [
-      "Tbilici",
-      "Batumi",
-      "Foti",
-      "Qobuleti",
-      "Bakuriani"
-    ],
-    "DataStreetSelect": [
-      "ქუჩა,ბაქოს ქ.",
-      "გრიბოედოვის. ქ",
-      "ნინოშვილის ქ.",
-      "ნინოშვილის ქ.",
-      "ნოდარ იმნაძის. ქ.",
-      "სარაჯიშვილის ქ.",
-      "სელიმ ხიმშიაშვილის ქ.",
-      "ყაზბეგის. ქ",
-      "ჩაიკოვსკის. ქ",
-      "9 მარტი",
-      "აეროპორტის გზატკეცილი",
-      "ანგისა",
-      "აჭრის წყალი",
-      "ახმეტელის. ქ",
-      "ბერიძის შესახვევი"
-    ]
+  "UserPage": {
+    "allProperties":"All properties",
+    "myProperties":"My properties",
+    "deletedProperties":"Deleted properties",
+
+    "addNew":"ADD NEW",
+    "showMore":"SOW MORE",
+    "logOut": "Log out",
+    "addAgent":"Add agent",
+    "apartmentBox": {
+      "floor":"Floor:",
+      "bedrooms":"Bedrooms:",
+      "bathroom":"Bathroom:",
+      "generalInfo":"General info",
+      "id":"ID",
+      "fullSpace":"Full Space",
+      "dealType":"Deal type",
+      "category":"Category",
+      "address":"Address",
+      "city":"City",
+      "history":"HISTORY",
+      "edit":"EDIT",
+      "delete":"DELETE",
+      "open": "open original"
+    }
+  },
+  "openApartmentPage": {
+    "description":"DESCRIPTION",
+    "Information":"Information",
+    "Added":"Added: ",
+    "Floor":"Floor: ",
+    "Bedrooms":"Bedrooms: ",
+    "bathroom":"bathroom: ",
+    "PersonalID":"PersonalID",
+    "FullSpace":"Full Space",
+    "DealType":"Deal Type",
+    "Address":"Address",
+    "City":"City",
+    "Country":"Country",
+    "View":"View",
+    "similarOffer":"SIMILAR OFFER",
+    "plagiarism":"Plagiarism:",
+    "massageToAgent":"MESSAGE TO AGENT",
+    "test":"test"
   }
 }

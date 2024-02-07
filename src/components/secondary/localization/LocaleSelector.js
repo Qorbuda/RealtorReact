@@ -26,6 +26,7 @@ export function LocaleSelection() {
         locale.unshift(newLocale);
         dispatch(setLocale(locale));
         setCurrentLocale(newLocale);
+        localStorage.setItem("language", newLocale)
         test = newLocale;
         LanguageSwitcher();
         window.location.reload(true);

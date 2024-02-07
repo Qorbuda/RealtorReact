@@ -72,6 +72,7 @@ function PhotosAndDocs() {
                     <div className='Post-property-page-photos-and-docs-image-and-gallery'>
                         <AddFilesBox
                             textTitle="docs"
+                            textTitleName={textFolder.photosAndDocs.docs}
                             iconTitleText={textFolder.photosAndDocs.UploadFile}
                             iconFormatText={textFolder.photosAndDocs.MaxSize}
                             buttonText={textFolder.photosAndDocs.buttonText}
@@ -81,6 +82,7 @@ function PhotosAndDocs() {
 
                         <AddFilesBox
                             textTitle="agreement"
+                            textTitleName={textFolder.photosAndDocs.agreement}
                             iconTitleText={textFolder.photosAndDocs.UploadFile}
                             iconFormatText={textFolder.photosAndDocs.MaxSize}
                             buttonText={textFolder.photosAndDocs.buttonText}

@@ -1,7 +1,3 @@
-import React from 'react';
-import PostPropertyPage from '../postPropertyPage';
-import getActivLanguageStatus from '../../components/secondary/localization/getActivLanguageStatus'
-
 var fullInfoDict = {
     "generalInformation": {
       "city": {

@@ -12,9 +12,9 @@
       "home": "მთავარი",
       "ourTeam": "ჩვენი გუნდი",
       "becomeAgent": "გახდი აგენტი",
-      "Franchise": "ფრანშიზა",
+      "Franchise": "ფ",
       "Contact": "კონტაქტი",
-      "postProperty": "პოსტის ქონება",
+      "postProperty": "ობიექტის დამატება",
       "currency": "ვალუტა",
       "aboutUs": "ჩვენს შესახებ"
     },
@@ -27,6 +27,8 @@
       "Space": "სივრცე",
       "city": "ქალაქი",
       "room": "ოთახი",
+      "idSerch": "ID",
+      "phoneNumber": "ტელეფონის ნომერი",
       "Beadroom": "საძინებელი",
       "dealType": "გარიგების ტიპი",
       "bathroom": "აბაზანა",
@@ -36,6 +38,24 @@
       "PropertyId": "ქონების ID",
       "apartmentCategory": "ბინების კატეგორია",
       "Floor": "სართული"
+    },
+    "homePageageApartmentText":{
+      "newProperties": "ახალი შეთავაზებები",
+      "showMore": "მეტის ნახვა"
+    },
+    "footerText":{
+      "ourTeam": "ჩვენი გუნდი",
+      "batumiRealtor": "უძრავი ქონების სააგენტოს ქსელი 'ბათუმი-რეალტორი'",
+      "socialMedia": "სოციალური მედია",
+      "followUs": "გამოგვყევი!",
+      "contact": "კონტაქტი",
+      "batumiLTD": "შპს ბათუმი რეალტორ,",
+      "batumiSTR": "ქ.26 მაისი, #68",
+      "joinUs": "შემოგვიერთდი",
+      "becomeAgent": "გახდი აგენტი",
+      "franchise": "ფრანშიზა",
+      "postProperty": "ობიექტის დამატება",
+      "aboutUs": "ჩვენს შესახებ"
     }
   },
   "OurTeamPage": {
@@ -48,7 +68,7 @@
     "ContactUs": "ᲓᲐᲒᲕᲘᲙᲐᲕᲨᲘᲠᲓᲘᲗ"
   },
   "PostPropertyPage": {
-    "AddAProperty": "დაამატეთ ქონება",
+    "AddAProperty": "დაამატეთ ობიექტი",
     "SekectCity": "ქალაქი",
     "SekectStreet": "ქუჩა",
     "Next": "შემდეგი ",
@@ -89,6 +109,8 @@
       "IconTitleText": "ატვირთეთ სურათი",
       "IconFormatText": "SVG, PNG or JPG (rec. 700x430px)",
       "UploadFile": "aტვირთე ფაილი",
+      "docs": "დოკუმენტი",
+      "agreement": "ხელშეკრულება",
       "MaxSize": "ფაილის მაქსიმალური ზომა 50 მბ",
       "buttonText": "დათვალიერება",
       "Links": "ბმულები",
@@ -96,12 +118,13 @@
     },
     "Confirm": {
       "Property": "საკუთრება",
+      "generalInfo": "მისამართი",
       "Owner": "მფლობელი",
       "Confirm": "დაადასტურეთ",
       "Description": "აღწერა",
-      "PhotosAndDocs": "ფოტოები და დოკუმენტები",
+      "PhotosAndDocs": "ფაილები",
       "PersonalID": "პირადი ID",
-      "GeneralInformation": "Ზოგადი ინფორმაცია",
+      "GeneralInformation": "მისამართი",
       "AddMainImages": "დაამატეთ ძირითადი სურათები"
     }
   },
@@ -117,16 +140,36 @@
       "BackLog": "უკან შესვლა ",
       "EnterEmailText": "შეიყვანეთ თქვენი ელფოსტა, ჩვენ გამოგიგზავნით გადატვირთვის ინსტრუქციებს"
     },
+    "registerAgent": {
+      "name": "სახელი",
+      "surname": "გვარი",
+      "personalNumber": "პირადი ნომერი",
+      "phone": "ტელეფონი",
+      "mail": "მეილი",
+      "password": "პაროლი",
+      "status": "პოზიცია",
+      "office": "ოფისი",
+      "georgian": "ქართული",
+      "english": "ინგლისური",
+      "russian": "რუსული",
+      "docs": "დოკუმენტი",
+      "registration": "დარეგისტრირება",
+      "addAgentImage": "დაამატე აგენტის სურათი",
+      "language": "ენები:"
+    },
     "finishForogotPassword": {
       "CheckYourEmail": "ᲒᲐᲓᲐᲐᲛᲝᲬᲛᲝᲗ ᲔᲚᲤᲝᲡᲢᲐ"
     }
   },
   "UserPage": {
-    "allProperties":"ყველა თვისება",
-    "myProperties":"ჩემი თვისებები",
+    "allProperties":"ყველა ობიექტი",
+    "myProperties":"ჩემი ობიექტები",
+    "deletedProperties":"წაშლილი ობიექტები",
+
     "addNew":"ᲐᲮᲚᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ",
     "showMore":"დათესეთ მეტი",
     "logOut": "გასვლა",
+    "addAgent":"აგენტის დამატება",
     "apartmentBox": {
       "floor":"სართული:",
       "bedrooms":"საძინებლები:",
@@ -158,6 +201,9 @@
     "City":"ქალაქი",
     "Country":"ქვეყანა",
     "View":"ხედი",
+    "similarOffer":"მსგავსი შეთავაზებები",
+    "plagiarism":"პლაგიატები:",
+    "massageToAgent":"მიწერე აგენტს",
     "test":"ტესტი"
   }
 }

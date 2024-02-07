@@ -12,7 +12,7 @@
       "home": "Home",
       "ourTeam": "Our team",
       "becomeAgent": "Become agent",
-      "Franchise": "Franchise",
+      "Franchise": "f",
       "Contact": "Contact",
       "postProperty": "Post property",
       "currency": "currency",
@@ -38,6 +38,24 @@
       "PropertyId": "Property ID",
       "apartmentCategory": "APARTMENT CATEGORY",
       "Floor": "Floor"
+    },
+    "homePageageApartmentText":{
+      "newProperties": "New Properties",
+      "showMore": "SHOW MORE"
+    },
+    "footerText":{
+      "ourTeam": "Our team",
+      "batumiRealtor": "Real estate agency network 'batumi-realtor'",
+      "socialMedia": "Social Media",
+      "followUs": "Follow us!",
+      "contact": "Contact",
+      "batumiLTD": "Batumi Realtor LTD Batumi,",
+      "batumiSTR": "str.26 of May, #68",
+      "joinUs": "Join us",
+      "becomeAgent": "Become agent",
+      "franchise": "Franchise",
+      "postProperty": "Post property",
+      "aboutUs": "About us"
     }
   },
   "OurTeamPage": {
@@ -91,6 +109,8 @@
       "IconTitleText": "Upload a picture",
       "IconFormatText": "SVG, PNG or JPG (rec. 700x430px)",
       "UploadFile": "Upload file",
+      "docs": "docs",
+      "agreement": "agreement",
       "MaxSize": "50 MB max file size",
       "buttonText": "Browse",
       "Links": "Links",
@@ -98,6 +118,7 @@
     },
     "Confirm": {
       "Property": "Property",
+      "generalInfo": "General Info",
       "Owner": "Owner",
       "Confirm": "Confirm",
       "Description": "Description",
@@ -119,6 +140,23 @@
       "BackLog": "Back to log in ",
       "EnterEmailText": "Enter your email,we'll send you reset instructions"
     },
+    "registerAgent": {
+      "name": "NAME",
+      "surname": "SURNAME",
+      "personalNumber": "PERSONAL NUMBER",
+      "phone": "PHONE",
+      "mail": "MAIL",
+      "password": "PASSWORD",
+      "status": "STATUS",
+      "office": "OFFICE",
+      "georgian": "GEORGIAN",
+      "english": "ENGLISH",
+      "russian": "RUSSIAN",
+      "docs": "docs",
+      "registration": "Registration",
+      "addAgentImage": "Add agent image",
+      "language": "LANGUAGES:"
+    },
     "finishForogotPassword": {
       "CheckYourEmail": "CHECK YOUR EMAIL"
     }
@@ -126,9 +164,13 @@
   "UserPage": {
     "allProperties":"All properties",
     "myProperties":"My properties",
+    
+    "deletedProperties":"Deleted properties",
+
     "addNew":"ADD NEW",
     "showMore":"SOW MORE",
     "logOut": "Log out",
+    "addAgent":"Add agent",
     "apartmentBox": {
       "floor":"Floor:",
       "bedrooms":"Bedrooms:",
@@ -160,6 +202,9 @@
     "City":"City",
     "Country":"Country",
     "View":"View",
+    "similarOffer":"SIMILAR OFFER",
+    "plagiarism":"Plagiarism:",
+    "massageToAgent":"MESSAGE TO AGENT",
     "test":"test"
   }
 }

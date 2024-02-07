@@ -103,7 +103,7 @@
 .footer-button {
     cursor: pointer;
     padding: 18px 24px;
-    background: #E77817;
+    background: #03001e;
     color: #fff;
     font-weight: 400;
     font-size: 18px;
@@ -118,4 +118,10 @@
     align-items: center;
     gap: 4px;
     align-self: stretch;
+}
+
+@media only screen and (max-width: 400px) {
+    .main-box {
+        width: calc(100% - 8px);
+    }
 }

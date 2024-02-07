@@ -2,10 +2,17 @@ import React, { useState, useRef } from 'react';
 import PictureIcon from '../icons/PictureIcon.svg'
 import PropertyAddInfoSaver from '../../pages/PropertyAddition/propertyAddInfoSaver';
 import './addFilesBoxStyle.css'
-
+import AddAgemtData from '../../pages/addAgent/addAgemtData';
 
 function AddMainImage(fileItems) {
-    var inputInfo = PropertyAddInfoSaver().photosAndDocs
+
+    if(fileItems.saveStatus == "addAgent"){
+        var inputInfo = AddAgemtData().photosAndDocs
+        console.log(inputInfo)
+    }else{
+        var inputInfo = PropertyAddInfoSaver().photosAndDocs
+        
+    }
 
     const [file, setFile] = useState();
 
@@ -16,7 +23,7 @@ function AddMainImage(fileItems) {
     if (inputInfo["mainImage"].imageName == "") {
         boxTitle = fileItems.iconTitleText
     } else {
-        boxTitle = inputInfo["mainImage"].imageName
+        boxTitle = inputInfo["mainImage"].imageName 
     }
 
     function handleChange(e) {
@@ -25,11 +32,12 @@ function AddMainImage(fileItems) {
         setFile(URL.createObjectURL(e.target.files[0]));
         inputInfo["mainImage"].imageName = e.target.files[0].name
         inputInfo["mainImage"].image = e.target.files[0]
+
+        console.log("inputInfo")
+        console.log(inputInfo)
     }
 
-
     return (
-
         <div className='Add-file-box-full-div'>
             <p className='Add-file-box-title-text'>{fileItems.textTitle}</p>
             <div className='Add-file-box-div-add-image-box'>
@@ -42,20 +50,14 @@ function AddMainImage(fileItems) {
                         <p id='Add-file-box-add-name-text' className='Add-file-box-add-text'>{boxTitle} </p>
                         <p className='Add-file-box-add-text'>{fileItems.iconFormatText} </p>
                     </div>
-
                 </div>
-
                 <div>
                     <input type='file' accept="image/*" name='image' ref={fileInput} onChange={handleChange} style={{ display: 'none' }} />
                 </div>
-
                 <button className='Add-file-box-div-add-button-div' onClick={() => fileInput.current.click()}>
                     <p className='Add-file-box-div-add-button-text'> {fileItems.buttonText} </p>
                 </button>
-
             </div>
-
-
         </div>
     );
 }

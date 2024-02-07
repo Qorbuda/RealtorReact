@@ -6,12 +6,11 @@
 }
 
 .ts-property-card {
-    max-width: 210px;
-    height: 320px;
+    max-width: 384px;
     padding: 0px;
     gap: 20px;
-    position:relative;
-    z-index:auto;
+    position: relative;
+    z-index: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -24,8 +23,8 @@
     align-items: center;
     width: 100%;
     gap: 24px;
-    position:relative;
-    z-index:auto;
+    position: relative;
+    z-index: auto;
 }
 
 .ts-property-card-info-head-container {
@@ -34,46 +33,46 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 0px;
-    gap: 10px;
-    min-width: 200px;
-    padding: 0 10px;
+    gap: 20px;
+    min-width: 320px;
 }
 
-.ts-property-card-info-head-price-div{
+.ts-property-card-info-head-price-div {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    z-index:3;
+    z-index: 3;
     gap: 20px;
 }
 
-.ts-property-card-info-head-info-text{
+.ts-property-card-info-head-info-text {
     color: var(--dark-grey, #333);
     font-family: Noto Sans;
-    font-size: 13px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 21px; /* 116.667% */
+    line-height: 21px;
+    /* 116.667% */
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 0;
 }
 
-.ts-property-card-info-secondary-items-div{
+.ts-property-card-info-secondary-items-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 
     padding: 0px;
-    gap: 10px;
-    min-width: 200px;
+    gap: 20px;
+    min-width: 320px;
 }
 
 .ts-property-card-info-content-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 0 30px 30px 30px;
     gap: 10px;
@@ -84,7 +83,7 @@
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
 }
@@ -92,7 +91,7 @@
 .ts-property-card-info-secondary-items {
     font-style: normal;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 16px;
 }
 
@@ -123,27 +122,29 @@
 
 @media only screen and (max-width: 400px) {
     .ts-base-container {
-        max-width: 100%!important;
+        max-width: 100% !important;
     }
+
     .ts-properties-section {
         max-width: 100%;
     }
 }
 
-.property-card-image-carusel{
+
+.property-card-image-carusel {
     max-width: 100px;
     max-height: 100px;
     width: auto;
     height: auto;
 }
 
-.ts-property-card-open-apartment-image-button{
-    float:left;
-    height:100%;
-    width:70%;
-    z-index:2;
-    background-color:transparent;
-
+.ts-property-card-open-apartment-image-button {
+    float: left;
+    height: 100%;
+    width: 70%;
+    z-index: 2;
+    background-color: transparent;
+    /* background-color: red; */
     position: absolute;
     top: 0;
     outline: none;
@@ -152,12 +153,12 @@
 
 }
 
-.ts-property-card-open-apartment-main-button{
-    float:left;
-    height:50%;
-    width:100%;
-    z-index:2;
-    background-color:transparent;
+.ts-property-card-open-apartment-main-button {
+    float: left;
+    height: 50%;
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
     position: absolute;
     top: 0;
     outline: none;
@@ -166,14 +167,68 @@
 
 }
 
+.Apartment-box-agent-three-point-button {
 
-.total-test{
-    position:relative;
-    z-index:auto;
+    height: 15%;
+    width: 15%;
+    z-index: 3;
+    background-color: transparent;
+    /* background-color: blue; */
+    position: absolute;
+    top: 0;
+    outline: none;
+    border: none;
+    right: 0;
+}
+
+.Apartment-box-agent-three-point-button-icon {
+    width: 19.662px;
+    height: 4.668px;
+    flex-shrink: 0;
+}
+
+
+.Apartment-box-from-agent-change-apartment {
+    width: auto;
+    height: auto;
+    position: absolute;
+    border-radius: 20px;
+    background: var(--light-grey, #F2F2F2);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 30px;
+    display: none;
+    z-index: 3;
+    right: 0;
+
+}
+
+.Apartment-box-from-agent-change-apartment-button-div {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.fast-sherch-buttons{
+    gap: 15px;
+}
+
+.total-test {
+    position: relative;
+    z-index: auto;
 }
 
 @media only screen and (max-width: 400px) {
     .total-test {
         width: 100%;
+    }
+    .ts-property-card {
+        width: calc(100% - 10px);
     }
 }

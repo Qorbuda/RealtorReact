@@ -5,7 +5,8 @@ const testMessage =
 {
   "headerInfo": {
     "title": "Stylish, 3 bdr Villa Elis, private pool & garden",
-    "itemcode": "2645137"
+    "itemcode": "2645137",
+    "id": 0
   },
   "imageInfo": {
     "mainImage": "",
@@ -37,6 +38,30 @@ const testMessage =
     "agentLanguage": { "ka": true, "en": true, "ru": false },
     "apartmentDescription": "Lorem ipsum dolor sit amet consectetur. Mi pharetra diam donec nisl. Hac sed suspendisse orci ut ac curabitur ultrices fringilla. Pretium mattis sapien sed enim et eget quam purus massa. Sed consequat non gravida nisi purus morbi ac sollicitudin purus.",
   },
+  "comments":
+    [
+      {
+        "id": 9172,
+        "commentText": "10 აპრილიდან აქირავებს",
+        "createDate": "2022-03-29T14:24:55",
+        "agentName": "Ruso Qavzharadze",
+        "agentImage": "upload/agents/IMG_20211011_122749.jpg"
+      },
+      {
+        "id": 9792,
+        "commentText": "თვისუფალია",
+        "createDate": "2022-04-13T12:40:47",
+        "agentName": "Ruso Qavzharadze",
+        "agentImage": "upload/agents/IMG_20211011_122749.jpg"
+      },
+      {
+        "id": 9989,
+        "commentText": "Gaqiravda",
+        "createDate": "2022-04-16T09:15:21",
+        "agentName": "Keti Pataraia",
+        "agentImage": "upload/agents/IMG-20210302-WA0001.jpg"
+      }
+    ],
   "PopularApartmentsInfo": {
     "apartmentsBoxInfo": [{
       "id": 2,

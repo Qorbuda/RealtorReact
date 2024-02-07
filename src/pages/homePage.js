@@ -43,7 +43,7 @@ function HomePage() {
 
       <div className='ts-base-container' style={{ marginBottom: "100px" }}>
 
-        <h1>{textFolder.weather_forcast_for}</h1>
+        <h1>{textFolder.HomePage.homePageageApartmentText.newProperties}</h1>
 
         <div ref={propertiesElement} className='ts-properties-section d-flex flex-row flex-wrap align-items-start' style={{ gap: "24px", marginBottom: "48px" }}>
           {properties.map((property, index) => (
@@ -52,7 +52,7 @@ function HomePage() {
         </div>
 
         <button className="Home-page-show-mor-button" onClick={homePageShowMorBtnClick} >
-          <p className='Home-page-show-mor-button-text'> show more  </p>
+          <p className='Home-page-show-mor-button-text'> {textFolder.HomePage.homePageageApartmentText.showMore} </p>
           <img className='Home-page-show-mor-button-Arrow' src={ArrowDown} />
 
         </button>

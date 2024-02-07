@@ -47,7 +47,7 @@ function Carousel(imagePath) {
                     {imageUrls.map((item, index) => (
                         <BootstrapCarousel.Item>
                             <img src={`https://api.myflats.ge/api/image/${item}`} className="caroucel-current-image" alt={`Image ${index + 1}`} 
-                            style={{borderRadius: "30px 30px 0px 0px", maxHeight:"157px", minHeight:"157px", minWidth:"210px", maxWidth:"210px"}} />
+                            style={{borderRadius: "30px 30px 0px 0px", maxHeight:"286px", minHeight:"286px", minWidth:"384px", maxWidth:"384px"}} />
                         </BootstrapCarousel.Item>
                     ))}
                 </BootstrapCarousel>

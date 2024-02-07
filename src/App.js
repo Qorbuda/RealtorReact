@@ -29,6 +29,7 @@ import OpenHomePage from './pages/openHomePage';
 import UserProperty from './pages/userProperty';
 import './App.css';
 import './fonts.css';
+import AddAgemtMain from './pages/addAgent/addAgemtMain';
 
 const App = () => {
 
@@ -45,7 +46,6 @@ const App = () => {
                 <Route path='/' element={<HomePage />} exact />
                 <Route path='/about_us' element={<AboutUsPage />} exact />
                 <Route path='/our_team' element={<OurTeamPage />} exact />
-                <Route path="/franchise" element={<FranchisePage />} exact/>
                 <Route path='/contact' element={<ContactPage />} exact />
                 <Route path='/open_property/:id/:langId' element={<OpenHomePage />} exact />
                 <Route path='/post_property' element={<PostPropertyPage />} exact />
@@ -58,6 +58,9 @@ const App = () => {
 
                 <Route path='/post_property' element={<PostPropertyPage/>} exact/>
                 <Route path="/post_property/general_info" element={<GeneralInfo/>} exact/>
+                
+                <Route path="/add_agent" element={<AddAgemtMain/>} exact/>
+
                 <Route path="/post_property/owner" element={<Owner/>} exact/>
                 <Route path="/post_property/property" element={<Property/>} exact/>
                 <Route path="/post_property/description" element={<Description/>} exact/>

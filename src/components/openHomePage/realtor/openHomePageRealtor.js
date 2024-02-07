@@ -9,12 +9,6 @@ import PhoneCallOrangeSmal from '../../icons/PhoneCallOrangeSmal.svg';
 const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
     var textFolder = LanguageSwitcher().openApartmentPage;
 
-    console.log("realtorInfo")
-    console.log(realtorInfo)
-    console.log("realtorInfo.personalID")
-    console.log(realtorInfo.personalID)
-
-
 
     return (
         <div className="main-box">
@@ -75,7 +69,7 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                     </div>
                 </div>
             </div>
-            {/* <button className='footer-button'>MESSAGE TO AGENT</button> */}
+            <button className='footer-button'>{textFolder.massageToAgent}</button>
 
         </div>
     )

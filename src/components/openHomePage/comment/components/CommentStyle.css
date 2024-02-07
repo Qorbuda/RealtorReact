@@ -1,0 +1,32 @@
+.commentar-autor-name{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.testClas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.open-home-page-agent-iamge-div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.open-home-page-agent-iamge{
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+}
+
+.commentar-agents-dtm{
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 12px;
+    
+}

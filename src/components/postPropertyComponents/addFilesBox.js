@@ -1,11 +1,22 @@
 import React, { useState, useRef } from 'react';
 import PictureIcon from '../icons/PictureIcon.svg'
 import PropertyAddInfoSaver from '../../pages/PropertyAddition/propertyAddInfoSaver';
+import AddAgemtData from '../../pages/addAgent/addAgemtData';
+import AddDocumentData from '../../pages/addAgent/addDocumentData';
+
+
 import './addFilesBoxStyle.css'
 
 
 function AddFilesBox(fileItems) {
-    var inputInfo = PropertyAddInfoSaver().photosAndDocs
+    if(fileItems.saveStatus == "addDocument"){
+        var inputInfo = AddDocumentData().docsData
+    }else if(fileItems.saveStatus == "addAgent"){
+        var inputInfo = AddAgemtData().photosAndDocs
+    }else{
+        var inputInfo = PropertyAddInfoSaver().photosAndDocs
+        
+    }
 
     const [file, setFile] = useState();
 
@@ -30,7 +41,7 @@ function AddFilesBox(fileItems) {
     return (
 
         <div className='Add-file-box-full-div'>
-            <p className='Add-file-box-title-text'>{fileItems.textTitle}</p>
+            <p className='Add-file-box-title-text'>{fileItems.textTitleName}</p>
             <div className='Add-file-box-div-add-image-box'>
                 <div className='Add-file-box-add-image-form-info'>
                     <div className='Add-file-box-add-image-div'>

@@ -5,7 +5,8 @@ import textLanguageRu from "./text-languages/textLanguageRu.json"
 import { test } from "./LocaleSelector";
 
 var actionText;
-function LanguageSwitcher(i = test) {
+function LanguageSwitcher(i = localStorage.getItem("language")) {
+    
     if (i == "" && actionText != null) {
         return actionText
     }

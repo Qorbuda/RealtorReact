@@ -214,7 +214,7 @@ function Confirm() {
             .catch(error => {
                 console.log(error);
             });
-            setTab(""); 
+            user?.id ? setTab("user_property") :  setTab(""); 
             window.location.reload();
     }
 }

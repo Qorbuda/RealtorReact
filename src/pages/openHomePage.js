@@ -7,13 +7,16 @@ import OpenHomePageFooterComponent from '../components/openHomePage/postProperty
 import SendMessageOpenApartment from '../contactMessage/sendMessageOpenApartment.js';
 import GetApartmentId from './openPage/getApartmentId.js';
 import OpenHomMainPage from '../components/openHomePage/openHomMainPage.js';
+import OpenHomMainPageAgents from '../components/openHomePage/openHomMainPageAgents.js';
 import { useParams } from 'react-router-dom';
+import { InvalidTokenError, jwtDecode } from 'jwt-decode';
 
 const testMessage =
 {
   "headerInfo": {
     "title": "Stylish, 3 bdr Villa Elis, private pool & garden",
-    "itemcode": "2645137"
+    "itemcode": "2645137",
+    "id":0
   },
   "imageInfo": {
     "mainImage": "",
@@ -194,7 +197,14 @@ const testMessage =
 function OpenHomePage() {
     const { id, langId } = useParams();
 
-
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            const decodedToken = jwtDecode(token);
+            setUser(decodedToken);
+        }
+    }, []);
     const [openHomePageFullInfo, setPropertyDetail] = useState(null);
     useEffect(() => {
         propertyDetail();
@@ -202,11 +212,11 @@ function OpenHomePage() {
 
         async function propertyDetail() {
             var data = await SendMessageOpenApartment(id, langId);
-
             setPropertyDetail(data);
           }
     return (<>
-                {openHomePageFullInfo && <OpenHomMainPage fullHomeInfo={openHomePageFullInfo} />}
+                {openHomePageFullInfo && (user?.id ? <OpenHomMainPageAgents fullHomeInfo={openHomePageFullInfo} /> : 
+                <OpenHomMainPage fullHomeInfo={openHomePageFullInfo} />)}
 
             </>
     );
