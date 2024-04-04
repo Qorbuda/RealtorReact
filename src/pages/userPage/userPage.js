@@ -16,6 +16,8 @@ import PropertyCardAgents from "../../components/homePage/propertyCardAgents";
 import { InvalidTokenError, jwtDecode } from 'jwt-decode';
 import PopapHistoryButton from "./PopapHistoryButton";
 import PopapDeleteButton from "./popapDeleteButton";
+import PopupRestoreButton from "./popapRestoreButton";
+
 
 
 import "./userPage.css";
@@ -35,37 +37,43 @@ function UserPage() {
         }
     }, []);
     var textFolder = LanguageSwitcher().UserPage;
-    
+
     const [propertiesFromUser, setpropertiesFromUser] = useState([]);
     const [clickCount, setClickCount] = useState(1);
-    
+
 
     const [isActiveDeleted, setIsActiveDeleted] = useState(false);
     const [isActiveAll, setIsActiveAll] = useState(true);
     const [isActiveMy, setIsActiveMy] = useState(false);
+    const [isActiveAgents, setIsActiveAgents] = useState(false);
+
     useEffect(() => {
         userPageShowMorBtnClick()
     }, [])
-    
+
     const navigate = useNavigate();
     const location = useLocation();
-    
+
     function setTab(tabName) {
         navigate(`/${tabName}`);
     };
-    
+
     const [popupHistoriOpen, setPopupHistoriOpen] = useState(false);
     const [popupHistoryInfo, setPopupHistoryInfo] = useState("");
-    
+
     const [popupDeleteOpen, setPopupDeleteOpen] = useState(false);
     const [popupDeleteInfo, setPopupDeleteInfo] = useState("");
     
-    
-    
+    const [popupRestoreOpen, setPopupRestoreOpen] = useState(false);
+    const [popupRestoreInfo, setPopupRestoreInfo] = useState("");
+
+
+
     return (
         user != null ? <div className="User-page-full-div align-items-center" >
             <PopapHistoryButton open={popupHistoriOpen} onClose={() => setPopupHistoriOpen(false)} historyFullInffoArr={popupHistoryInfo} />
             <PopapDeleteButton open={popupDeleteOpen} onClose={() => setPopupDeleteOpen(false)} historyFullInffoArr={popupDeleteInfo} />
+            <PopupRestoreButton open={popupRestoreOpen} onClose={() => setPopupRestoreOpen(false)} historyFullInffoArr={popupRestoreInfo} />
 
             <div className="User-page-agent-info">
                 <div className="User-page-agent-title-and-image">
@@ -84,7 +92,7 @@ function UserPage() {
                         <img className='User-page-log-out-buttton-icon' src={AddAgent} />
                         <p className="User-page-log-out-button-text">{textFolder.addAgent}</p>
                     </button> : ''}
-                    
+
                     <button className="User-page-log-out-buttton-full-div" onClick={() => { logout(); setTab(""); window.location.reload(); }}>
                         <img className='User-page-log-out-buttton-icon' src={LogOutBtnIcon} />
                         <p className="User-page-log-out-button-text">{textFolder.logOut}</p>
@@ -101,9 +109,13 @@ function UserPage() {
                         <button className={`${isActiveMy ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={showMyItems}>
                             <p className={`${isActiveMy ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.myProperties}</p>
                         </button>
-                        
+
                         <button className={`${isActiveDeleted ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={ShowDeletedItems}>
                             <p className={`${isActiveDeleted ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.deletedProperties}</p>
+                        </button>
+
+                        <button className={`${isActiveAgents ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={showAgentList}>
+                            <p className={`${isActiveAgents ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.agentList}</p>
                         </button>
 
                     </div>
@@ -112,66 +124,76 @@ function UserPage() {
                             <p className="User-page-search-sistem-add-new-info-title">{textFolder.addNew}</p>
                             <img className="User-page-search-sistem-add-new-info-icon" src={BtnPlusIcon}></img>
                         </div>
-                    </button> 
+                    </button>
                 </div>
-                <SearchBarHome fromHome={false} setItems={setpropertiesFromUser} clickCount={setClickCount} />
+                {isActiveAgents==false ? <SearchBarHome fromHome={false} setItems={setpropertiesFromUser} clickCount={setClickCount} /> : ""}
             </div>
 
-            <div className='ts-properties-section d-flex flex-row flex-wrap align-items-start' style={{ gap: "24px", marginBottom: "48px" }}>
+            {isActiveAgents==false ? <div className='ts-properties-section d-flex flex-row flex-wrap align-items-start' style={{ gap: "24px", marginBottom: "48px" }}>
                 {propertiesFromUser.map((property, index) => (
                     // <ApartmentBoxFromAgent apartmentInfo={property} key={index} onClickHistoryBtn={showHistoryPopap} onClickDeleteBtn={showDeletePopap} />
-                    <PropertyCardAgents apartmentInfo={property} key={index} onClickHistoryBtn={showHistoryPopap} onClickDeleteBtn={showDeletePopap} />
+                    <PropertyCardAgents apartmentInfo={property} key={index} onClickHistoryBtn={showHistoryPopap} onClickDeleteBtn={showDeletePopap}  deletedItems={isActiveDeleted} onCklickRestore={showRestorePopap}/>
                 ))}
-            </div>
+            </div> : ""}
 
-            <button className="User-pahe-show-mor-button" onClick={userPageShowMorBtnClick} >
+            {isActiveAgents==false ? <button className="User-pahe-show-mor-button" onClick={userPageShowMorBtnClick} >
                 <p className='User-pahe-show-mor-button-text'> {textFolder.showMore}</p>
                 <img className='User-pahe-show-mor-button-Arrow' src={ArrowDown} />
-            </button>
+            </button> : 
+            ("jemaaaaaaaaal am frchxilshi unda iyos agentebis sia")
+            
+            }
         </div> : null
 
-);
+    );
 
-function showHistoryPopap(status, info) {
-    setPopupHistoryInfo(info)
-    setPopupHistoriOpen(status)
-}
+    function showHistoryPopap(status, info) {
+        setPopupHistoryInfo(info)
+        setPopupHistoriOpen(status)
+    }
 
-function showDeletePopap(status, info) {
-    setPopupDeleteInfo(info)
-    setPopupDeleteOpen(status)
-}
-async function ShowDeletedItems(){
-    setIsActiveAll(false);
-    setIsActiveMy(false);
-    setIsActiveDeleted(true);
-    var filter = SearchFullInfo()
-    filter.isNotActive = true;
-    filter.myItems = false;
-    var props = await sendMessageLoginUsers(clickCount, filter);
-    setpropertiesFromUser([]);
-    setpropertiesFromUser(props);
-    
-    setClickCount(1);
-}
-async function showMyItems() {
-    setIsActiveAll(false);
-    setIsActiveMy(true);
-    setIsActiveDeleted(false);
-    var filter = SearchFullInfo()
-    filter.myItems = true;
-    filter.agentId = user?.id;
-    filter.isNotActive = false;
-    var props = await sendMessageLoginUsers(clickCount, filter);
-    setpropertiesFromUser([]);
-    setpropertiesFromUser(props);
-    
-    setClickCount(1);
-}
-async function showAllItems() {
-    setIsActiveAll(true);
-        setIsActiveMy(false);
-    setIsActiveDeleted(false);
+    function showDeletePopap(status, info) {
+        setPopupDeleteInfo(info)
+        setPopupDeleteOpen(status)
+    }
+    function showRestorePopap(status, info){
+        setPopupRestoreInfo(info)
+        setPopupRestoreOpen(status)
+    }
+
+
+    async function ShowDeletedItems() {
+        changePageShowStatus();
+        setIsActiveDeleted(true);
+        var filter = SearchFullInfo()
+        filter.isNotActive = true;
+        filter.myItems = false;
+        filter.agentId = user?.id;
+        var props = await sendMessageLoginUsers(clickCount, filter);
+        setpropertiesFromUser([]);
+        setpropertiesFromUser(props);
+        setClickCount(1);
+    }
+
+    async function showMyItems() {
+        changePageShowStatus();
+
+        setIsActiveMy(true);
+        var filter = SearchFullInfo()
+        filter.myItems = true;
+        filter.agentId = user?.id;
+        filter.isNotActive = false;
+        var props = await sendMessageLoginUsers(clickCount, filter);
+        setpropertiesFromUser([]);
+        setpropertiesFromUser(props);
+
+        setClickCount(1);
+    }
+
+    async function showAllItems() {
+        changePageShowStatus();
+        setIsActiveAll(true);
+
 
         var filter = SearchFullInfo()
         filter.myItems = false;
@@ -181,6 +203,21 @@ async function showAllItems() {
         setpropertiesFromUser(props);
         setClickCount(1);
     }
+
+
+    async function showAgentList() {
+        changePageShowStatus();
+        setIsActiveAgents(true);
+
+        var filter = SearchFullInfo()
+        filter.myItems = false;
+        filter.isNotActive = false;
+        var props = await sendMessageLoginUsers(clickCount, filter);
+        setpropertiesFromUser([]);
+        setpropertiesFromUser(props);
+        setClickCount(1);
+    }
+
     async function userPageShowMorBtnClick() {
         var filter = SearchFullInfo()
         var props = await sendMessageLoginUsers(clickCount, filter);
@@ -188,8 +225,16 @@ async function showAllItems() {
         const result = propertiesFromUser.concat(props);
         setpropertiesFromUser(result);
     }
+    
     function logout() {
         localStorage.removeItem('token');
+    }
+
+    function changePageShowStatus() {
+        setIsActiveAll(false);
+        setIsActiveMy(false);
+        setIsActiveDeleted(false);
+        setIsActiveAgents(false);
     }
 }
 

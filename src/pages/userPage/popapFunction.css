@@ -54,6 +54,8 @@
   max-width: 90%;
   overflow: auto;
   margin-left: 5%;
+  display: flex;
+  gap: 5px;
 }
 
 .add-document-popap-change-box-div {

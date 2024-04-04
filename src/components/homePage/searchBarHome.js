@@ -29,6 +29,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     const [categoryApartmentsSelect, setCategoryApartmentsSelect] = useState(0);
     const [repairsSelect, setRepairsSelect] = useState(0);
     const [streetSelect, setStreetSelect] = useState(0)
+    const [sortingSelect, setSortingSelect] = useState(0)
 
     const [cities, setCities] = useState([]);
     const [street, setstreet] = useState([]);
@@ -57,6 +58,10 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     const [categories, setCategories] = useState([]);
     const [dealTypes, setDealTypes] = useState([]);
     const [repairs, setRepairs] = useState([]);
+    const [sorting, setSorting] = useState([{index: 1, name: langId == 1 ? "თარიღით კლება" : langId == 2 ? "По убыванию по дате" : "Descending by date"},
+                                            {index: 2, name: langId == 1 ? "თარიღით ზრდა" : langId == 2 ? "Увеличение по дате" : "Increase by date"},
+                                            {index: 3, name: langId == 1 ? "ფასით კლება" : langId == 2 ? "снижается в цене" : "Decreasing in price"},
+                                            {index: 4, name: langId == 1 ? "ფასით ზრდა" : langId == 2 ? "увеличение цены" : "Increase in price"}])
     useEffect(() => {
         axios.get(`https://api.myflats.ge/api/Appartments/get-categories?langId=${langId}`)
             .then(response => {
@@ -93,6 +98,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     var repairsController = new SelectController(repairsSelect, setRepairsSelect, repairs)
     var cityController = new SelectController(citySelect, setcitySelect, cities)
     var streetController = new SelectController(streetSelect, setStreetSelect, street)
+    var sortingController = new SelectController(sortingSelect, setSortingSelect, sorting)
 
 
     const [priceFromRange, setPriceFromRange] = useState([0, 1000000])
@@ -108,9 +114,10 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     const [inputBeadroom, Beadroom] = useState('');
     const [inputBathroom, bathroom] = useState('');
     const [inputRoom, room] = useState('');
-    
     const [inputId, id] = useState('');
     const [inputPhoneNumber, phoneNumber] = useState('');
+    const [agentSelect, setagentSelect] = useState(0);
+    const [agents, setAgents] = useState([]);
     
     // var inputPropertyIdController = new InputController(propertyId, setPropertyId);
     var inputRoomController = new InputController(inputRoom, room);
@@ -119,10 +126,26 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     
     var inputIdController = new InputController(inputId, id);
     var inputPhoneNumberController = new InputController(inputPhoneNumber, phoneNumber);
+    useEffect(() => {
+        // Fetch agent data when the selected office changes
+        axios.get(`https://api.myflats.ge/api/Agents/get-office-aggents?officeId=${0}`)
+          .then(response => {
+            const agentData = response.data;
+            setAgents(agentData);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+    }, []);
+    var agentController = new SelectController(agentSelect, setagentSelect, agents)
+    searchInputInfro.agentId = agentController.state
 
+    const agentObject = agentController.options.find(x => x.index == searchInputInfro.agentId);
+    
     searchInputInfro.dealType.index = dealTypeController.state
     searchInputInfro.categoryApartments.index = categoryApartmentsController.state
     searchInputInfro.repairs.index = repairsController.state
+    searchInputInfro.sorting.index = sortingController.state
 
     searchInputInfro.city.index = cityController.state
     searchInputInfro.street.index = streetController.state
@@ -168,7 +191,10 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
 
                 <div className='search-bar-row'>
                     <BaseInputInt placeholder={textFolder.idSerch} controller={inputIdController} />
-                    <BaseInputInt placeholder={textFolder.phoneNumber} controller={inputPhoneNumberController} />
+                    <BaseSelect nameOfSelect={textFolder.Agent} controller={agentController} placeholder={textFolder.Agent} />
+                    <BaseSelect nameOfSelect={textFolder.Sorting} controller={sortingController} placeholder={textFolder.Sorting} />
+
+                    {/* <BaseInputInt placeholder={textFolder.phoneNumber} controller={inputPhoneNumberController} /> */}
                 </div>
 
                 <div className='search-system-slider'>

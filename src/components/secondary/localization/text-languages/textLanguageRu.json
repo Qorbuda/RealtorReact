@@ -37,7 +37,9 @@
       "search": "SEARCH",
       "PropertyId": "Property ID",
       "apartmentCategory": "APARTMENT CATEGORY",
-      "Floor": "Floor"
+      "Floor": "Floor",
+      "Agent": "Agent"
+
     },
     "homePageageApartmentText":{
       "newProperties": "New Properties",

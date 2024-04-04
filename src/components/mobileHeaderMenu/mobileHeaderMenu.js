@@ -41,7 +41,7 @@ const MobileHeaderMenu = ({handleMenuClose}) => {
                     <button className='orange-font' onClick={() => { setTab("post_property/general_info") }}>{textFolder.postProperty}<span className="orange-font "> +</span></button>
                     <a className='d-flex flex-row align-items-center gap-3' href='tel:+995322422093'>
                         <img src={PhoneCall} />
-                        (+995) 322 42 20 93
+                        +995 577 374 230
                     </a>
                     <a className='d-flex flex-row align-items-center gap-3' href='mailto:info@batumi-realtor.com'>
                         <img src={EnvelopeSimple} />

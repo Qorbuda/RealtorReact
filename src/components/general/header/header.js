@@ -46,7 +46,7 @@ function Header() {
                     <div className="ts-mobile-email">
                         <a className='d-flex flex-row align-items-center gap-3' href='tel:+995322422093'>
                             <img src={PhoneCall} />
-                            (+995) 322 42 20 93
+                            +995 577 374 230
                         </a>
 
                         <a className='d-flex flex-row align-items-center gap-3' href='mailto:info@batumi-realtor.com'>

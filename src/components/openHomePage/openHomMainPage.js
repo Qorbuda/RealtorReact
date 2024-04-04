@@ -191,10 +191,12 @@ const fullHomeInfops =
 
 function OpenHomMainPage({fullHomeInfo}) {
 
+
+
     return (
         <div className='post-property-page'>
             <div className='main-container'>
-                <OpenHomePageHeaderComponent titleInfo={fullHomeInfo.headerInfo} />
+                <OpenHomePageHeaderComponent titleInfo={fullHomeInfo} />
                 <OpenHomePageImagesComponent mainImageInfo={fullHomeInfo.imageInfo.mainImage} imagesInfo={fullHomeInfo.imageInfo.allImage} />
                 <OpenHomePageBodyComponent mapCoordinates={fullHomeInfo.mapCoordinates} realtorInfo={fullHomeInfo.realtorInfo} />
                 <OpenHomePageFooterComponent popularProperties={fullHomeInfo.popularApartmentsInfo.apartmentsBoxInfo} />

@@ -16,12 +16,17 @@ function PropertyCard(apartmentInfo) {
 
     function setTab(tabName, itemId, langId) {
         GetApartmentId(apartmentInfo.id)
-        navigate(`/${tabName}/${itemId}/${langId}`);
+        const newTab = window.open(`/${tabName}/${itemId}/${langId}`);
+        // newTab.onload = () => {
+        //     navigate(`/${tabName}/${itemId}/${langId}`);
+        // };
     };
+
+    
     return (
         <div className='ts-property-card d-flex flex-column align-items-start'>
 
-            <button className='ts-property-card-open-apartment-main-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1); window.location.reload(); }}>
+            <button className='ts-property-card-open-apartment-main-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1);  }}>
             </button>
 
             <div className='total-test'>

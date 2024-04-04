@@ -7,6 +7,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import PropertyAddInfoSaver from './propertyAddInfoSaver';
 import axios from 'axios';
 import LanguageSwitcher from '../../components/secondary/localization/LanguageSwitcher';
+import ShowAddObject from './showAddObject';
 
 
 import '../PropertyAddition/PropertyAdditionStyle/PropertyAdditionAllPage.css';
@@ -20,11 +21,13 @@ function Confirm() {
     var inputInfo = PropertyAddInfoSaver()
     var textFolder = LanguageSwitcher().PostPropertyPage;
     const [reason, setReason] = useState(null);
-    
-    var editReasons = new SelectController(reason, setReason, [{ name: "Reload", index: 1 }, { name: "Updating incorrect information", index: 2 }, 
-            { name: "The owner has changed the information", index: 3 }])
-            
-    if (reason){
+    const [showAddObjectOpen, setShowAddObjectOpen] = useState(false);
+
+
+    var editReasons = new SelectController(reason, setReason, [{ name: "Reload", index: 1 }, { name: "Updating incorrect information", index: 2 },
+    { name: "The owner has changed the information", index: 3 }])
+
+    if (reason) {
         inputInfo.editReason = editReasons.options.find(o => o.index == reason).name
     }
     const navigate = useNavigate();
@@ -38,11 +41,13 @@ function Confirm() {
         if (token) {
             const decodedToken = jwtDecode(token);
             setUser(decodedToken);
-  
+
         }
     }, []);
     return (
         <div className='Post-property-pag-input-boxs'>
+            <ShowAddObject open={showAddObjectOpen} onClose={() => addProjectFinisAndGoHome()} />
+
             <div className='Post-property-heder-and-buttons'>
                 <p className='Post-property-page-title'>{textFolder.AddAProperty}</p>
                 <PostPropertyPage currTab='6' />
@@ -100,15 +105,13 @@ function Confirm() {
                     <div className='Post-property-confirm-general-information-box'>
                         <div className='Post-property-confirm-general-information-box-title-div'>
                             <p className='Post-property-confirm-general-information-box-title-text'>
-
                                 {textFolder.Confirm.Description}
-
                             </p >
                             <button className='Post-property-confirm-general-information-box-title-icon' onClick={() => { setTab("post_property/description") }} >
                                 <img className='Post-property-general-info-input-icon' src={EditIcon} />
                             </button>
                         </div >
-                        <p className='Post-property-confirm-general-information-box-info'>{geavText(inputInfo, 'description', "description")}</p >
+                        <p className='Post-property-confirm-general-information-box-info'>{geavText(inputInfo, 'description', "descriptionKa")}</p >
 
                     </div>
                 </div>
@@ -173,17 +176,23 @@ function Confirm() {
         </div>
     );
 
-    function showSelector(status){
-        if (status){
+    function showSelector(status) {
+        if (status) {
 
-            
+
             return <BaseSelect placeholder={"Reason for change"} controller={editReasons} />
         }
     }
+
+    function addProjectFinisAndGoHome (){
+        user?.id ? setTab("user_property") : setTab("");
+        window.location.reload();
+    }
     function PostAppartment(inputInfo, userId) {
+        setShowAddObjectOpen(true)
         PropertyAddInfoSaver("clear")
         const formData = new FormData();
-    
+
         if (inputInfo.photosAndDocs.mainImage.image) {
             formData.append('mainImage', inputInfo.photosAndDocs.mainImage.image);
         }
@@ -199,11 +208,11 @@ function Confirm() {
         if (inputInfo.photosAndDocs.agreement.docs) {
             formData.append('agreement', inputInfo.photosAndDocs.agreement.docs);
         }
-    
-    
+
+
         formData.append('inputInfo', JSON.stringify(inputInfo));
         axios.post('https://api.myflats.ge/api/Appartments/post-appartments', formData, {
-            params:{agentId: userId},
+            params: { agentId: userId },
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
@@ -214,8 +223,7 @@ function Confirm() {
             .catch(error => {
                 console.log(error);
             });
-            user?.id ? setTab("user_property") :  setTab(""); 
-            window.location.reload();
+       
     }
 }
 

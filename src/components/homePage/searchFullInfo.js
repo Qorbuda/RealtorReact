@@ -27,6 +27,7 @@ var searchFullDict = {
     "bathroom":"",
     "idNum":"",
     "phoneNum":"",
+    "agentId" : 0,
     "price":{
         "min":0,
         "max":10000000
@@ -38,6 +39,10 @@ var searchFullDict = {
     "space":{
         "min":0,
         "max":100000
+    },
+    "sorting":{
+        "index": 0,
+        "name": ""
     },
     "myItems": false,
     "agentId": 0,

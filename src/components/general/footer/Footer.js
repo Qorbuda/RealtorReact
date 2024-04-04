@@ -31,7 +31,7 @@ function Footer() {
                     <a className='ts-footer-items white-font ts-footer-link' href='https://goo.gl/maps/suxKciwfmetysGth6' target='_blank'>
                         {textFolder.batumiLTD}<br /> {textFolder.batumiSTR}
                     </a>
-                    <a className='ts-footer-items white-font ts-footer-link' href='tel:+995322422093' target='_blank'>(+995) 322 42 20 93</a>
+                    <a className='ts-footer-items white-font ts-footer-link' href='tel:+995322422093' target='_blank'>+995 577 374 230</a>
                 </div>
 
                 <div className='d-flex flex-column align-items-start ts-footer-row'>

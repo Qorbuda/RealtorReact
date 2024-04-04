@@ -11,7 +11,7 @@ import PropertyAddInfoSaver from '../../pages/PropertyAddition/propertyAddInfoSa
 import "./homePage.css"
 
 
-function PropertyCardAgents({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn }) {
+function PropertyCardAgents({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn, deletedItems, onCklickRestore }) {
     apartmentInfo = apartmentInfo
 
     const navigate = useNavigate();
@@ -21,7 +21,10 @@ function PropertyCardAgents({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn
 
     function setTab(tabName, itemId, langId) {
         GetApartmentId(apartmentInfo.id)
-        navigate(`/${tabName}/${itemId}/${langId}`);
+        const newTab = window.open(`/${tabName}/${itemId}/${langId}`);
+        // newTab.onload = () => {
+        //     navigate(`/${tabName}/${itemId}/${langId}`);
+        // };
     };
 
     const togglePopup = () => {
@@ -37,7 +40,7 @@ function PropertyCardAgents({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn
     return (
         <div className='ts-property-card d-flex flex-column align-items-start'>
 
-            <button className='ts-property-card-open-apartment-main-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1); window.location.reload(); }}>
+            <button className='ts-property-card-open-apartment-main-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1);  }}>
             </button>
 
             <div className='total-test'>
@@ -98,15 +101,24 @@ function PropertyCardAgents({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn
 
             <div className="Apartment-box-from-agent-change-apartment" id={'overlay' + apartmentInfo.id}>
                 <div className="Apartment-box-from-agent-change-apartment-button-div">
-                    <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onClickHistoryBtn(true, apartmentInfo.apartmentHistory)}>
-                        <p className="Apartment-box-from-agent-apartment-pop-btn-text">{"history"}</p>
-                    </button>
-                    <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => { setEditProperty(apartmentInfo.id) }} >
-                        <p className="Apartment-box-from-agent-apartment-pop-btn-text">{"edit"}</p>
-                    </button>
-                    <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onClickDeleteBtn(true, apartmentInfo.id)}>
-                        <p className="Apartment-box-from-agent-apartment-pop-btn-text" >{"delete"}</p>
-                    </button>
+                    {deletedItems ? 
+                        <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onCklickRestore(true, apartmentInfo.id)}>
+                            <p className="Apartment-box-from-agent-apartment-pop-btn-text">{"restore"}</p>
+                        </button>
+                        : 
+                    
+                        <>
+                            <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onClickHistoryBtn(true, apartmentInfo.apartmentHistory)}>
+                                <p className="Apartment-box-from-agent-apartment-pop-btn-text">{"history"}</p>
+                            </button>
+                            <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => { setEditProperty(apartmentInfo.id) }} >
+                                <p className="Apartment-box-from-agent-apartment-pop-btn-text">{"edit"}</p>
+                            </button>
+                            <button className="Apartment-box-from-agent-apartment-pop-btn" onClick={() => onClickDeleteBtn(true, apartmentInfo.id)}>
+                                <p className="Apartment-box-from-agent-apartment-pop-btn-text" >{"delete"}</p>
+                            </button>
+                        </>
+                    }
                 </div>
 
             </div>
@@ -135,7 +147,7 @@ function PropertyCardAgents({ apartmentInfo, onClickHistoryBtn, onClickDeleteBtn
         inputInfo.property.checkBoxs = input.property.checkBoxs
 
         navigate(`/post_property/general_info`);
-        
+
 
     }
 

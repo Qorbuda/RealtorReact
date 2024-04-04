@@ -3,6 +3,7 @@ import Ka from '../icons/ka.svg'
 import Eng from '../icons/eng.svg'
 import Ru from '../icons/ru.svg'
 import PhoneCallBlack from '../icons/PhoneCallBlack.svg'
+import ThreePoints from '../icons/ThreePoints.svg'
 import LanguageSwitcher from '../secondary/localization/LanguageSwitcher';
 import NumberLink from '../numberLinkComponent/numberLink';
 
@@ -18,12 +19,15 @@ function OurTeamAgentsDes(agentInfro, agentKey) {
     const handleMessageToAgent = () => {
         WhatsUpLinkUtil.openLink(agentInfro.agentInfro['numbers'][0]);
     }
-    
+
     return (
         <div key={agentInfro.agentKey} className='Team-Agent-info-bar' >
+
             <img src={`https://api.myflats.ge/api/image/${getInfroText(agentInfro.agentInfro, "agentMainImage")}`} alt="Image" className="Team-Agent-info-bar-img" />
             <div className='Team-Agent-info-text-bar'>
                 <div className='Team-Agent-info-text'>
+
+
                     <div className='Team-Agent-info-name'>
                         <p className='Team-Agent-Name-Text'>{getInfroText(agentInfro.agentInfro, "fullName")}</p>
                         <p className='Team-Agent-self-position'>{getInfroText(agentInfro.agentInfro, "position")}</p>
@@ -33,14 +37,16 @@ function OurTeamAgentsDes(agentInfro, agentKey) {
                     </div>
                     {/* <p className='Team-Agent-info-view-properties'>view properties</p> */}
                     <div className='Team-Agent-info-phone-numbers-bar'>
-                            {getInfroPhone(agentInfro.agentInfro, "numbers", 0)}
-                            {getInfroPhone(agentInfro.agentInfro, "numbers", 1)}
+                        {getInfroPhone(agentInfro.agentInfro, "numbers", 0)}
+                        {getInfroPhone(agentInfro.agentInfro, "numbers", 1)}
                     </div>
                     <button className='Team-Agent-info-button-bar' onClick={handleMessageToAgent}>
                         <p className='Team-Agent-info-button-text'>{textFolder.MessageToAgent}</p>
                     </button>
 
+
                 </div>
+
             </div>
         </div>
     );
@@ -79,21 +85,21 @@ function getInfroText(mainInfom, TextKey, index = -1) {
     else return (mainInfom[TextKey][index])
 }
 
-function getInfroPhone(mainInfom, TextKey, index = -1){
+function getInfroPhone(mainInfom, TextKey, index = -1) {
 
-    if (!mainInfom[TextKey][index] || mainInfom[TextKey][index]  == "") {
-        return(
+    if (!mainInfom[TextKey][index] || mainInfom[TextKey][index] == "") {
+        return (
             <div className='Team-Agent-info-phone-number-bar'>
             </div>
         );
-    } 
-    return(
-            <div className='Team-Agent-info-phone-number-bar'>
-                <img className='Team-Agent-info-phone-icon' src={PhoneCallBlack} />
-                <p className='Team-Agent-info-phone-number'> 
-                    <NumberLink phoneNumber={mainInfom[TextKey][index]}/>
-                </p>
-            </div>
+    }
+    return (
+        <div className='Team-Agent-info-phone-number-bar'>
+            <img className='Team-Agent-info-phone-icon' src={PhoneCallBlack} />
+            <p className='Team-Agent-info-phone-number'>
+                <NumberLink phoneNumber={mainInfom[TextKey][index]} />
+            </p>
+        </div>
     );
 
 }

@@ -10,9 +10,6 @@ const Comment = ({
   handleInsertNode,
   handleEditNode,
   handleDeleteNode,
-  agentName,
-  commentTime,
-  agentImage,
   comment,
 }) => {
   const [input, setInput] = useState("");
@@ -25,10 +22,6 @@ const Comment = ({
     inputRef?.current?.focus();
   }, [editMode]);
 
-  const handleNewComment = () => {
-    setExpand(!expand);
-    setShowInput(true);
-  };
 
   const onAddComment = () => {
     if (editMode) {
@@ -47,66 +40,71 @@ const Comment = ({
     handleDeleteNode(comment.id);
   };
 
+
+  function addCommentFun(agentName, commentTIme, CommentText, agentImage) {
+    return (
+      <div className="coments-info-div">
+        <div className="testClas">
+          <img src={`https://api.myflats.ge/api/image/` + agentImage} className='open-home-page-agent-iamge' />
+          <div className="commentar-autor-name">{agentName}</div>
+          <p className="commentar-agents-dtm">{commentTIme}</p>
+        </div>
+        <span
+          ref={inputRef}
+          style={{ wordWrap: "break-word" }}
+        >
+          {CommentText}
+        </span>
+
+        <div style={{ display: "flex", marginTop: "5px" }}>
+          {
+            <Action
+              className="reply"
+              type="DELETE"
+              handleClick={handleDelete}
+            />
+          }
+        </div>
+      </div>
+    )
+  }
+
+  function oldCommentSort(commentData) {
+    let commentArr = []
+
+    for (let i = 0; i < commentData.length; i++) {
+      commentArr.push(addCommentFun(commentData[i].agentName, commentData[i].createDate, commentData[i].commentText, commentData[i].agentImage,))
+    }
+
+    return(
+      <div className="coments-info-full-div">
+        {commentArr}
+      </div>
+    )
+  }
+
   return (
     <div>
-      <div className={comment.id === 1 ? "inputContainer" : "commentContainer"}>
-        {comment.id === 1 ? (
-          <>
-            <input
-              type="text"
-              className="inputContainer__input first_input"
-              autoFocus
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="your comment"
-            />
+      <div className="comment-page-input-full-div">
+        <input
+          type="text"
+          className="inputContainer__input first_input"
+          autoFocus
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="your comment"
+        />
 
-            <Action
-              className="commentar-button"
-              type="COMMENT"
-              handleClick={onAddComment}
-            />
-          </>
-        ) : (
-          <>
-            <div className="testClas">
-              <img src={`https://api.myflats.ge/api/image/` + agentImage} className='open-home-page-agent-iamge' />
-              <div className="commentar-autor-name">{agentName}</div>
-              <p className="commentar-agents-dtm">{commentTime}</p>
-            </div>
-            <span
-              ref={inputRef}
-              style={{ wordWrap: "break-word" }}
-            >
-              {comment.name}
-            </span>
-
-            <div style={{ display: "flex", marginTop: "5px" }}>
-              {
-                <Action
-                  className="reply"
-                  type="DELETE"
-                  handleClick={handleDelete}
-                />
-              }
-            </div>
-          </>
-        )}
+        <Action
+          className="commentar-button"
+          type="COMMENT"
+          handleClick={onAddComment}
+        />
+      </div>
+      <div className="comment-page-comment-full-div">
+        {oldCommentSort(comment)}
       </div>
 
-      <div style={{ display: expand ? "block" : "none", paddingLeft: 25 }}>
-        {comment?.items?.map((cmnt) => {
-          return (
-            <Comment
-              key={cmnt.id}
-              handleInsertNode={handleInsertNode}
-              handleEditNode={handleEditNode}
-              handleDeleteNode={handleDeleteNode}
-              comment={cmnt}
-            />
-          );
-        })}
-      </div>
     </div>
 
   );
@@ -114,54 +112,3 @@ const Comment = ({
 
 export default Comment;
 
-
-
-// <div style={{ display: "flex", marginTop: "5px" }}>
-//   {editMode ? (
-//     <>
-//       <Action
-//         className="reply"
-//         type="SAVE"
-//         handleClick={onAddComment}
-//       />
-//       <Action
-//         className="reply"
-//         type="CANCEL"
-//         handleClick={() => {
-//           if (inputRef.current)
-//             inputRef.current.innerText = comment.name;
-//           setEditMode(false);
-//         }}
-//       />
-//     </>
-//   ) : (
-//     <>
-//       <Action
-//         className="reply"
-//         type={
-//           <>
-//             {expand ? (
-//               <UpArrow width="10px" height="10px" />
-//             ) : (
-//               <DownArrow width="10px" height="10px" />
-//             )}{" "}
-//             REPLY
-//           </>
-//         }
-//         handleClick={handleNewComment}
-//       />
-//       <Action
-//         className="reply"
-//         type="EDIT"
-//         handleClick={() => {
-//           setEditMode(true);
-//         }}
-//       />
-//       <Action
-//         className="reply"
-//         type="DELETE"
-//         handleClick={handleDelete}
-//       />
-//     </>
-//   )}
-// </div>

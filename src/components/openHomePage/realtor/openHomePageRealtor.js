@@ -27,12 +27,12 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                 </div>
                 <div className='property-infos'>
                     <div className='property-info'>
-                        <h3>{textFolder.PersonalID}</h3>
+                        <h3>{textFolder.ObjectType}</h3>
                         <span>{realtorInfo.personalID}</span>
                     </div>
                     <div className='property-info'>
                         <h3>{textFolder.FullSpace}</h3>
-                        <span>{realtorInfo.fullSpace}</span>
+                        <span>{realtorInfo.fullSpace} M<sup>2</sup></span>
                     </div>
                     <div className='property-info'>
                         <h3>{textFolder.DealType}</h3>

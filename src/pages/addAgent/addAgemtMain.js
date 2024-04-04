@@ -28,7 +28,7 @@ function AddAgemtMain() {
         if (token) {
             const decodedToken = jwtDecode(token);
             setUser(decodedToken);
-  
+
         }
     }, []);
     const navigate = useNavigate();
@@ -53,6 +53,17 @@ function AddAgemtMain() {
     }, []);
 
 
+    const generatePassword = (length) => {
+        const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let password = '';
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            password += charset[randomIndex];
+        }
+        return password;
+    };
+
+
     const [office, setOffice] = useState(0);
     var dealTypeController = new SelectController(office, setOffice, offices)
 
@@ -71,7 +82,7 @@ function AddAgemtMain() {
     const [inputMail, mail] = useState('');
     var inputMailController = new InputController(inputMail, mail);
 
-    const [inputPassword, password] = useState('');
+    const [inputPassword, password] = useState(generatePassword(8));
     var inputPasswordController = new InputController(inputPassword, password);
 
     newAgentData.name = inputNameController.state
@@ -102,7 +113,7 @@ function AddAgemtMain() {
                 <div className='add-agent-inputs-firs-line-div'>
                     <BaseSelect placeholder={textFolder.status} controller={agentStatusController} />
                     <BaseSelect placeholder={textFolder.office} controller={dealTypeController} />
-                    
+
                 </div>
                 <div className='add-agent-inputs-firs-checkbox-div'>
                     <div className="add-agent-inputs-firs-checkbox-div-text">{textFolder.language}</div>
@@ -137,7 +148,7 @@ function AddAgemtMain() {
                         iconTitleText={"Upload a picture"}
                         iconFormatText={"SVG, PNG or JPG (rec. 700x430px)"}
                         buttonText={"Browse"}
-                        saveStatus = "addAgent"
+                        saveStatus="addAgent"
                     />
                 </div>
                 <div className='add-agent-inputs-firs-line-div'>
@@ -149,14 +160,14 @@ function AddAgemtMain() {
                         buttonText={"Browse"}
                         iconImage={uploadDocIcon}
                         FileTitleId="docs-bloc-id"
-                        saveStatus = "addAgent"
+                        saveStatus="addAgent"
                     />
 
                 </div>
 
             </div>
             <div className="button-container">
-                <BaseButton text={textFolder.registration} call_method={() => {SaveAgent() }} />
+                <BaseButton text={textFolder.registration} call_method={() => { SaveAgent() }} />
             </div>
         </div>
     );
@@ -164,10 +175,10 @@ function AddAgemtMain() {
     function setTab(tabName) {
         navigate(`/${tabName}`);
     };
-    
+
     const [errorMessages, setErrorMessages] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
-    function SaveAgent(){
+    function SaveAgent() {
         console.log(newAgentData)
         const formData = new FormData();
         if (newAgentData.photosAndDocs.mainImage.image) {
@@ -178,7 +189,7 @@ function AddAgemtMain() {
         }
         formData.append('inputInfo', JSON.stringify(newAgentData));
         axios.post('https://api.myflats.ge/api/Agents/post-agent', formData, {
-            params:{agentId: user?.id},
+            params: { agentId: user?.id },
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
@@ -190,8 +201,8 @@ function AddAgemtMain() {
             .catch(error => {
                 console.log(error);
             });
-            // setTab(""); 
-            // window.location.reload();
+        // setTab(""); 
+        // window.location.reload();
     }
 
     function checkBoxClickFun(checkBoxIndex) {
@@ -205,6 +216,9 @@ function AddAgemtMain() {
     };
 
 
+
+
+    console.log(generatePassword(8))
 
 
     return (

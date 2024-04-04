@@ -238,7 +238,7 @@ const fullHomeInfops =
 
 function OpenHomMainPageAgents({ fullHomeInfo }) {
   
-  //fullHomeInfo = fullHomeInfops
+  // fullHomeInfo = fullHomeInfops
 //  
   return (
     <div className='post-property-page'>

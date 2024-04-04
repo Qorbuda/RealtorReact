@@ -54,7 +54,9 @@ var fullInfoDict = {
       "checkBoxs": []
     },
     "description": {
-      "description": ""
+      "descriptionEn": "",
+      "descriptionKa": "",
+      "descriptionRu": ""
     },
     "photosAndDocs": {
       "mainImage": {

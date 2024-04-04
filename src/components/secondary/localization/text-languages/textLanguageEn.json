@@ -37,7 +37,10 @@
       "search": "SEARCH",
       "PropertyId": "Property ID",
       "apartmentCategory": "APARTMENT CATEGORY",
-      "Floor": "Floor"
+      "Floor": "Floor",
+      "Sorting": "Sosrting",
+      "Agent": "Agent"
+
     },
     "homePageageApartmentText":{
       "newProperties": "New Properties",
@@ -103,7 +106,11 @@
       "Popular": "Similar offers",
       "Bathroom": "Bathroom"
     },
-    "Description": "Description ",
+    "Description": {
+      "descriptionEn" : "Description in English",
+      "descriptionKa" : "Description in Georgian",
+      "descriptionRu" : "Description in Russian"
+    },
     "photosAndDocs": {
       "AddMainImage": "Add main image",
       "IconTitleText": "Upload a picture",
@@ -164,9 +171,8 @@
   "UserPage": {
     "allProperties":"All properties",
     "myProperties":"My properties",
-    
     "deletedProperties":"Deleted properties",
-
+    "agentList":"agents list",
     "addNew":"ADD NEW",
     "showMore":"SOW MORE",
     "logOut": "Log out",
@@ -195,6 +201,7 @@
     "Floor":"Floor: ",
     "Bedrooms":"Bedrooms: ",
     "bathroom":"bathroom: ",
+    "ObjectType":"Object type",
     "PersonalID":"PersonalID",
     "FullSpace":"Full Space",
     "DealType":"Deal Type",

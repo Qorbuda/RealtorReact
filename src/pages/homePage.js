@@ -34,7 +34,7 @@ function HomePage() {
   return (
     <div className='d-flex flex-column justify-content-center align-items-center'>
       <div className='ts-base-container' style={{ marginBottom: "100px", width: "90%" }}>
-        <FastFilters handleScroll={handleScroll}/>
+        <FastFilters handleScroll={handleScroll} setItems={setProperties} clickCount={setClickCount}/>
       </div>
 
       <div className='ts-base-container' style={{ marginBottom: "100px", width: "90%" }}>

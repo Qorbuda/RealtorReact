@@ -30,11 +30,17 @@ function Description() {
     function setTab(tabName) {
         navigate(`/${tabName}`);
     };
-    const [description, setdescription] = useState(inputInfo.description);
-    var descriptionController = new InputController(description, setdescription);
+    const [descriptionEn, setdescriptionEn] = useState(inputInfo.descriptionEn);
+    const [descriptionKa, setdescriptionKA] = useState(inputInfo.descriptionKa);
+    const [descriptionRu, setdescriptionRu] = useState(inputInfo.descriptionRu);
+    var descriptionControllerEn = new InputController(descriptionEn, setdescriptionEn);
+    var descriptionControllerKa = new InputController(descriptionKa, setdescriptionKA);
+    var descriptionControllerRu = new InputController(descriptionRu, setdescriptionRu);
 
 
-    inputInfo.description = descriptionController.state
+    inputInfo.descriptionEn = descriptionControllerEn.state
+    inputInfo.descriptionKa = descriptionControllerKa.state
+    inputInfo.descriptionRu = descriptionControllerRu.state
 
 
     return (
@@ -46,10 +52,18 @@ function Description() {
             </div>
 
             <div className='Post-property-fescription-page-input-div'>
-                <textarea className="form-control Post-property-fescription-page-input" type="text" placeholder={textFolder.Description} onChange={(event) => { descriptionController.setState(event.target.value) }} value={descriptionController.state}></textarea>
+                <textarea className="form-control Post-property-fescription-page-input" type="text" placeholder={textFolder.Description.descriptionEn}
+                    onChange={(event) => { descriptionControllerEn.setState(event.target.value) }} value={descriptionControllerEn.state}></textarea>
+
+                <textarea className="form-control Post-property-fescription-page-input" type="text" placeholder={textFolder.Description.descriptionKa}
+                    onChange={(event) => { descriptionControllerKa.setState(event.target.value) }} value={descriptionControllerKa.state}></textarea>
+
+                <textarea className="form-control Post-property-fescription-page-input" type="text" placeholder={textFolder.Description.descriptionRu}
+                    onChange={(event) => { descriptionControllerRu.setState(event.target.value) }} value={descriptionControllerRu.state}></textarea>
+
                 <div className='Post-property-owner-page-buttons-div'>
 
-                    <BaseButton text={textFolder.Back}  call_method={() => { setTab("post_property/property") }} />
+                    <BaseButton text={textFolder.Back} call_method={() => { setTab("post_property/property") }} />
                     <BaseButton text={<span >{textFolder.Next} <img className='Post-property-general-info-input-icon' src={ArrowRaight} /></span>}
                         call_method={() => { setTab("post_property/photos_and_docs") }} />
 

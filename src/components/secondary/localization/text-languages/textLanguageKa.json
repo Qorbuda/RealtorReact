@@ -37,7 +37,10 @@
       "search": "ძიება",
       "PropertyId": "ქონების ID",
       "apartmentCategory": "ბინების კატეგორია",
-      "Floor": "სართული"
+      "Floor": "სართული",
+      "Sorting": "Sosrting",
+      "Agent": "აგენტი"
+
     },
     "homePageageApartmentText":{
       "newProperties": "ახალი შეთავაზებები",
@@ -103,7 +106,11 @@
       "Popular": "მსგავსი შეთავაზებები",
       "Bathroom": "აბაზანა"
     },
-    "Description": "აღწერა ",
+    "Description": {
+      "descriptionEn" : "აღწერა ინგლისურად",
+      "descriptionKa" : "აღწერა ქართულად",
+      "descriptionRu" : "აღწერა რუსულად"
+    },
     "photosAndDocs": {
       "AddMainImage": "დაამატეთ მთავარი სურათი",
       "IconTitleText": "ატვირთეთ სურათი",
@@ -165,7 +172,7 @@
     "allProperties":"ყველა ობიექტი",
     "myProperties":"ჩემი ობიექტები",
     "deletedProperties":"წაშლილი ობიექტები",
-
+    "agentList":"აგენტების სია",
     "addNew":"ᲐᲮᲚᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ",
     "showMore":"დათესეთ მეტი",
     "logOut": "გასვლა",
@@ -194,6 +201,7 @@
     "Floor":"სართული: ",
     "Bedrooms":"საძინებლები: ",
     "bathroom":"აბაზანა: ",
+    "ObjectType":"ობიექტის ტიპი",
     "PersonalID":"პირადი ID",
     "FullSpace":"სრული ფართი",
     "DealType":"გარიგების ტიპი",

@@ -26,12 +26,26 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
     const [popupChangeAgent, setPopupChangeAgent] = useState(false);
     const [popupDeleteOpen, setPopupDeleteOpen] = useState(false);
     const [popupDeleteInfo, setPopupDeleteInfo] = useState("");
+    
+    let titleText = titleInfo.titleInfo.realtorInfo.dealType + titleInfo.titleInfo.realtorInfo.category + titleInfo.titleInfo.realtorInfo.city + titleInfo.titleInfo.realtorInfo.street
+
+    
     console.log("titleInfo")
     console.log(titleInfo)
+    console.log(titleText)
 
     titleInfo = titleInfo.titleInfo.headerInfo
 
+    const [buttonText, setButtonText] = useState('Click me');
 
+    const handleMouseEnter = () => {
+        setButtonText('Button hovered'); // Set text to display when hovered
+      };
+    
+      // Event handler for when the mouse leaves the button
+      const handleMouseLeave = () => {
+        setButtonText('Click me'); // Set back to initial text
+      };
 
     var inputInfo = PropertyAddInfoSaver()
     const navigate = useNavigate();
@@ -129,7 +143,7 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
                         {showNotification && <img className="hover-notification" src={ShareDun} /> }
                         {/* <img className="hover-notification" src={ShareDun} /> */}
                     </button>
-                    <button className="open-Home-page-header-agent-shear-btn">
+                    <button className="open-Home-page-header-agent-shear-btn"  >
                         <img className="open-Home-page-header-agent-shear-btn-icon" onClick={() => { showAddDocsPopap(true) }} src={Contract} />
                     </button>
                     <button className="open-Home-page-header-agent-shear-btn" onClick={() => handleDownload()}>

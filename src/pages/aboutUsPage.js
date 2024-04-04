@@ -6,10 +6,18 @@ import AddPropertyMapComponent from '../components/addPropertyMap/AddPropertyMap
 import PropertyCard from '../components/homePage/propertyCard';
 import SendMessage from '../contactMessage/sendMessage';
 import SearchFullInfo from "../components/homePage/searchFullInfo";
+import '@fortawesome/fontawesome-free/css/all.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGripHorizontal, faX } from  "@fortawesome/free-solid-svg-icons"
 
 function AboutUsPage() {
     const [properties, setProperties] = useState([]);
     const [clickCount, setClickCount] = useState(1);
+    const [showSearchContainer, setShowSearchContainer] = useState(false);
+
+    const handleToggle = () => {
+        setShowSearchContainer(!showSearchContainer);
+    }
 
 
     useEffect(() => {
@@ -24,15 +32,18 @@ function AboutUsPage() {
     return (
         <div className='post-property-page'>
             <div className='about-us-page-main'>
-                <div className='main-search-container'>
+                <FontAwesomeIcon icon={faGripHorizontal} className='toggle-style' size='3x' onClick={handleToggle}/>
+                {showSearchContainer && <FontAwesomeIcon icon={faX} className='toggle-x' onClick={handleToggle} size='1x'/> }
+                {showSearchContainer && <div className='main-search-container modal-style'>
+                    
                     <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount}/>
                     <div className='properties_container'>
                         {properties.length > 0 && <PropertyCard apartmentInfo={properties[0]}/>}
                         {properties.length > 1 && <PropertyCard apartmentInfo={properties[1]}/>} 
                     </div>
-                </div>
-                <div className='main-map-container' >
-                    <AddPropertyMapComponent />
+                </div>}
+                <div className='main-map-container'>
+                    <AddPropertyMapComponent properties={properties}/>
                 </div>
             </div> 
         </div>

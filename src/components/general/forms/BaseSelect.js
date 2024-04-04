@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import './forms.css';
 
 
 function BaseSelect({ id,  nameOfSelect, controller, placeholder, onChange, inModal = false }) {
