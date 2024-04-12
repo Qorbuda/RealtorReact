@@ -168,11 +168,11 @@ function UserPage() {
         var filter = SearchFullInfo()
         filter.isNotActive = true;
         filter.myItems = false;
-        filter.agentId = user?.id;
-        var props = await sendMessageLoginUsers(clickCount, filter);
+        filter.userId = user?.id;
+        var props = await sendMessageLoginUsers(1, filter);
         setpropertiesFromUser([]);
         setpropertiesFromUser(props);
-        setClickCount(1);
+        setClickCount(2);
     }
 
     async function showMyItems() {
@@ -181,13 +181,13 @@ function UserPage() {
         setIsActiveMy(true);
         var filter = SearchFullInfo()
         filter.myItems = true;
-        filter.agentId = user?.id;
+        filter.userId = user?.id;
         filter.isNotActive = false;
-        var props = await sendMessageLoginUsers(clickCount, filter);
+        setClickCount(1);
+        var props = await sendMessageLoginUsers(1, filter);
         setpropertiesFromUser([]);
         setpropertiesFromUser(props);
-
-        setClickCount(1);
+        setClickCount(2);
     }
 
     async function showAllItems() {
@@ -198,10 +198,10 @@ function UserPage() {
         var filter = SearchFullInfo()
         filter.myItems = false;
         filter.isNotActive = false;
-        var props = await sendMessageLoginUsers(clickCount, filter);
+        var props = await sendMessageLoginUsers(1, filter);
         setpropertiesFromUser([]);
         setpropertiesFromUser(props);
-        setClickCount(1);
+        setClickCount(2);
     }
 
 
@@ -215,12 +215,13 @@ function UserPage() {
         var props = await sendMessageLoginUsers(clickCount, filter);
         setpropertiesFromUser([]);
         setpropertiesFromUser(props);
-        setClickCount(1);
+        setClickCount(2);
     }
 
     async function userPageShowMorBtnClick() {
         var filter = SearchFullInfo()
-        var props = await sendMessageLoginUsers(clickCount, filter);
+        
+        var props = await sendMessageLoginUsers(clickCount != 1 ? clickCount : 2, filter);
         setClickCount(prevCount => prevCount + 1);
         const result = propertiesFromUser.concat(props);
         setpropertiesFromUser(result);

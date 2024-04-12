@@ -46,8 +46,8 @@ var searchFullDict = {
     },
     "myItems": false,
     "agentId": 0,
-    "isNotActive": false
-
+    "isNotActive": false,
+    "userId" : 0
 }
 
 
