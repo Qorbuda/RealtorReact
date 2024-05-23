@@ -36,7 +36,7 @@ function AboutUsPage() {
                 {showSearchContainer && <FontAwesomeIcon icon={faX} className='toggle-x' onClick={handleToggle} size='1x'/> }
                 {showSearchContainer && <div className='main-search-container modal-style'>
                     
-                    <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount}/>
+                    <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount} mapSearch={true}/>
                     <div className='properties_container'>
                         {properties.length > 0 && <PropertyCard apartmentInfo={properties[0]}/>}
                         {properties.length > 1 && <PropertyCard apartmentInfo={properties[1]}/>} 

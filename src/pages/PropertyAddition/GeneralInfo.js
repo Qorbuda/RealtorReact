@@ -108,7 +108,6 @@ function GeneralInfo(test = "")  {
                 </div>
                 <div className='Post-property-add-map-cordinants'>
                     <AddPropertyMapComponent/>
-
                 </div>
             </div>
         </div>

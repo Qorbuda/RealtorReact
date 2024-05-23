@@ -18,7 +18,7 @@ import axios from 'axios';
 
 
 
-function SearchBarHome({ fromHome, setItems, clickCount }) {
+function SearchBarHome({ fromHome, setItems, clickCount, mapSearch }) {
     var lang = getActivLanguageStatus();
     var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
     var textFolder = LanguageSwitcher().HomePage.searchField;
@@ -221,7 +221,7 @@ function SearchBarHome({ fromHome, setItems, clickCount }) {
     );
     async function searchItems() {
 
-        var props = fromHome ? await SendMessage(1, searchInputInfro) : await sendMessageLoginUsers(1, searchInputInfro);
+        var props = fromHome ? await SendMessage(mapSearch ? 0 : 1, searchInputInfro) : await sendMessageLoginUsers(mapSearch ? 0 : 1, searchInputInfro);
         setItems([])
 
         setItems(props)

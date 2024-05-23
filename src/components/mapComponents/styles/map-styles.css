@@ -88,6 +88,7 @@
     .map-wrap {
         width: calc(100% - 12px);
         left: 12px;
+        height: 300px;
     }
   }
 

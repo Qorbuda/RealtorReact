@@ -96,6 +96,11 @@
     height: 575px;
 }
 
+.Post-property-add-map-cordinants .map {
+    width: calc(100% - 12px);
+    height: 100%;
+}
+
 
 /* Owner page  */
 
