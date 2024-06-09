@@ -6,7 +6,7 @@ import MAP_DATA from '../mapComponents/constants/MAP_DATA';
 import createMarkers from '../mapComponents/utils/markersUtil';
 import { createMarkerData } from './utils/createMarkerData';
 
-const AddPropertyMapComponent = ({properties}) => {
+const AddPropertyMapComponent = ({ properties }) => {
     const map = useRef(null);
     const mapContainer = useRef(null);
     const [lng] = useState(MAP_DATA.STARTING_POS.lng);
@@ -16,7 +16,7 @@ const AddPropertyMapComponent = ({properties}) => {
 
     useEffect(() => {
         console.log(properties)
-        
+
         map.current = new maplibregl.Map({
             container: mapContainer.current,
             style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
@@ -27,7 +27,7 @@ const AddPropertyMapComponent = ({properties}) => {
 
         const width = mapContainer.current.offsetWidth;
         const height = mapContainer.current.offsetHeight;
-       
+
 
         map.current.setMaxBounds(MAP_DATA.MAX_BOUNDS);
         map.current.setMinZoom(MAP_DATA.MIN_ZOOM);

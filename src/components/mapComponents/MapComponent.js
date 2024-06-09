@@ -12,7 +12,7 @@ import useMapLoaded from './hooks/useMapLoaded';
 import addDoubleClickMarker from '../addPropertyMap/utils/addMarkerUtil';
 import useUpdateMapLocation from './hooks/useUpdateMapLocation';
 
-const MapComponent = ({selectedCity}) => {
+const MapComponent = ({ selectedCity }) => {
     const mapContainer = useRef(null);
     const map = useRef(null);
     const [lng] = useState(MAP_DATA.STARTING_POS.lng);
@@ -22,12 +22,12 @@ const MapComponent = ({selectedCity}) => {
 
     useEffect(() => {
         if (map.current) return;
-    
+
         map.current = new maplibregl.Map({
-          container: mapContainer.current,
-          style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
-          center: [lng, lat],
-          zoom: zoom
+            container: mapContainer.current,
+            style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
+            center: [lng, lat],
+            zoom: zoom
         });
 
         map.current.setMaxBounds(MAP_DATA.MAX_BOUNDS);
@@ -36,7 +36,7 @@ const MapComponent = ({selectedCity}) => {
 
         map.current.addControl(new maplibregl.NavigationControl(), 'top-left');
         SearchBar(map.current);
-        
+
     }, [API_KEY, lng, lat, zoom]);
 
     const isMapLoaded = useMapLoaded(map);
@@ -58,7 +58,7 @@ const MapComponent = ({selectedCity}) => {
 
     return (
         <div className="map-wrap">
-          <div ref={mapContainer} className="map" />
+            <div ref={mapContainer} className="map" />
         </div>
     );
 }

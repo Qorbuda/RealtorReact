@@ -8,7 +8,8 @@ import PhoneCallOrangeSmal from '../../icons/PhoneCallOrangeSmal.svg';
 
 const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
     var textFolder = LanguageSwitcher().openApartmentPage;
-
+    console.log("realtorInfo================")
+    console.log(realtorInfo)
 
     return (
         <div className="main-box">
@@ -28,7 +29,7 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                 <div className='property-infos'>
                     <div className='property-info'>
                         <h3>{textFolder.ObjectType}</h3>
-                        <span>{realtorInfo.personalID}</span>
+                        <span>{realtorInfo.category}</span>
                     </div>
                     <div className='property-info'>
                         <h3>{textFolder.FullSpace}</h3>

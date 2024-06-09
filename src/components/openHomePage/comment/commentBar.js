@@ -5,7 +5,7 @@ import useNode from "./hooks/useNode";
 import './commentBar-style.css';
 
 
-const comments = {  
+const comments = {
     id: 1,
     items: [],
 };

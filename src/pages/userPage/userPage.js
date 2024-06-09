@@ -114,9 +114,9 @@ function UserPage() {
                             <p className={`${isActiveDeleted ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.deletedProperties}</p>
                         </button>
 
-                        <button className={`${isActiveAgents ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={showAgentList}>
+                        {/* <button className={`${isActiveAgents ? 'active_tab_button' : 'not_active_tab_button'}`} onClick={showAgentList}>
                             <p className={`${isActiveAgents ? 'active_tab_text' : 'not_active_tab_text'}`}>{textFolder.agentList}</p>
-                        </button>
+                        </button> */}
 
                     </div>
                     <button className="User-page-search-sistem-add-new-btn" onClick={() => { setTab("post_property/general_info") }}>

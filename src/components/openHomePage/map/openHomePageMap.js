@@ -4,20 +4,20 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import "../../mapComponents/styles/map-styles.css";
 import MAP_DATA from '../../mapComponents/constants/MAP_DATA';
 
-const OpenHomePageMapComponent = ({coordinates}) => {
+const OpenHomePageMapComponent = ({ coordinates }) => {
     const map = useRef(null);
     const mapContainer = useRef(null);
     const [zoom] = useState(MAP_DATA.STARTING_ZOOM);
     const [API_KEY] = useState(MAP_DATA.key);
-    
+
     useEffect(() => {
         if (map.current) return;
-        
+
         map.current = new maplibregl.Map({
-          container: mapContainer.current,
-          style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
-          center: [coordinates ? coordinates.lngCord : 0, coordinates ? coordinates.latCord : 0],
-          zoom: zoom
+            container: mapContainer.current,
+            style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
+            center: [coordinates ? coordinates.lngCord : 0, coordinates ? coordinates.latCord : 0],
+            zoom: zoom
         });
 
         const width = mapContainer.current.offsetWidth;
@@ -28,19 +28,19 @@ const OpenHomePageMapComponent = ({coordinates}) => {
         map.current.setMaxZoom(MAP_DATA.MAX_ZOOm);
         map.current.doubleClickZoom.disable();
 
-        
+
 
         const newMarker = new maplibregl.Marker().setLngLat(coordinates ? [coordinates.lngCord, coordinates.latCord] : [0, 0]).addTo(map.current);
 
         map.current.on('move', () => {
             const topLeft = map.current.unproject([0, 0]).toArray();
             const bottomRight = map.current.unproject([width, height]).toArray();
-    
-            if(newMarker) {
+
+            if (newMarker) {
                 const bounds = new maplibregl.LngLatBounds(bottomRight, topLeft);
                 const markerPosition = newMarker.getLngLat();
-    
-                if(bounds.contains(markerPosition)) {
+
+                if (bounds.contains(markerPosition)) {
                     newMarker.getElement().style.display = '';
                 } else {
                     newMarker.getElement().style.display = 'none';
@@ -52,7 +52,7 @@ const OpenHomePageMapComponent = ({coordinates}) => {
 
     return (
         <div className="map-wrap">
-            <div ref={mapContainer} className="map" />
+            <div ref={mapContainer} className="map" />s
         </div>
     );
 }

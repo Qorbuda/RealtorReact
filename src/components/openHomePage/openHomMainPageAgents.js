@@ -13,7 +13,7 @@ const fullHomeInfops =
   "headerInfo": {
     "title": "sales departament #5",
     "itemCode": "4162035             ",
-    "id" : 0
+    "id": 0
   },
   "imageInfo": {
     "mainImage": null,
@@ -60,29 +60,29 @@ const fullHomeInfops =
     "apartmentDescription": "Вашему вниманию представляется многофункциональная 37м2 квартира на 17 этаже в комплексе Inturist Residents в самом сердце Батуми в непосредственной близости к морю.\nВыполнен дизайнерский ремонт с применением высококачественных материалов, имеется вся нео"
   },
   "comments":
-  [
-    {
-      "id": 9172,
-      "commentText": "10 აპრილიდან აქირავებს",
-      "createDate": "2022-03-29T14:24:55",
-      "agentName": "Ruso Qavzharadze",
-      "agentImage": "upload/agents/IMG_20211011_122749.jpg"
-    },
-    {
-      "id": 9792,
-      "commentText": "თვისუფალია",
-      "createDate": "2022-04-13T12:40:47",
-      "agentName": "Ruso Qavzharadze",
-      "agentImage": "upload/agents/IMG_20211011_122749.jpg"
-    },
-    {
-      "id": 9989,
-      "commentText": "Gaqiravda",
-      "createDate": "2022-04-16T09:15:21",
-      "agentName": "Keti Pataraia",
-      "agentImage": "upload/agents/IMG-20210302-WA0001.jpg"
-    }
-  ],
+    [
+      {
+        "id": 9172,
+        "commentText": "10 აპრილიდან აქირავებს",
+        "createDate": "2022-03-29T14:24:55",
+        "agentName": "Ruso Qavzharadze",
+        "agentImage": "upload/agents/IMG_20211011_122749.jpg"
+      },
+      {
+        "id": 9792,
+        "commentText": "თვისუფალია",
+        "createDate": "2022-04-13T12:40:47",
+        "agentName": "Ruso Qavzharadze",
+        "agentImage": "upload/agents/IMG_20211011_122749.jpg"
+      },
+      {
+        "id": 9989,
+        "commentText": "Gaqiravda",
+        "createDate": "2022-04-16T09:15:21",
+        "agentName": "Keti Pataraia",
+        "agentImage": "upload/agents/IMG-20210302-WA0001.jpg"
+      }
+    ],
   "popularApartmentsInfo": {
     "apartmentsBoxInfo": [
       {
@@ -237,9 +237,9 @@ const fullHomeInfops =
 }
 
 function OpenHomMainPageAgents({ fullHomeInfo }) {
-  
+
   // fullHomeInfo = fullHomeInfops
-//  
+  //  
   return (
     <div className='post-property-page'>
       <div className='main-container'>

@@ -39,12 +39,12 @@ function Menu() {
     }, []);
     return (
         <div className='d-flex flex-row justify-content-between align-items-center gap-3 menu-wrapper menu-main'>
-            <button  onClick={() => {user?.id ? setTab("user_property") :  setTab("")}}>
+            <button onClick={() => { user?.id ? setTab("user_property") : setTab("") }}>
                 <Logo />
             </button>
             <div className='d-flex flex-row align-items-start gap-3'>
-                <button className={location.pathname === "/" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { user?.id ? setTab("user_property") :  setTab("") }}>{textFolder.home}</button>
-                <button className={location.pathname === "/about_us" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("about_us") }}>{textFolder.aboutUs}</button>
+                <button className={location.pathname === "/" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { user?.id ? setTab("user_property") : setTab("") }}>{textFolder.home}</button>
+                {/* <button className={location.pathname === "/about_us" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("about_us") }}>{textFolder.aboutUs}</button> */}
                 <button className={location.pathname === "/our_team" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("our_team") }}>{textFolder.ourTeam}</button>
                 <a className="menu-btn black-font" href="https://myvacancy.ge/" target="_blank">{textFolder.becomeAgent}</a>
                 {/* <button className={location.pathname === "/franchise" ? "menu-btn menu-btn-active" : "menu-btn"} onClick={() => { setTab("franchise") }}>{textFolder.Franchise}</button> */}

@@ -18,26 +18,25 @@ const Comment = ({
   const [expand, setExpand] = useState(false);
   const inputRef = useRef(null);
 
+
+
   useEffect(() => {
     inputRef?.current?.focus();
   }, [editMode]);
 
 
   const onAddComment = () => {
-    if (editMode) {
-      handleEditNode(comment.id, inputRef?.current?.innerText);
-    } else {
-      setExpand(true);
-      handleInsertNode(comment.id, input);
-      setShowInput(false);
-      setInput("");
-    }
+    console.log("input")
+    console.log(input)
+    console.log(setInput)
 
-    if (editMode) setEditMode(false);
   };
 
   const handleDelete = () => {
     handleDeleteNode(comment.id);
+    // console.log("input")
+    // console.log(input)
+    // console.log(setInput)
   };
 
 
@@ -76,7 +75,7 @@ const Comment = ({
       commentArr.push(addCommentFun(commentData[i].agentName, commentData[i].createDate, commentData[i].commentText, commentData[i].agentImage,))
     }
 
-    return(
+    return (
       <div className="coments-info-full-div">
         {commentArr}
       </div>
@@ -102,6 +101,9 @@ const Comment = ({
         />
       </div>
       <div className="comment-page-comment-full-div">
+        <div id="">
+
+        </div>
         {oldCommentSort(comment)}
       </div>
 

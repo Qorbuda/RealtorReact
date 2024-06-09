@@ -8,7 +8,7 @@ import SendMessage from '../contactMessage/sendMessage';
 import SearchFullInfo from "../components/homePage/searchFullInfo";
 import '@fortawesome/fontawesome-free/css/all.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGripHorizontal, faX } from  "@fortawesome/free-solid-svg-icons"
+import { faGripHorizontal, faX } from "@fortawesome/free-solid-svg-icons"
 
 function AboutUsPage() {
     const [properties, setProperties] = useState([]);
@@ -26,26 +26,26 @@ function AboutUsPage() {
             const properties = await SendMessage(clickCount, filter);
             setProperties(properties);
         }
-        fetchData();  
+        fetchData();
     }, [])
 
     return (
         <div className='post-property-page'>
             <div className='about-us-page-main'>
-                <FontAwesomeIcon icon={faGripHorizontal} className='toggle-style' size='3x' onClick={handleToggle}/>
-                {showSearchContainer && <FontAwesomeIcon icon={faX} className='toggle-x' onClick={handleToggle} size='1x'/> }
+                <FontAwesomeIcon icon={faGripHorizontal} className='toggle-style' size='3x' onClick={handleToggle} />
+                {showSearchContainer && <FontAwesomeIcon icon={faX} className='toggle-x' onClick={handleToggle} size='1x' />}
                 {showSearchContainer && <div className='main-search-container modal-style'>
-                    
-                    <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount} mapSearch={true}/>
+
+                    <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount} mapSearch={true} />
                     <div className='properties_container'>
-                        {properties.length > 0 && <PropertyCard apartmentInfo={properties[0]}/>}
-                        {properties.length > 1 && <PropertyCard apartmentInfo={properties[1]}/>} 
+                        {properties.length > 0 && <PropertyCard apartmentInfo={properties[0]} />}
+                        {properties.length > 1 && <PropertyCard apartmentInfo={properties[1]} />}
                     </div>
                 </div>}
                 <div className='main-map-container'>
-                    <AddPropertyMapComponent properties={properties}/>
+                    <AddPropertyMapComponent properties={properties} />
                 </div>
-            </div> 
+            </div>
         </div>
     );
 }
