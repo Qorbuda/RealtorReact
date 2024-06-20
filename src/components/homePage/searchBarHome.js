@@ -102,7 +102,7 @@ function SearchBarHome({ fromHome, setItems, clickCount, mapSearch }) {
 
 
     const [priceFromRange, setPriceFromRange] = useState([0, 1000000])
-    const [floorRange, setfloorRangeRange] = useState([0, 50])
+    const [floorRange, setfloorRangeRange] = useState([0, 100])
     const [spaceRamge, setSpaceRamge] = useState([0, 1000])
 
     var priceFromRangeController = new InputWithSliderController(priceFromRange, setPriceFromRange)

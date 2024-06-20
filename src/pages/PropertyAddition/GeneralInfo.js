@@ -106,9 +106,9 @@ function GeneralInfo(test = "")  {
                     <BaseButton text={<span >{textFolder.Next} <img className='Post-property-general-info-input-icon' src={ArrowRaight} /></span>} call_method={() => { setTab("post_property/owner"); }} />
 
                 </div>
-                <div className='Post-property-add-map-cordinants'>
+                {/* <div className='Post-property-add-map-cordinants'>
                     <AddPropertyMapComponent/>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Share from "../../icons/Share.svg"
 import ShareDun from "../../icons/ShareDun.svg"
 import Contract from "../../icons/Contract.svg"
@@ -15,6 +15,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import PopapEditDocument from '../../../pages/userPage/popapEditDocument'
 import PopapEditAgent from '../../../pages/userPage/popapEditAgent'
 import PopapDeleteButton from "../../../pages/userPage/popapDeleteButton";
+import { InvalidTokenError, jwtDecode } from 'jwt-decode';
 
 
 import './headerStyle.css';
@@ -26,7 +27,14 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
     const [popupChangeAgent, setPopupChangeAgent] = useState(false);
     const [popupDeleteOpen, setPopupDeleteOpen] = useState(false);
     const [popupDeleteInfo, setPopupDeleteInfo] = useState("");
-    
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            const decodedToken = jwtDecode(token);
+            setUser(decodedToken);
+        }
+    }, []);
     let titleText = titleInfo.titleInfo.realtorInfo.dealType + titleInfo.titleInfo.realtorInfo.category + titleInfo.titleInfo.realtorInfo.city + titleInfo.titleInfo.realtorInfo.street
 
     
@@ -152,9 +160,9 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
                     <button className="open-Home-page-header-agent-shear-btn">
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={Copy} onClick={() => setEditProperty(false)}/>
                     </button>
-                    <button className="open-Home-page-header-agent-shear-btn" onClick={() => { showChangeAgent(true) }} >
+                    {user?.id == 62 ? (<button className="open-Home-page-header-agent-shear-btn" onClick={() => { showChangeAgent(true) }} >
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={EditAgent} />
-                    </button>
+                    </button>) : ""}
                     <button className="open-Home-page-header-agent-shear-btn">
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={Edit} onClick={() => setEditProperty(true)} />
                     </button>

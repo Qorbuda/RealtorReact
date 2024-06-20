@@ -5,11 +5,10 @@ import Eng from '../../icons/eng.svg'
 import Ru from '../../icons/ru.svg'
 import LanguageSwitcher from '../../secondary/localization/LanguageSwitcher';
 import PhoneCallOrangeSmal from '../../icons/PhoneCallOrangeSmal.svg';
+import NumberLink from '../../numberLinkComponent/numberLink';
 
 const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
     var textFolder = LanguageSwitcher().openApartmentPage;
-    console.log("realtorInfo================")
-    console.log(realtorInfo)
 
     return (
         <div className="main-box">
@@ -41,7 +40,7 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                     </div>
                     <div className='property-info'>
                         <h3>{textFolder.Address}</h3>
-                        <span>{realtorInfo.address}</span>
+                        <span>{realtorInfo.street}</span> 
                     </div>
                     <div className='property-info'>
                         <h3>{textFolder.City}</h3>
@@ -63,14 +62,14 @@ const OpenHomePageRealtorComponent = ({ realtorInfo }) => {
                     <span>{realtorInfo.realtorName}</span>
                     <div className='open-home-page-agent-iamge-div'>
                         <img src={PhoneCallOrangeSmal}/> 
-                        <span>{realtorInfo.realtorPhone}</span>
+                        <span><NumberLink phoneNumber = {realtorInfo.realtorPhone}/></span>
                     </div>
                     <div className='open-home-page-agent-language-flags'>
                         {getLanguageIcons(realtorInfo.agentLanguage)}
                     </div>
                 </div>
             </div>
-            <button className='footer-button'>{textFolder.massageToAgent}</button>
+            <button className='footer-button'><NumberLink phoneNumber = {realtorInfo.realtorPhone}/> {textFolder.massageToAgent}</button>
 
         </div>
     )

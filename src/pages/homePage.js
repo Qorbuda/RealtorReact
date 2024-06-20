@@ -20,25 +20,25 @@ function HomePage() {
 
   useEffect(() => {
     homePageShowMorBtnClick();
-    if(propertiesElement.current) {
+    if (propertiesElement.current) {
       setScrollToCoordinate(propertiesElement.current.getBoundingClientRect().top)
     }
-    
+
   }, [])
   const token = localStorage.getItem('token');
   const handleScroll = () => {
-    window.scrollTo({top: scrollToCoordinate, behavior: 'smooth'});
+    window.scrollTo({ top: scrollToCoordinate, behavior: 'smooth' });
   }
 
 
   return (
     <div className='d-flex flex-column justify-content-center align-items-center'>
       <div className='ts-base-container' style={{ marginBottom: "100px", width: "90%" }}>
-        <FastFilters handleScroll={handleScroll} setItems={setProperties} clickCount={setClickCount}/>
+        <FastFilters handleScroll={handleScroll} setItems={setProperties} clickCount={setClickCount} />
       </div>
 
       <div className='ts-base-container' style={{ marginBottom: "100px", width: "90%" }}>
-        <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount}/>
+        <SearchBarHome fromHome={true} setItems={setProperties} clickCount={setClickCount} />
       </div>
 
       <div className='ts-base-container' style={{ marginBottom: "100px" }}>
