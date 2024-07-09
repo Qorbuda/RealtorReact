@@ -48,7 +48,7 @@ function UserPage() {
     const [isActiveAgents, setIsActiveAgents] = useState(false);
 
     useEffect(() => {
-        userPageShowMorBtnClick()
+        showAllItems()
     }, [])
 
     const navigate = useNavigate();
