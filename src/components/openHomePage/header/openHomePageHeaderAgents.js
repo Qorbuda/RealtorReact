@@ -7,12 +7,14 @@ import Copy from "../../icons/Copy.svg"
 import EditAgent from "../../icons/EditAgent.svg"
 import Edit from "../../icons/Edit.svg"
 import Delete from "../../icons/Delete.svg"
+import CallPhoneIcon from "../../icons/CallPhoneIcon.svg"
 import ImageDownloadButton from "./imageDownloadButton"
 import LanguageSwitcher from "../../secondary/localization/LanguageSwitcher"
 import ApartmentEdit from "../../../pages/userPage/apartmentEdit";
 import PropertyAddInfoSaver from "../../../pages/PropertyAddition/propertyAddInfoSaver";
 import { useNavigate, useLocation } from 'react-router-dom';
 import PopapEditDocument from '../../../pages/userPage/popapEditDocument'
+import PopapShowPhonNumber from '../../../pages/userPage/popapShowPhonNumber'
 import PopapEditAgent from '../../../pages/userPage/popapEditAgent'
 import PopapDeleteButton from "../../../pages/userPage/popapDeleteButton";
 import { InvalidTokenError, jwtDecode } from 'jwt-decode';
@@ -24,6 +26,7 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
     let imageLinksData = getImageLink(titleInfo.titleInfo.imageInfo.allImage)
     const [photoData, setPhotoData] = useState(imageLinksData);
     const [popupAddDocsOpen, setPopupAddDocsOpen] = useState(false);
+    const [PopupShowNumber, setPopupShowNumber] = useState(false);
     const [popupChangeAgent, setPopupChangeAgent] = useState(false);
     const [popupDeleteOpen, setPopupDeleteOpen] = useState(false);
     const [popupDeleteInfo, setPopupDeleteInfo] = useState("");
@@ -37,23 +40,23 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
     }, []);
     let titleText = titleInfo.titleInfo.realtorInfo.dealType + titleInfo.titleInfo.realtorInfo.category + titleInfo.titleInfo.realtorInfo.city + titleInfo.titleInfo.realtorInfo.street
 
-    
+
     console.log("titleInfo")
     console.log(titleInfo)
-    console.log(titleText)
-
+    console.log(titleInfo?.titleInfo?.realtorInfo?.ownerTel)
+    var ownerNum = titleInfo?.titleInfo?.realtorInfo?.ownerTel
     titleInfo = titleInfo.titleInfo.headerInfo
 
     const [buttonText, setButtonText] = useState('Click me');
 
     const handleMouseEnter = () => {
         setButtonText('Button hovered'); // Set text to display when hovered
-      };
-    
-      // Event handler for when the mouse leaves the button
-      const handleMouseLeave = () => {
+    };
+
+    // Event handler for when the mouse leaves the button
+    const handleMouseLeave = () => {
         setButtonText('Click me'); // Set back to initial text
-      };
+    };
 
     var inputInfo = PropertyAddInfoSaver()
     const navigate = useNavigate();
@@ -130,11 +133,18 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
         inputInfo.appartmentId = isedit ? titleInfo.id : null;
         inputInfo.property.checkBoxs = input.property.checkBoxs
         setTab(`post_property/general_info`)
+        
     }
     return (
         <div className="header_container">
-            <PopapEditDocument open={popupAddDocsOpen} onClose={() => setPopupAddDocsOpen(false) } itemId={titleInfo.id}/>
-            <PopapEditAgent open={popupChangeAgent} onClose={() => setPopupChangeAgent(false) } itemId={titleInfo.id}/>
+            <PopapEditDocument open={popupAddDocsOpen} onClose={() => setPopupAddDocsOpen(false)} itemId={titleInfo.id} />
+            <PopapShowPhonNumber
+                open={PopupShowNumber}
+                onClose={() => setPopupShowNumber(false)}
+                itemId={titleInfo.id}
+                phoneNum={ownerNum}
+            />
+           <PopapEditAgent open={popupChangeAgent} onClose={() => setPopupChangeAgent(false)} itemId={titleInfo.id} />
             <PopapDeleteButton open={popupDeleteOpen} onClose={() => setPopupDeleteOpen(false)} historyFullInffoArr={popupDeleteInfo} />
 
             <div className='header-title'>
@@ -144,13 +154,16 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
             <div className="open-Home-page-header-agent-info-div">
                 <div className="open-Home-page-header-agent-btn-div-text-div" > <span> {textFolder.plagiarism} 0</span></div>
                 <div className="open-Home-page-header-agent-button-div">
-
+                    <button className="open-Home-page-header-agent-shear-btn">
+                        <img className="open-Home-page-header-agent-shear-btn-icon" src={CallPhoneIcon} onClick={() => showOwnerPhoneNumber(true)} />
+                    </button>
                     <button className="open-Home-page-header-agent-shear-btn">
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={Share} onClick={copyLink} />
 
-                        {showNotification && <img className="hover-notification" src={ShareDun} /> }
+                        {showNotification && <img className="hover-notification" src={ShareDun} />}
                         {/* <img className="hover-notification" src={ShareDun} /> */}
                     </button>
+
                     <button className="open-Home-page-header-agent-shear-btn"  >
                         <img className="open-Home-page-header-agent-shear-btn-icon" onClick={() => { showAddDocsPopap(true) }} src={Contract} />
                     </button>
@@ -158,7 +171,7 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={Download} />
                     </button>
                     <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Copy} onClick={() => setEditProperty(false)}/>
+                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Copy} onClick={() => setEditProperty(false)} />
                     </button>
                     {user?.id == 62 ? (<button className="open-Home-page-header-agent-shear-btn" onClick={() => { showChangeAgent(true) }} >
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={EditAgent} />
@@ -167,8 +180,9 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
                         <img className="open-Home-page-header-agent-shear-btn-icon" src={Edit} onClick={() => setEditProperty(true)} />
                     </button>
                     <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Delete}  onClick={() => deleteProperty()}/>
+                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Delete} onClick={() => deleteProperty()} />
                     </button>
+
                 </div>
 
             </div>
@@ -184,11 +198,15 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
     function showChangeAgent(status) {
         setPopupChangeAgent(status)
     }
-    function deleteProperty(){
+    function showOwnerPhoneNumber(status) {
+        setPopupShowNumber(status)
+    }
+
+    function deleteProperty() {
         setPopupDeleteInfo(titleInfo.id)
         setPopupDeleteOpen(true)
     }
-    
+
 }
 
 export default OpenHomePageHeaderComponentAgents;

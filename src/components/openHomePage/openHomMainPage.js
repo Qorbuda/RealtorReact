@@ -190,7 +190,8 @@ const fullHomeInfops =
 }
 
 function OpenHomMainPage({fullHomeInfo}) {
-
+  console.log('fullHomeInfo')
+    console.log(fullHomeInfo)
 
 
     return (

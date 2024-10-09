@@ -13,6 +13,7 @@ import SearchFullInfo from "./searchFullInfo";
 import SendMessage from '../../contactMessage/sendMessage';
 import sendMessageLoginUsers from "../../contactMessage/sendMessageLoginUsers";
 import getActivLanguageStatus from '../secondary/localization/getActivLanguageStatus'
+import { InvalidTokenError, jwtDecode } from 'jwt-decode';
 
 import axios from 'axios';
 
@@ -23,7 +24,14 @@ function SearchBarHome({ fromHome, setItems, clickCount, mapSearch }) {
     var langId = lang == "en" ? 3 : lang == "ka" ? 1 : 2;
     var textFolder = LanguageSwitcher().HomePage.searchField;
     var searchInputInfro = SearchFullInfo()
-
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            const decodedToken = jwtDecode(token);
+            setUser(decodedToken);
+        }
+    }, []);
     const [dealTypeSelect, setDealTypeSelect] = useState(0);
     const [citySelect, setcitySelect] = useState(0);
     const [categoryApartmentsSelect, setCategoryApartmentsSelect] = useState(0);
@@ -194,7 +202,7 @@ function SearchBarHome({ fromHome, setItems, clickCount, mapSearch }) {
                     <BaseSelect nameOfSelect={textFolder.Agent} controller={agentController} placeholder={textFolder.Agent} />
                     <BaseSelect nameOfSelect={textFolder.Sorting} controller={sortingController} placeholder={textFolder.Sorting} />
 
-                    {/* <BaseInputInt placeholder={textFolder.phoneNumber} controller={inputPhoneNumberController} /> */}
+                    {user?.id != null ? <BaseInputInt placeholder={textFolder.phoneNumber} controller={inputPhoneNumberController} /> : ''}
                 </div>
 
                 <div className='search-system-slider'>

@@ -121,7 +121,7 @@
       "MaxSize": "50 MB max file size",
       "buttonText": "Browse",
       "Links": "Links",
-      "AddMainImages": "Add main images"
+      "AddMainImages": "Add images"
     },
     "Confirm": {
       "Property": "Property",
@@ -156,11 +156,14 @@
       "password": "PASSWORD",
       "status": "STATUS",
       "office": "OFFICE",
+      "agentName": "AGENT NAME",
       "georgian": "GEORGIAN",
       "english": "ENGLISH",
       "russian": "RUSSIAN",
       "docs": "docs",
+      "projectsToAccept": "PROJECTS TO ACCEPT",
       "registration": "Registration",
+      "deleteAgentBtnText": "Delete",
       "addAgentImage": "Add agent image",
       "language": "LANGUAGES:"
     },
@@ -177,6 +180,7 @@
     "showMore":"SOW MORE",
     "logOut": "Log out",
     "addAgent":"Add agent",
+    "deleteAgent":"Delete Agent",
     "apartmentBox": {
       "floor":"Floor:",
       "bedrooms":"Bedrooms:",

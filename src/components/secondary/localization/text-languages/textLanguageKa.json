@@ -121,7 +121,7 @@
       "MaxSize": "ფაილის მაქსიმალური ზომა 50 მბ",
       "buttonText": "დათვალიერება",
       "Links": "ბმულები",
-      "AddMainImages": "დაამატეთ ძირითადი სურათები"
+      "AddMainImages": "დაამატეთ სურათები"
     },
     "Confirm": {
       "Property": "საკუთრება",
@@ -162,7 +162,9 @@
       "docs": "დოკუმენტი",
       "registration": "დარეგისტრირება",
       "addAgentImage": "დაამატე აგენტის სურათი",
-      "language": "ენები:"
+      "language": "ენები:",
+      "agentName":"აგენტი",
+      "deleteAgentBtnText": "წაშლა"
     },
     "finishForogotPassword": {
       "CheckYourEmail": "ᲒᲐᲓᲐᲐᲛᲝᲬᲛᲝᲗ ᲔᲚᲤᲝᲡᲢᲐ"

@@ -107,7 +107,7 @@ function Owner() {
                 <div className='Post-property-owner-page-input-line-div-thri-bar'>
                     <BaseInput placeholder={textFolder.ownerPage.Name} controller={inputNameController} />
                     <BaseInput placeholder={textFolder.ownerPage.Surname} controller={inputSurnameController} />
-                    <BaseInput placeholder={textFolder.ownerPage.PersonalId} controller={inputPersonalIdController} />
+                    {/* <BaseInput placeholder={textFolder.ownerPage.PersonalId} controller={inputPersonalIdController} /> */}
                 </div>
                 <div className='Post-property-owner-page-input-line-div-thri-bar'>
                     <BaseInput placeholder={textFolder.ownerPage.Phone} controller={inputPhoneController} />

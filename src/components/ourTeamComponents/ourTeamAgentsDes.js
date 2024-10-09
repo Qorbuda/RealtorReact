@@ -35,7 +35,6 @@ function OurTeamAgentsDes(agentInfro, agentKey) {
                             {getLanguageIcons(agentInfro.agentInfro.languages, agentInfro.agentKey)}
                         </div>
                     </div>
-                    {/* <p className='Team-Agent-info-view-properties'>view properties</p> */}
                     <div className='Team-Agent-info-phone-numbers-bar'>
                         {getInfroPhone(agentInfro.agentInfro, "numbers", 0)}
                         {getInfroPhone(agentInfro.agentInfro, "numbers", 1)}
@@ -96,9 +95,9 @@ function getInfroPhone(mainInfom, TextKey, index = -1) {
     return (
         <div className='Team-Agent-info-phone-number-bar'>
             <img className='Team-Agent-info-phone-icon' src={PhoneCallBlack} />
-            <p className='Team-Agent-info-phone-number'>
+            <div className='Team-Agent-info-phone-number'>
                 <NumberLink phoneNumber={mainInfom[TextKey][index]} />
-            </p>
+            </div>
         </div>
     );
 

@@ -36,7 +36,7 @@ function ContactPageAgentBox(agentInfo) {
                         </div>
                         <div className='Contact-page-agent-info-text-mail-div'>
                             <img className='Contact-page-agent-Mail-icon' src={PhoneCallOrange} />
-                            <p className='Contact-page-agent-Mail-icon-text'><NumberLink phoneNumber={agentInfo.agentInfo.phone}/></p> 
+                            <div className='Contact-page-agent-Mail-icon-text'><NumberLink phoneNumber={agentInfo.agentInfo.phone} /></div>
                         </div>
                     </div>
                 </div>

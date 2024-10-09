@@ -22,14 +22,13 @@ function PropertyCard(apartmentInfo) {
         // };
     };
 
-    
     return (
         <div className='ts-property-card d-flex flex-column align-items-start'>
 
             <button className='ts-property-card-open-apartment-main-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1);  }}>
             </button>
 
-            <div className='total-test'>
+            <div className='total-test'  >
                 <Carousel imagePath={apartmentInfo.mainImagePath} />
                 <button className='ts-property-card-open-apartment-image-button' onClick={() => { setTab("open_property", apartmentInfo.id, 1); window.location.reload(); }}>
                 </button>

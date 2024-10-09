@@ -30,6 +30,7 @@ import UserProperty from './pages/userProperty';
 import './App.css';
 import './fonts.css';
 import AddAgemtMain from './pages/addAgent/addAgemtMain';
+import DeleteAgemtMain from './pages/addAgent/deleteAgemtMain';
 
 const App = () => {
 
@@ -60,6 +61,7 @@ const App = () => {
                 <Route path="/post_property/general_info" element={<GeneralInfo/>} exact/>
                 
                 <Route path="/add_agent" element={<AddAgemtMain/>} exact/>
+                <Route path="/delete_agent" element={<DeleteAgemtMain/>} exact/>
 
                 <Route path="/post_property/owner" element={<Owner/>} exact/>
                 <Route path="/post_property/property" element={<Property/>} exact/>

@@ -157,7 +157,9 @@
       "docs": "docs",
       "registration": "Registration",
       "addAgentImage": "Add agent image",
-      "language": "LANGUAGES:"
+      "language": "LANGUAGES:",
+      "agentName":"AGENT",
+      "deleteAgentBtnText": "DELETE"
     },
     "finishForogotPassword": {
       "CheckYourEmail": "CHECK YOUR EMAIL"

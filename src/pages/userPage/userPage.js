@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import GreenActivIcon from "../../components/icons/GreenActivIcon.svg"
 import LogOutBtnIcon from "../../components/icons/logOutBtnIcon.svg"
 import AddAgent from "../../components/icons/AddAgent.svg"
+import subtractAgent from "../../components/icons/subtractAgent.svg"
 import BtnPlusIcon from "../../components/icons/BtnPlusIcon.svg"
 import ArrowDown from "../../components/icons/ArrowDown.svg"
 import SearchBarHome from "../../components/homePage/searchBarHome";
@@ -91,6 +92,11 @@ function UserPage() {
                     {user?.id == 62 ? <button className="User-page-log-out-buttton-full-div" onClick={() => { setTab("add_agent"); }}>
                         <img className='User-page-log-out-buttton-icon' src={AddAgent} />
                         <p className="User-page-log-out-button-text">{textFolder.addAgent}</p>
+                    </button> : ''}
+                    
+                    {user?.id == 62 ? <button className="User-page-log-out-buttton-full-div" onClick={() => { setTab("delete_agent"); }}>
+                        <img className='User-page-log-out-buttton-icon' src={subtractAgent} />
+                        <p className="User-page-log-out-button-text">{textFolder.deleteAgent}</p>
                     </button> : ''}
 
                     <button className="User-page-log-out-buttton-full-div" onClick={() => { logout(); setTab(""); window.location.reload(); }}>
