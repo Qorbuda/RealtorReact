@@ -50,12 +50,11 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
     const [buttonText, setButtonText] = useState('Click me');
 
     const handleMouseEnter = () => {
-        setButtonText('Button hovered'); // Set text to display when hovered
+        setButtonText('Button hovered'); 
     };
 
-    // Event handler for when the mouse leaves the button
     const handleMouseLeave = () => {
-        setButtonText('Click me'); // Set back to initial text
+        setButtonText('Click me'); 
     };
 
     var inputInfo = PropertyAddInfoSaver()
@@ -152,40 +151,87 @@ const OpenHomePageHeaderComponentAgents = (titleInfo) => {
                 <small>ID: {titleInfo.itemCode}</small>
             </div>
             <div className="open-Home-page-header-agent-info-div">
-                <div className="open-Home-page-header-agent-btn-div-text-div" > <span> {textFolder.plagiarism} 0</span></div>
-                <div className="open-Home-page-header-agent-button-div">
-                    <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={CallPhoneIcon} onClick={() => showOwnerPhoneNumber(true)} />
-                    </button>
-                    <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Share} onClick={copyLink} />
-
-                        {showNotification && <img className="hover-notification" src={ShareDun} />}
-                        {/* <img className="hover-notification" src={ShareDun} /> */}
-                    </button>
-
-                    <button className="open-Home-page-header-agent-shear-btn"  >
-                        <img className="open-Home-page-header-agent-shear-btn-icon" onClick={() => { showAddDocsPopap(true) }} src={Contract} />
-                    </button>
-                    <button className="open-Home-page-header-agent-shear-btn" onClick={() => handleDownload()}>
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Download} />
-                    </button>
-                    <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Copy} onClick={() => setEditProperty(false)} />
-                    </button>
-                    {user?.id == 62 ? (<button className="open-Home-page-header-agent-shear-btn" onClick={() => { showChangeAgent(true) }} >
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={EditAgent} />
-                    </button>) : ""}
-                    <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Edit} onClick={() => setEditProperty(true)} />
-                    </button>
-                    <button className="open-Home-page-header-agent-shear-btn">
-                        <img className="open-Home-page-header-agent-shear-btn-icon" src={Delete} onClick={() => deleteProperty()} />
-                    </button>
-
-                </div>
-
+            <div className="open-Home-page-header-agent-btn-div-text-div">
+                <span>{textFolder.plagiarism} 0</span>
             </div>
+            <div className="open-Home-page-header-agent-button-div">
+                <button className="open-Home-page-header-agent-shear-btn">
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        src={CallPhoneIcon}
+                        onClick={() => showOwnerPhoneNumber(true)}
+                    />
+                    {/* <span className="tooltip">{`Call Owner ${ownerNum}`}</span> */}
+                    <span className="tooltip">Call Owner</span>
+                </button>
+
+                <button className="open-Home-page-header-agent-shear-btn">
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        src={Share}
+                        onClick={copyLink}
+                    />
+                    {showNotification && <img className="hover-notification" src={ShareDun} />}
+                    <span className="tooltip">Share Link</span>
+                </button>
+
+                <button className="open-Home-page-header-agent-shear-btn">
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        onClick={() => showAddDocsPopap(true)}
+                        src={Contract}
+                    />
+                    <span className="tooltip">Add Documents</span>
+                </button>
+
+                <button className="open-Home-page-header-agent-shear-btn" onClick={() => handleDownload()}>
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        src={Download}
+                    />
+                    <span className="tooltip">Download</span>
+                </button>
+
+                <button className="open-Home-page-header-agent-shear-btn">
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        src={Copy}
+                        onClick={() => setEditProperty(false)}
+                    />
+                    <span className="tooltip">Copy</span>
+                </button>
+
+                {user?.id == 62 ? (
+                    <button className="open-Home-page-header-agent-shear-btn" onClick={() => { showChangeAgent(true) }}>
+                        <img
+                            className="open-Home-page-header-agent-shear-btn-icon"
+                            src={EditAgent}
+                        />
+                        <span className="tooltip">Edit Agent</span>
+                    </button>
+                ) : (
+                    ""
+                )}
+
+                <button className="open-Home-page-header-agent-shear-btn">
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        src={Edit}
+                        onClick={() => setEditProperty(true)}
+                    />
+                    <span className="tooltip">Edit</span>
+                </button>
+
+                <button className="open-Home-page-header-agent-shear-btn">
+                    <img
+                        className="open-Home-page-header-agent-shear-btn-icon"
+                        src={Delete}
+                        onClick={() => deleteProperty()}
+                    />
+                    <span className="tooltip">Delete</span>
+                </button>
+            </div>
+        </div>
 
             {/* <button>MESSAGE TO AGENT</button> */}
         </div>
